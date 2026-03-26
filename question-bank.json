@@ -18,7 +18,8 @@
       "concept": 1,
       "hierarchy": 1,
       "wording": 1
-    }
+    },
+    "type": "multiple_choice"
   },
   {
     "id": "ST-005",
@@ -39,7 +40,8 @@
       "concept": 1,
       "hierarchy": 2,
       "wording": 0
-    }
+    },
+    "type": "multiple_choice"
   },
   {
     "id": "ST-011",
@@ -60,7 +62,8 @@
       "concept": 1,
       "hierarchy": 2,
       "wording": 0
-    }
+    },
+    "type": "multiple_choice"
   },
   {
     "id": "ST-015",
@@ -81,7 +84,8 @@
       "concept": 1,
       "hierarchy": 2,
       "wording": 0
-    }
+    },
+    "type": "multiple_choice"
   },
   {
     "id": "BND-001",
@@ -97,7 +101,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Bonding & Grounding > Purpose and principles",
-    "hint": "Bonding = equalize potential; grounding = reference."
+    "hint": "Bonding = equalize potential; grounding = reference.",
+    "type": "multiple_choice"
   },
   {
     "id": "BND-002",
@@ -113,7 +118,8 @@
     ],
     "answer": 2,
     "ref": "ITSIMM: Bonding & Grounding > Connections and terminations",
-    "hint": "Paint is an insulator—contact quality matters."
+    "hint": "Paint is an insulator—contact quality matters.",
+    "type": "multiple_choice"
   },
   {
     "id": "BND-003",
@@ -129,7 +135,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Bonding & Grounding > Conductor routing",
-    "hint": "Short, straight, and practical reduces impedance."
+    "hint": "Short, straight, and practical reduces impedance.",
+    "type": "multiple_choice"
   },
   {
     "id": "BND-004",
@@ -145,7 +152,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Bonding & Grounding > Busbars",
-    "hint": "TMGB = main telecom grounding busbar."
+    "hint": "TMGB = main telecom grounding busbar.",
+    "type": "multiple_choice"
   },
   {
     "id": "BND-005",
@@ -161,7 +169,8 @@
     ],
     "answer": 0,
     "ref": "ITSIMM: Bonding & Grounding > Bonding backbone",
-    "hint": "TBB links busbars across the system."
+    "hint": "TBB links busbars across the system.",
+    "type": "multiple_choice"
   },
   {
     "id": "FIB-001",
@@ -177,7 +186,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Fiber > Connector care",
-    "hint": "Inspect/clean/inspect/mate starts with inspect."
+    "hint": "Inspect/clean/inspect/mate starts with inspect.",
+    "type": "multiple_choice"
   },
   {
     "id": "FIB-002",
@@ -193,7 +203,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Fiber > Connector inspection and cleaning",
-    "hint": "ICI-M: Inspect, Clean, Inspect, Mate."
+    "hint": "ICI-M: Inspect, Clean, Inspect, Mate.",
+    "type": "multiple_choice"
   },
   {
     "id": "FIB-003",
@@ -209,7 +220,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Fiber > OTDR interpretation",
-    "hint": "High reflectance at a connector often points to interface issues."
+    "hint": "High reflectance at a connector often points to interface issues.",
+    "type": "multiple_choice"
   },
   {
     "id": "FIB-004",
@@ -225,7 +237,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Fiber > Loss mechanisms",
-    "hint": "Longer wavelengths can be more bend-loss sensitive in practice."
+    "hint": "Longer wavelengths can be more bend-loss sensitive in practice.",
+    "type": "multiple_choice"
   },
   {
     "id": "FIB-005",
@@ -241,7 +254,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Fiber > Microbending and macrobending",
-    "hint": "Bends/stress = loss."
+    "hint": "Bends/stress = loss.",
+    "type": "multiple_choice"
   },
   {
     "id": "PWS-001",
@@ -257,7 +271,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Pathways & Spaces > Fill and capacity",
-    "hint": "Space and access are the big compliance drivers."
+    "hint": "Space and access are the big compliance drivers.",
+    "type": "multiple_choice"
   },
   {
     "id": "PWS-002",
@@ -273,7 +288,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Pathways & Spaces > Conduit fill",
-    "hint": "Know the typical fill number used on exams."
+    "hint": "Know the typical fill number used on exams.",
+    "type": "multiple_choice"
   },
   {
     "id": "FIR-001",
@@ -289,7 +305,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Firestopping > Purpose and assemblies",
-    "hint": "Think 'listed assembly' and 'compartmentalization'."
+    "hint": "Think 'listed assembly' and 'compartmentalization'.",
+    "type": "multiple_choice"
   },
   {
     "id": "FIR-002",
@@ -305,7 +322,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Firestopping > Re-entry and compliance",
-    "hint": "Re-entry must match the listed system."
+    "hint": "Re-entry must match the listed system.",
+    "type": "multiple_choice"
   },
   {
     "id": "DC-001",
@@ -321,7 +339,8 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Data Centers > Redundancy and separation",
-    "hint": "Avoid a single point of failure."
+    "hint": "Avoid a single point of failure.",
+    "type": "multiple_choice"
   },
   {
     "id": "DC-002",
@@ -337,6 +356,4973 @@
     ],
     "answer": 1,
     "ref": "ITSIMM: Data Centers > Airflow management",
-    "hint": "Hot/cold air mixing is the trap."
+    "hint": "Hot/cold air mixing is the trap.",
+    "type": "multiple_choice"
+  },
+  {
+    "id": "ST-001",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Primary purpose of bonding in a telecommunications system is to:",
+    "ref": "ITSIMM: Bonding & Grounding > Purpose",
+    "hint": "Bonding = equalize potential.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Provide a path for normal current flow",
+      "Equalize potential between conductive components to reduce shock hazards",
+      "Increase signal strength",
+      "Reduce crosstalk"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "ST-005",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "Correct sequence before mating fiber connectors:",
+    "ref": "ITSIMM: Fiber > Connector care",
+    "hint": "Inspect, clean, inspect, mate.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 2,
+      "wording": 0
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Clean → Inspect → Mate",
+      "Inspect → Clean → Inspect → Mate",
+      "Inspect → Mate → Clean",
+      "Mate → Clean → Inspect"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "ST-011",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Primary purpose of firestopping a penetration is to:",
+    "ref": "ITSIMM: Firestopping > Purpose",
+    "hint": "Listed assembly + compartmentalization.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 2,
+      "wording": 0
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improve cooling",
+      "Maintain fire-resistance rating by restoring compartmentalization of a listed assembly",
+      "Bond the sleeve",
+      "Reduce attenuation"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "ST-015",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Why must A/B redundant pathways be physically separated:",
+    "ref": "ITSIMM: Data Centers > Redundancy",
+    "hint": "Avoid single point of failure.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 2,
+      "wording": 0
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "To reduce bend radius",
+      "To prevent a single incident from impacting both (avoid single point of failure)",
+      "To improve connector polish",
+      "To reduce pair untwist"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BND-001",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY purpose of bonding metallic telecommunications components is to:",
+    "ref": "ITSIMM: Bonding & Grounding > Purpose and principles",
+    "hint": "Bonding is about equalizing potential, not carrying normal load current.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Provide a low-resistance path for normal equipment operating current",
+      "Equalize electrical potential between conductive parts to reduce hazardous differences",
+      "Increase shielding effectiveness by creating isolated ground planes",
+      "Replace surge protection devices at service entrances"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TEST-MC-001",
+    "domain": "Fiber",
+    "difficulty": 1,
+    "style": "DEF",
+    "q": "Microbending primarily increases:",
+    "ref": "Test",
+    "hint": "Stress causes loss.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reflectance",
+      "Attenuation",
+      "Propagation speed",
+      "Crosstalk"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TF-TEST-001",
+    "domain": "Fiber",
+    "difficulty": 1,
+    "style": "TRUE_FALSE",
+    "q": "Fiber connectors should be inspected before mating.",
+    "ref": "test",
+    "hint": "test",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "true_false",
+    "answer": true
+  },
+  {
+    "id": "BND-002",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "A rack bonding jumper is attached over painted steel using a standard screw. MOST appropriate correction is to:",
+    "ref": "ITSIMM: Bonding & Grounding > Connections and terminations",
+    "hint": "Connection quality matters as much as conductor presence.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use a larger conductor so the paint film has less effect",
+      "Rework the connection to listed hardware with metal-to-metal contact",
+      "Route the conductor through flexible conduit before reconnecting",
+      "Add a second jumper to a different painted location"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BND-003",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A telecommunications bonding backbone is installed with unnecessary coils and sweeping detours. MOST likely result is:",
+    "ref": "ITSIMM: Bonding & Grounding > Conductor routing",
+    "hint": "Short and straight is preferred to minimize impedance.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Lower impedance during fault and surge events",
+      "Higher impedance that can reduce bonding effectiveness",
+      "Improved isolation from building grounding conductors",
+      "Greater protection against alien crosstalk in copper cabling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BND-004",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A TMGB is BEST described as:",
+    "ref": "ITSIMM: Bonding & Grounding > Busbars",
+    "hint": "TMGB is the main telecom grounding busbar.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The main telecommunications grounding busbar bonded to the building grounding electrode system",
+      "A busbar dedicated only to outside plant protectors in each closet",
+      "A factory-installed bus in every cabinet for active equipment grounding",
+      "A measurement point used exclusively for resistance-to-earth testing"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "BND-005",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "The function of a TBB is to:",
+    "ref": "ITSIMM: Bonding & Grounding > Bonding backbone",
+    "hint": "Think of the TBB as the telecom bonding backbone.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Bond ladder tray sections together within one room only",
+      "Interconnect telecommunications grounding busbars back to the main telecom grounding busbar",
+      "Provide supplemental grounding for shielded patch cords at the work area",
+      "Separate sensitive equipment from the building grounding system"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-001",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "FIRST",
+    "q": "Before mating a fiber connector pair, the FIRST action should be to:",
+    "ref": "ITSIMM: Fiber > Connector care",
+    "hint": "Inspection comes before cleaning or mating.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Record the expected insertion loss budget",
+      "Inspect the connector end face for contamination or damage",
+      "Apply canned air to both adapters",
+      "Measure continuity with a tone generator"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-002",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "Which sequence reflects accepted fiber connector handling practice?",
+    "ref": "ITSIMM: Fiber > Connector inspection and cleaning",
+    "hint": "Use the inspect-clean-inspect-mate sequence.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Clean -> Mate -> Inspect",
+      "Inspect -> Clean -> Inspect -> Mate",
+      "Mate -> Clean -> Test -> Inspect",
+      "Inspect -> Polish -> Mate -> Verify"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-003",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "An OTDR trace shows a strong reflective event at the first connector but little cumulative loss on the link. MOST likely cause is:",
+    "ref": "ITSIMM: Fiber > OTDR interpretation",
+    "hint": "Connector contamination often creates a reflective near-end event.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Severe macro-bending near mid-span",
+      "A dirty or poorly mated connector interface near the launch end",
+      "An incorrect reference method during insertion-loss testing",
+      "Too many nonreflective fusion splices in the backbone"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-004",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A single-mode link passes at 1310 nm but fails at 1550 nm. MOST likely field issue is:",
+    "ref": "ITSIMM: Fiber > Loss mechanisms",
+    "hint": "Bend loss often becomes more evident at longer wavelengths.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Split pairs in a copper patch panel",
+      "A bend-sensitive section causing higher loss at the longer wavelength",
+      "Excessive shield bonding at the rack",
+      "Too little launch fiber in the certification setup"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-005",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Microbending primarily causes an increase in:",
+    "ref": "ITSIMM: Fiber > Microbending and macrobending",
+    "hint": "Stress and bends increase loss.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Attenuation",
+      "Crosstalk",
+      "Propagation velocity",
+      "Characteristic impedance"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "PWS-001",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY concern when tray fill exceeds recommended capacity is:",
+    "ref": "ITSIMM: Pathways & Spaces > Fill and capacity",
+    "hint": "Overfill hurts access, adds stress, and limits expansion.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reduced accessibility and limited future growth",
+      "Immediate optical overheating from normal signal levels",
+      "Lower copper return loss due to tighter grouping",
+      "Improved EMI shielding from denser cable packing"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "PWS-002",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A commonly used maximum conduit fill guideline in telecom practice questions is:",
+    "ref": "ITSIMM: Pathways & Spaces > Conduit fill",
+    "hint": "Know the typical exam-style fill number.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "20%",
+      "40%",
+      "60%",
+      "80%"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIR-001",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY purpose of firestopping a penetration is to:",
+    "ref": "ITSIMM: Firestopping > Purpose and assemblies",
+    "hint": "Firestop systems preserve rated compartmentation.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Increase cable tray load capacity at the opening",
+      "Restore the fire-resistance performance of the penetrated assembly",
+      "Provide a low-impedance path to ground",
+      "Keep dust from entering the telecom room"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIR-002",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "Additional cables were added through an existing firestopped sleeve without following the listed re-entry method. MOST likely result is:",
+    "ref": "ITSIMM: Firestopping > Re-entry and compliance",
+    "hint": "Re-entry must follow the listing, not improvisation.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The assembly may no longer comply and can fail inspection",
+      "The added cable improves thermal expansion behavior",
+      "Pathway fill limits are automatically reset",
+      "No issue exists as long as some sealant remains visible"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "DC-001",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason redundant A and B pathways are physically separated is to:",
+    "ref": "ITSIMM: Data Centers > Redundancy and separation",
+    "hint": "Physical separation reduces common-mode failure risk.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reduce connector reflectance",
+      "Avoid a single incident disabling both paths",
+      "Equalize optical loss between cabinets",
+      "Simplify patch cord color coding"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "DC-002",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "Missing blanking panels in a populated cabinet row MOST directly affects:",
+    "ref": "ITSIMM: Data Centers > Airflow management",
+    "hint": "Open spaces promote hot/cold air mixing.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Airflow management and cooling efficiency",
+      "Copper pair balance at patch fields",
+      "TMGB continuity",
+      "Firestop re-entry compliance"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "BND-006",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A telecommunications room has two isolated rack-ground schemes that are not bonded together. The MOST likely concern is:",
+    "ref": "ITSIMM: Bonding & Grounding > Equipotential bonding",
+    "hint": "Separate conductive systems can sit at different potentials.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Uneven optical power levels across fiber trunks",
+      "Potential difference between conductive parts during a fault event",
+      "Reduced horizontal cable pair balance at the patch panel",
+      "Higher airflow bypass around blanking panels"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BND-007",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "FIRST",
+    "q": "Before installing a bonding conductor onto a new cabinet row, the FIRST check should be whether:",
+    "ref": "ITSIMM: Bonding & Grounding > Planning and hardware",
+    "hint": "Start with approved attachment points and hardware.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The conductor color matches the category cable jacket color",
+      "The planned connection point and hardware are listed and suitable for the surface/material",
+      "The rack has at least one shielded patch panel installed",
+      "The bonding conductor is routed in a separate fire-rated sleeve"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BND-008",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A contractor proposes running a bonding conductor in a long loop around the room to keep it away from pathways. MOST appropriate response is to:",
+    "ref": "ITSIMM: Bonding & Grounding > Conductor routing",
+    "hint": "Routing should minimize length and bends.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Approve it because physical separation from cabling is always preferred",
+      "Approve it only if a larger conductor is used",
+      "Reject it because excessive length and looping increase impedance",
+      "Reject it only if the room contains optical fiber"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "BND-009",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Bonding jumper connections should be accessible after installation PRIMARILY so technicians can:",
+    "ref": "ITSIMM: Bonding & Grounding > Inspection and maintenance",
+    "hint": "Accessible connections can be verified and serviced.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Measure conductor capacitance to nearby tray systems",
+      "Inspect, verify, and maintain connection integrity over time",
+      "Reduce electromagnetic coupling into copper backbones",
+      "Shorten patch cord lengths during MAC work"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BND-010",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "When adding a new cabinet to an existing bonded lineup, the MOST appropriate practice is to:",
+    "ref": "ITSIMM: Bonding & Grounding > Extending the bonding system",
+    "hint": "New conductive components should be integrated into the telecom bonding system.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Assume mechanical contact through floor anchors is sufficient",
+      "Bond the cabinet into the approved room bonding scheme using listed methods",
+      "Install a separate isolated ground rod for the new cabinet",
+      "Rely on the equipment power cord grounding conductor alone"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-006",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "During backbone pull planning, the MOST important reason to respect manufacturer pull tension limits is to avoid:",
+    "ref": "ITSIMM: Fiber > Handling and pulling",
+    "hint": "Mechanical abuse can create hidden or immediate performance problems.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Color-code fading on the jacket",
+      "Damage that changes fiber performance or long-term reliability",
+      "Adapter keying issues at the patch panel",
+      "Excessive rack bonding impedance"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-007",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A field-installed fiber connector repeatedly fails loss testing even after re-cleaning. MOST appropriate next step is to:",
+    "ref": "ITSIMM: Fiber > Field termination and troubleshooting",
+    "hint": "Persistent failure suggests a termination/interface problem, not a paperwork issue.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Increase test-set reference loss allowance",
+      "Reinspect termination quality and remake the connector if needed",
+      "Change the link to multimode reference values",
+      "Document it as pass if OTDR distance is correct"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-008",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "The purpose of a launch cord in OTDR testing is to:",
+    "ref": "ITSIMM: Fiber > OTDR testing",
+    "hint": "Launch and receive fibers help reveal end events.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Match the test wavelength to the source fiber color",
+      "Allow the OTDR to characterize the near-end event outside the instrument dead zone",
+      "Convert multimode results into single-mode attenuation values",
+      "Reduce connector reflectance by index matching"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-009",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When routing fiber in a cabinet, service loops should be managed MOST carefully to avoid:",
+    "ref": "ITSIMM: Fiber > Routing and slack storage",
+    "hint": "Good slack management protects the fiber and preserves access.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Changes in copper pair twist rate",
+      "Violations of bend-radius requirements and future congestion",
+      "Higher dc resistance in bonding conductors",
+      "Ground-loop current through patch panels"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-010",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A multimode channel has acceptable length and connector count, but measured loss is still high in one direction only. MOST likely cause is:",
+    "ref": "ITSIMM: Fiber > Testing and troubleshooting",
+    "hint": "Asymmetrical results often point to one-end interface or setup issues.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "An end-face condition or test setup issue affecting one end interface",
+      "Excessive shield continuity in the horizontal cable",
+      "An oversized conduit body in the pathway",
+      "A mislabeled TBB in the telecom room"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "FIB-011",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason to use manufacturer-approved cleaning materials on connector end faces is to:",
+    "ref": "ITSIMM: Fiber > Connector cleaning",
+    "hint": "Cleaning should improve the interface, not create new defects.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Raise optical power at the transmitter",
+      "Remove contamination without introducing additional damage or residue",
+      "Change the connector polish geometry in the field",
+      "Reduce the need for reference setting"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-012",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A splice tray is packed so tightly that fibers cross sharply over one another. MOST likely long-term risk is:",
+    "ref": "ITSIMM: Fiber > Splicing and slack management",
+    "hint": "Crowded trays increase stress and service risk.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improved splice protection due to tighter retention",
+      "Stress-related attenuation or damage during future access",
+      "Lower reflectance at all mated connectors",
+      "Reduced need for tray labeling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-013",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "Fusion splicing is generally preferred over mechanical splicing when the priority is:",
+    "ref": "ITSIMM: Fiber > Splicing methods",
+    "hint": "Fusion splices are typically lower-loss and lower-reflectance.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Maximum connector interchangeability at the outlet",
+      "Lower typical splice loss and reflectance in permanent joints",
+      "Eliminating the need for splice trays",
+      "Supporting category cable PoE delivery"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-014",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A connectorized trunk is being staged on the floor before installation. MOST appropriate protection method is to:",
+    "ref": "ITSIMM: Fiber > Storage and staging",
+    "hint": "Protect connector end faces until the moment of use.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Remove dust caps so trapped moisture can evaporate",
+      "Keep factory protection in place and prevent end-face contact or crushing",
+      "Loosely tie the connectors together with the pull string",
+      "Rest the connector bundle on the cable reel flange"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIB-015",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason polarity management matters in duplex fiber links is to:",
+    "ref": "ITSIMM: Fiber > Polarity",
+    "hint": "Tx must land on Rx.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Maintain the intended transmit-to-receive relationship end to end",
+      "Keep insertion loss equal on both wavelengths",
+      "Reduce macrobend sensitivity in patch cords",
+      "Ensure adapters remain keyed to the rack grounding system"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-001",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Maintaining pair twist as close as practical to the point of termination PRIMARILY helps preserve:",
+    "ref": "ITSIMM: Copper > Termination practices",
+    "hint": "Untwisting too far degrades pair balance.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Conductor ampacity for remote powering",
+      "Balanced transmission performance",
+      "Rack grounding continuity",
+      "Faceplate mechanical retention"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "COP-002",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A commonly taught maximum untwist at a UTP termination is approximately:",
+    "ref": "ITSIMM: Copper > Termination limits",
+    "hint": "Know the typical best-practice untwist limit.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "13 mm (0.5 in)",
+      "25 mm (1.0 in)",
+      "38 mm (1.5 in)",
+      "50 mm (2.0 in)"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-003",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A horizontal link has correct pinout on a wire map but poor NEXT performance. MOST likely field cause is:",
+    "ref": "ITSIMM: Copper > Performance troubleshooting",
+    "hint": "A link can wire-map correctly and still fail transmission metrics.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Excessive untwist or poor pair geometry at termination",
+      "A missing bonding jumper on the ladder rack",
+      "A mislabeled port in the administration record",
+      "The work area patch cord is too short"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-004",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When routing UTP near power conductors, the MOST appropriate objective is to:",
+    "ref": "ITSIMM: Copper > Separation from EMI sources",
+    "hint": "Separation and crossing geometry matter.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Maximize parallel exposure so cable temperature equalizes",
+      "Maintain recommended separation and cross power at right angles when necessary",
+      "Bond the data cable shield at both ends regardless of design",
+      "Use tighter cable bundling to reduce alien crosstalk"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "COP-005",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A permanent link intermittently fails after furniture moves, but patch cords test good. MOST likely problem is:",
+    "ref": "ITSIMM: Copper > Troubleshooting installed cable",
+    "hint": "Intermittent field failures often come from mechanical stress or damage in the fixed cabling.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Conductor damage or excessive bend/strain in the horizontal cable path",
+      "Incorrect optical wavelength reference at the tester",
+      "A missing blanking panel in the cabinet row",
+      "An oversized telecom grounding busbar"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-006",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason to observe cable pull-tension limits during copper installation is to prevent:",
+    "ref": "ITSIMM: Copper > Pulling practices",
+    "hint": "Too much tension can change cable geometry.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Unwanted jacket color transfer to pathway surfaces",
+      "Conductor deformation and performance degradation",
+      "Improper building grounding electrode resistance",
+      "Loss of firestop listing at sleeves"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "COP-007",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A contractor proposes cinching bundles tightly with narrow nylon ties every few inches. MOST appropriate response is to:",
+    "ref": "ITSIMM: Copper > Cable support and bundling",
+    "hint": "Compression damage is a common installation mistake.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Approve it because tighter bundles improve pair stability",
+      "Allow it only for shielded cable",
+      "Reject it because excessive compression can deform cable and impair performance",
+      "Reject it only if the bundle exceeds conduit fill"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "COP-008",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "For balanced twisted-pair cabling, a split pair condition means:",
+    "ref": "ITSIMM: Copper > Wire map faults",
+    "hint": "A split pair may pass simple continuity but fail performance badly.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Two conductors from different pairs are incorrectly used as a pair",
+      "The jacket has separated from the conductor insulation",
+      "The cable shield is bonded at both ends",
+      "Two horizontal runs are terminated on the same port"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-009",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A link fails return loss while length, wire map, and insertion loss are acceptable. MOST likely installation issue is:",
+    "ref": "ITSIMM: Copper > Certification interpretation",
+    "hint": "Return loss points to impedance mismatches.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Abrupt impedance discontinuity from poor termination or damaged cable geometry",
+      "Insufficient blanking panels in the cabinet",
+      "An unbonded rack upright",
+      "Too many fiber splices in the same pathway"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-010",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When dressing cables to a patch panel, the MOST appropriate practice is to:",
+    "ref": "ITSIMM: Copper > Termination and dressing",
+    "hint": "Good dressing protects performance and serviceability.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Force tight right-angle turns so front-of-rack depth is minimized",
+      "Maintain bend radius and strain relief while preserving pair geometry",
+      "Untwist each pair early so lacing is easier",
+      "Bundle all categories together with maximum compression"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "COP-011",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY function of certification testing on a newly installed copper link is to:",
+    "ref": "ITSIMM: Copper > Certification",
+    "hint": "Certification is about standards-based link performance.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Verify the link meets the selected performance standard for the intended application",
+      "Replace administration records for the installed pathway",
+      "Determine the building grounding electrode resistance",
+      "Measure firestop expansion under heat"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-012",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A PoE-heavy bundle is planned in a warm ceiling area. MOST appropriate installation response is to:",
+    "ref": "ITSIMM: Copper > Remote powering considerations",
+    "hint": "Remote powering can make thermal management relevant.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Ignore bundle size because dc power does not affect temperature",
+      "Consider bundle sizing, pathway conditions, and manufacturer guidance for heat management",
+      "Use only shielded patch cords at the work area",
+      "Shorten all horizontal links below 50 m regardless of standard"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "COP-013",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "CAUSE",
+    "q": "A cable run passes continuity and wire map but a user reports very low throughput. MOST appropriate next test is to check:",
+    "ref": "ITSIMM: Copper > Troubleshooting strategy",
+    "hint": "Basic continuity tests do not prove data performance.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Transmission performance such as NEXT, return loss, and delay-related metrics",
+      "Only room bonding continuity at the rack",
+      "The TMGB resistance to earth",
+      "The firestop system listing number"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "COP-014",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A shielded cable system is installed with mixed unapproved components from different designs. MOST likely consequence is:",
+    "ref": "ITSIMM: Copper > Shielded cabling systems",
+    "hint": "Component compatibility matters in a system design.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Guaranteed lower alien crosstalk than UTP",
+      "Uncertain end-to-end performance and shield continuity behavior",
+      "Automatic improvement in PoE heat dissipation",
+      "Elimination of the need for bonding"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "COP-015",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason to use proper cable supports rather than resting horizontal cable on ceiling tiles is to:",
+    "ref": "ITSIMM: Copper > Support methods",
+    "hint": "Support and access are both part of good installation practice.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reduce optical reflectance in nearby fiber links",
+      "Protect cable, preserve accessibility, and comply with installation practices",
+      "Provide supplemental grounding to the grid",
+      "Lower the tester reference uncertainty"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-003",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A pathway design leaves no spare capacity in a fast-growing area. MOST likely project consequence is:",
+    "ref": "ITSIMM: Pathways & Spaces > Capacity planning",
+    "hint": "Pathway planning should include future growth.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Lower insertion loss on newly added links",
+      "Costly retrofits and constrained future moves, adds, and changes",
+      "Improved airflow through underfloor spaces",
+      "Reduced need for administration labeling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-004",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Cable supports in ceiling spaces should be independently supported PRIMARILY to:",
+    "ref": "ITSIMM: Pathways & Spaces > Support systems",
+    "hint": "Use proper support hardware, not incidental building elements.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Prevent the telecommunications cabling from relying on nonapproved building components for support",
+      "Increase pair balance through tighter suspension spacing",
+      "Provide a direct bond to the structural steel",
+      "Reduce OTDR dead zones on nearby backbone links"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "PWS-005",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A conduit route includes multiple tight bends and a crowded pull box. MOST likely field impact is:",
+    "ref": "ITSIMM: Pathways & Spaces > Route planning",
+    "hint": "Bends and congestion increase pulling stress.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Simpler compliance with bend-radius requirements during the pull",
+      "Higher pulling difficulty and increased risk of cable damage",
+      "Lower risk of jacket abrasion because the route is shorter",
+      "Improved firestopping because more sealant can be used"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-006",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When horizontal cabling must cross fluorescent lighting power, the MOST appropriate approach is to:",
+    "ref": "ITSIMM: Pathways & Spaces > Separation and routing",
+    "hint": "Crossing at right angles reduces parallel exposure.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Run parallel directly alongside it for the shortest route",
+      "Cross it as close to 90 degrees as practical while maintaining separation elsewhere",
+      "Bond the cable bundle to the light fixture",
+      "Use the lighting hanger wires as cable support"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-007",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A telecommunications room should be planned as a dedicated space PRIMARILY because it:",
+    "ref": "ITSIMM: Pathways & Spaces > Telecommunications spaces",
+    "hint": "TRs are operational infrastructure spaces, not general storage.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Allows shared use with custodial storage without affecting operations",
+      "Provides controlled access and proper support for telecom equipment and cabling",
+      "Reduces the need for grounding and bonding",
+      "Eliminates the need for documentation"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-008",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "Water pipes are discovered above a proposed equipment lineup in a telecom room. MOST appropriate action is to:",
+    "ref": "ITSIMM: Pathways & Spaces > Room planning risks",
+    "hint": "Protect equipment from foreseeable environmental hazards.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Proceed because telecom racks are sealed against moisture",
+      "Relocate or redesign to avoid placing critical equipment under potential leak sources",
+      "Install larger bonding conductors to compensate",
+      "Add more blanking panels to improve cooling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-009",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason to maintain manufacturer bend-radius limits during pathway turns is to:",
+    "ref": "ITSIMM: Pathways & Spaces > Bend radius",
+    "hint": "Bend radius affects both immediate and long-term reliability.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Protect cable performance and mechanical integrity",
+      "Improve labeling visibility on bundles",
+      "Increase tray fill efficiency",
+      "Reduce need for testing documentation"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "PWS-010",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A pathway was installed directly above a ceiling grid with little access space for future work. MOST likely issue is:",
+    "ref": "ITSIMM: Pathways & Spaces > Accessibility",
+    "hint": "Serviceability is a major design criterion.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Simplified addition of new supports later",
+      "Poor serviceability and greater risk of disturbing existing cabling during MAC work",
+      "Lower dc resistance in remote powering bundles",
+      "Improved compliance with firestop re-entry rules"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-011",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "A sleeve through a floor is filled almost edge to edge with current cables. MOST appropriate concern is:",
+    "ref": "ITSIMM: Pathways & Spaces > Sleeves and penetrations",
+    "hint": "Leave practical space for growth and re-entry work.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Insufficient room for future capacity and proper cable management",
+      "Excessive optical reflectance at patch panels",
+      "Incorrect wire map at the work area",
+      "Low resistance-to-earth at the TMGB"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "PWS-012",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Entrance facilities are planned carefully PRIMARILY to:",
+    "ref": "ITSIMM: Pathways & Spaces > Entrance facilities",
+    "hint": "Entrance design manages service entry and transition.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Control where outside services enter and transition into the building telecom infrastructure",
+      "Shorten every horizontal run to the same length",
+      "Eliminate the need for backbone cabling",
+      "Provide alternate grounding electrode systems for each carrier"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "PWS-013",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A ladder rack run is not aligned with cabinet entry points, forcing repeated sharp cable offsets. MOST likely result is:",
+    "ref": "ITSIMM: Pathways & Spaces > Rack and pathway alignment",
+    "hint": "Alignment matters for clean routing and cable protection.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Cleaner front-of-rack appearance with no technical downside",
+      "Less efficient routing and greater risk of bend or support issues",
+      "Automatic reduction of alien crosstalk",
+      "Better separation from power by default"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "PWS-014",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A pull box in a conduit system is generally used to:",
+    "ref": "ITSIMM: Pathways & Spaces > Conduit systems",
+    "hint": "Pull boxes help installation, not network operation.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Provide a location to ease pulling and manage route changes over longer runs",
+      "House active Ethernet switching equipment",
+      "Replace the need for firestopping at penetrations",
+      "Act as the telecommunications grounding busbar"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "PWS-015",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "When selecting between several pathway routes, the MOST appropriate choice is usually the one that:",
+    "ref": "ITSIMM: Pathways & Spaces > Route selection",
+    "hint": "Pathway selection is a multi-factor design decision.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Has the fewest supports regardless of access limitations",
+      "Balances separation, accessibility, capacity, and protection of the installed cabling",
+      "Runs closest to electrical gear to minimize building material cost",
+      "Uses the most existing miscellaneous building hardware"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIR-003",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "Before selecting a firestop material, the MOST important consideration is whether it:",
+    "ref": "ITSIMM: Firestopping > Listed systems",
+    "hint": "Use a listed system, not just a generic sealant.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Matches the cable jacket color family",
+      "Is part of a listed system appropriate for the penetrated assembly and opening condition",
+      "Contains metallic particles for grounding continuity",
+      "Remains permanently soft in all applications"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIR-004",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A crew wants to pack an opening tightly with leftover foam from another trade. MOST appropriate response is to:",
+    "ref": "ITSIMM: Firestopping > Materials and listings",
+    "hint": "Listing compatibility is the key issue.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Allow it if the foam cures hard enough",
+      "Allow it for nonplenum cabling only",
+      "Reject it unless it is specifically part of the correct listed firestop system",
+      "Reject it only when fiber is present"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "FIR-005",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Firestop documentation is important PRIMARILY because it:",
+    "ref": "ITSIMM: Firestopping > Documentation",
+    "hint": "Good records support compliance and future changes.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Replaces the need for administration labels",
+      "Helps verify the installed system matches the approved listing and can be maintained on re-entry",
+      "Measures cable attenuation through the penetration",
+      "Provides alternate grounding records for inspectors"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIR-006",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A penetration opening was enlarged in the field, but the crew used the original listed system details without checking limits. MOST likely issue is:",
+    "ref": "ITSIMM: Firestopping > Field changes",
+    "hint": "Listings have specific tested parameters.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The larger opening may fall outside the tested conditions of the listing",
+      "The larger opening always improves smoke resistance",
+      "The cable bundle will automatically cool better",
+      "The pathway fill ratio no longer matters"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "FIR-007",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "The MOST appropriate time to inspect a firestop installation is:",
+    "ref": "ITSIMM: Firestopping > Inspection",
+    "hint": "Inspection before concealment avoids expensive rework.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Only after ceiling closure and final occupancy",
+      "During and after installation so assembly details can be verified before concealment",
+      "Only when a failed cable test suggests an issue",
+      "After the first MAC activity in the area"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "FIR-008",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A contractor proposes using a penetration opening as spare pathway capacity with no immediate sealing, planning to return later. MOST appropriate response is to:",
+    "ref": "ITSIMM: Firestopping > Compliance",
+    "hint": "Open penetrations undermine compartmentation.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Approve it if the room has sprinklers",
+      "Approve it if cable count is still below tray fill",
+      "Reject it because the rated opening must be properly protected per the listed system",
+      "Reject it only for backbone pathways"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "DC-003",
+    "domain": "Data Centers",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A top-of-rack design leaves no slack management space for patch cords. MOST likely operational issue is:",
+    "ref": "ITSIMM: Data Centers > Patch cord management",
+    "hint": "Manageability is critical at high density.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improved mean time to repair due to tighter routing",
+      "Congestion and harder tracing or replacement during moves and troubleshooting",
+      "Lower insertion loss on all fiber jumpers",
+      "Elimination of the need for labeling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "DC-004",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Underfloor or overhead pathway planning in a data center should primarily support:",
+    "ref": "ITSIMM: Data Centers > Distribution planning",
+    "hint": "Data center pathways are about scale, service, and environmental coordination.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Only shortest-distance cable routing",
+      "Scalable distribution with separation, serviceability, and airflow awareness",
+      "Maximum coexistence with unrelated building storage",
+      "Independent grounding electrodes for each row"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "DC-005",
+    "domain": "Data Centers",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "Cabinet rows are installed without consistent front/rear orientation. MOST likely consequence is:",
+    "ref": "ITSIMM: Data Centers > Cabinet layout",
+    "hint": "Orientation drives cooling patterns and operational consistency.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reduced need for cable labeling because layouts are unique",
+      "Compromised airflow strategy and less predictable operations",
+      "Better power diversity at the rack level",
+      "Lower optical attenuation across trunks"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "DC-006",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When staging high-density fiber trunks above cabinets, the MOST appropriate practice is to:",
+    "ref": "ITSIMM: Data Centers > High-density fiber management",
+    "hint": "Support, bend radius, and access remain critical in dense spaces.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Allow trunks to rest on connector bundles if bend radius is unknown",
+      "Use dedicated support and routing accessories that preserve bend radius and access",
+      "Tie trunks tightly to power whips to save space",
+      "Remove identification tags after pull-in to reduce clutter"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "DC-007",
+    "domain": "Data Centers",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A row design mixes critical and noncritical circuits in the same poorly identified pathway. MOST likely risk is:",
+    "ref": "ITSIMM: Data Centers > Administration and resiliency",
+    "hint": "Clear segregation and identification reduce operational mistakes.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improved flexibility with no operational downside",
+      "Higher chance of human error during maintenance or incident response",
+      "Guaranteed lower cooling demand",
+      "Reduced need for redundant pathways"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "DC-008",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason to coordinate telecom pathways with mechanical systems in a data center is to:",
+    "ref": "ITSIMM: Data Centers > Coordination",
+    "hint": "Data center systems are interdependent in a confined environment.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Ensure telecom cabling can ignore cooling layout requirements",
+      "Avoid conflicts that degrade access, cooling performance, or future capacity",
+      "Increase conductor resistance for safety",
+      "Reduce the need for patch field documentation"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-001",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason to verify de-energization and follow site safety procedures before working near electrical infrastructure is to:",
+    "ref": "ITSIMM: Safety > Electrical and jobsite safety",
+    "hint": "Safety controls come before installation speed.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improve copper attenuation results",
+      "Reduce risk of injury and unintended contact with hazardous energy",
+      "Maintain cable color-code consistency",
+      "Increase firestop cure speed"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-002",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When using a ladder in an active telecom construction area, the MOST appropriate practice is to:",
+    "ref": "ITSIMM: Safety > Ladders and access",
+    "hint": "Condition, setup, and area control matter.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Place it directly in front of egress routes if work time is short",
+      "Inspect the ladder, secure the work area, and use it according to rating and condition",
+      "Stand on the top cap for better patch panel reach",
+      "Use metallic ladders by default near energized equipment"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-003",
+    "domain": "Safety",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "Fiber scraps are found on an unprotected work surface after termination. MOST likely concern is:",
+    "ref": "ITSIMM: Safety > Fiber safety",
+    "hint": "Fiber shards are a real handling hazard.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "No issue if the scraps are too small to label",
+      "Injury hazard and contamination risk that require proper disposal practices",
+      "Automatic increase in reflectance on nearby connectors",
+      "Reduced grounding continuity at the rack"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-004",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Personal protective equipment on a cabling job should be selected PRIMARILY based on:",
+    "ref": "ITSIMM: Safety > PPE",
+    "hint": "PPE follows hazard assessment.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Cabinet color and customer preference",
+      "The hazards of the specific task and site conditions",
+      "Whether testing is copper or fiber",
+      "How many technicians are on shift"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-005",
+    "domain": "Safety",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A telecom room is being used to store cleaning chemicals and spare furniture. MOST appropriate response is to:",
+    "ref": "ITSIMM: Safety > Housekeeping and space use",
+    "hint": "Dedicated telecom spaces should not become storage rooms.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Allow it if equipment remains powered on",
+      "Allow it if the items are labeled",
+      "Correct it because telecom spaces should remain dedicated and free of unrelated hazards or obstructions",
+      "Correct it only if the room also contains backbone fiber"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "SAF-006",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "Before drilling through a wall or floor for a pathway, the MOST appropriate action is to:",
+    "ref": "ITSIMM: Safety > Penetrations and site checks",
+    "hint": "Always verify hidden conditions before drilling.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Drill first and verify utilities later if the route is obvious",
+      "Verify the area for hidden utilities and structural constraints per site procedures",
+      "Increase drill speed to minimize wall heating",
+      "Use the closest opening regardless of the pathway plan"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-007",
+    "domain": "Safety",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A jobsite crew leaves patch cords, tools, and scrap material across the floor in an active room. MOST likely immediate risk is:",
+    "ref": "ITSIMM: Safety > Housekeeping",
+    "hint": "Good housekeeping is a safety and quality issue.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improved workflow due to shorter reach distances",
+      "Trip hazards and accidental damage to equipment or cabling",
+      "Lower static discharge in the room",
+      "Better thermal performance under the cabinets"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-008",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Lockout/tagout procedures exist PRIMARILY to:",
+    "ref": "ITSIMM: Safety > Hazardous energy control",
+    "hint": "LOTO prevents unexpected energization.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improve labeling consistency across the campus",
+      "Control hazardous energy so equipment cannot be unexpectedly energized during work",
+      "Raise the pass rate of certification tests",
+      "Document patch panel port assignments"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "SAF-009",
+    "domain": "Safety",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A technician wants to look into a fiber connector end face without appropriate inspection equipment. MOST appropriate guidance is to:",
+    "ref": "ITSIMM: Safety > Optical safety",
+    "hint": "Never assume a fiber is dark.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Proceed briefly if the source output is believed to be low",
+      "Proceed only on multimode systems",
+      "Do not view the end face directly; use proper inspection tools and safety practices",
+      "Disconnect the patch cord and use a flashlight through the ferrule"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "SAF-010",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When working above a suspended ceiling, the MOST appropriate method for handling removed tiles is to:",
+    "ref": "ITSIMM: Safety > Work area control",
+    "hint": "Maintain a safe and orderly work zone.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Lean them against live cabinets until reinstall",
+      "Place and protect them so they do not create hazards or become damaged",
+      "Leave them stacked in egress paths for quick reuse",
+      "Cut them as needed to fit around unsupported cable bundles"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-001",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY value of a proper reference setup before fiber insertion-loss testing is to:",
+    "ref": "ITSIMM: Testing > Fiber loss testing",
+    "hint": "A bad reference invalidates otherwise careful measurements.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Ensure measurements are based on a known baseline for the chosen test method",
+      "Eliminate the need for connector inspection",
+      "Convert OTDR traces into certification reports automatically",
+      "Measure building grounding impedance simultaneously"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-002",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A copper tester reports a link length much shorter than the pathway route suggests. MOST likely reason is:",
+    "ref": "ITSIMM: Testing > Copper diagnostics",
+    "hint": "TDR-based length can terminate at a fault.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The cable category is too high for the tester",
+      "A fault such as an open, short, or severe discontinuity before the far end",
+      "The rack is not bonded to the TMGB",
+      "The room temperature is too low for certification"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-003",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When troubleshooting an intermittent cabling complaint, the MOST appropriate starting point is to:",
+    "ref": "ITSIMM: Troubleshooting > Process",
+    "hint": "Start by defining the problem before changing hardware.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Replace all patch panels on the affected floor",
+      "Gather symptoms, verify the scope, and test methodically from the physical layer outward",
+      "Assume the active equipment is the only likely cause",
+      "Reterminate every outlet in the affected zone"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-004",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Administration labels are important PRIMARILY because they:",
+    "ref": "ITSIMM: Administration > Labeling",
+    "hint": "Clear identification speeds MACs and troubleshooting.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reduce attenuation on copper backbones",
+      "Support accurate identification, maintenance, and troubleshooting",
+      "Replace the need for as-built drawings",
+      "Eliminate the need for test records"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-005",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A tester indicates a reverse pair fault on a newly terminated outlet. MOST appropriate correction is to:",
+    "ref": "ITSIMM: Testing > Wire map faults",
+    "hint": "Pin-position errors require retermination, not tester adjustments.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Bond the faceplate to the rack",
+      "Review the termination against the selected pinout and reterminate the affected pair positions",
+      "Increase the test limit margin",
+      "Shorten the patch cord at the workstation"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-006",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "As-built documentation is valuable PRIMARILY because it:",
+    "ref": "ITSIMM: Administration > Documentation",
+    "hint": "As-builts describe the real installed condition.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Serves as the operational record of what was actually installed",
+      "Guarantees future category upgrades without retesting",
+      "Replaces firestop labeling requirements",
+      "Provides direct evidence of grounding electrode resistance"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-007",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A fiber link length matches design, but insertion loss is above budget and OTDR shows several small events. MOST likely explanation is:",
+    "ref": "ITSIMM: Testing > Fiber interpretation",
+    "hint": "Several small loss events can add up past the budget.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Cumulative loss from multiple interfaces or splices along the path",
+      "Insufficient pair twist at the copper outlet",
+      "A missing blanking panel in the row",
+      "The TBB is oversized for the room"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-008",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "The MOST appropriate reason to store tester results with cable IDs is to:",
+    "ref": "ITSIMM: Administration > Test records",
+    "hint": "Tie results to identifiers so they remain useful later.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Allow future verification and traceability of installed link performance",
+      "Replace panel labeling with electronic-only records",
+      "Avoid documenting pathway routes",
+      "Eliminate warranty paperwork from manufacturers"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-009",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "After a cable plant change, some labels were updated but records were not. MOST likely operational impact is:",
+    "ref": "ITSIMM: Administration > Record consistency",
+    "hint": "Records and labels must agree.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Improved flexibility because field labels take priority over all records",
+      "Confusion during maintenance because physical identifiers and documentation no longer align",
+      "Automatic tester recalibration is required",
+      "Lower return loss on the modified links"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-010",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY purpose of a visual fault locator is to:",
+    "ref": "ITSIMM: Testing > Fiber basic tools",
+    "hint": "A VFL is a troubleshooting aid, not a certification instrument.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Certify insertion loss against a fiber standard",
+      "Help locate obvious continuity problems or bends in certain fiber situations",
+      "Measure dc resistance of bonding conductors",
+      "Verify copper pair untwist at the patch panel"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-011",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A certification result fails propagation delay skew on a copper link. MOST plausible cause is:",
+    "ref": "ITSIMM: Testing > Delay-related metrics",
+    "hint": "Skew is tied to differences among pairs.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Significant pair characteristic differences or improper cable construction somewhere in the link",
+      "A missing firestop at the floor sleeve",
+      "A mislabeled patch panel port",
+      "Too many service loops in the bonding conductor"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-012",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "When documenting a failed test for rework, the MOST useful note is one that:",
+    "ref": "ITSIMM: Administration > Rework documentation",
+    "hint": "Actionable failure records speed correction.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "States only that the link did not pass",
+      "Identifies the cable ID, failed parameter, test setup, and observed conditions",
+      "Lists the installer name without the cable record",
+      "Avoids specifics until all links are tested"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-013",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Moves, adds, and changes are easier to perform correctly when cabling systems have:",
+    "ref": "ITSIMM: Administration > MAC support",
+    "hint": "Good administration reduces human error.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Random spare lengths hidden above ceilings",
+      "Clear labeling, accurate records, and orderly pathway/rack management",
+      "Maximum bundle compression for space savings",
+      "Independent grounding electrodes at each outlet"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-014",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A copper link passes permanent-link testing, but the user still has problems after equipment connection. MOST appropriate next step is to:",
+    "ref": "ITSIMM: Troubleshooting > Link vs channel",
+    "hint": "A permanent link pass does not rule out channel issues.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Assume the certification result proves the entire channel is flawless",
+      "Evaluate channel elements such as patch cords, equipment cords, and application specifics",
+      "Retest the building grounding electrode system only",
+      "Replace all firestops in the pathway"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-015",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A port identifier that directly corresponds to rack, panel, and position is BEST considered:",
+    "ref": "ITSIMM: Administration > Label schemes",
+    "hint": "Useful labels encode location logically.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A structured administration label",
+      "A shielding drain path",
+      "A type of OTDR launch reference",
+      "A firestop listing code"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-016",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A fiber loss test is repeated and gives very different results each time with no physical changes. MOST likely cause is:",
+    "ref": "ITSIMM: Testing > Measurement consistency",
+    "hint": "Inconsistent setup creates inconsistent data.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Unstable or inconsistent test setup, cleaning, or referencing",
+      "Improved connector polish after every measurement",
+      "Too much bonding between cabinets",
+      "A conduit fill error in the original design"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-017",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "A troubleshooting workflow should change only one variable at a time PRIMARILY so that:",
+    "ref": "ITSIMM: Troubleshooting > Method",
+    "hint": "Controlled changes keep troubleshooting evidence meaningful.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The site safety plan does not need revision",
+      "Cause and effect can be observed without creating new uncertainty",
+      "Patch panels do not require labels",
+      "OTDR dead zones become shorter"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "TST-018",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A report shows every link on one panel failing by a small consistent margin, while links elsewhere pass. MOST likely next check is to:",
+    "ref": "ITSIMM: Troubleshooting > Pattern analysis",
+    "hint": "Clustered failures point to a shared cause.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Investigate common factors such as termination practice, panel hardware, or test setup at that panel",
+      "Replace every workstation NIC on the floor",
+      "Install a larger TMGB",
+      "Reclassify the pathway as underfloor"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "TST-019",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY role of change control in cabling administration is to:",
+    "ref": "ITSIMM: Administration > Change control",
+    "hint": "Change control preserves system integrity over time.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Prevent any future MAC activity",
+      "Ensure modifications are tracked so labels, records, and physical plant stay aligned",
+      "Replace field testing after every move",
+      "Increase optical launch power margins"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-001",
+    "domain": "Principles of Transmission",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A balanced twisted-pair horizontal cable is untwisted farther than recommended while being terminated. Which effect is MOST likely to appear first in field performance?",
+    "ref": "ITSIMM: Principles of Transmission > Balanced cabling performance factors",
+    "hint": "Think about what pair twist is preserving at the point of termination.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "An increase in near-end crosstalk due to degraded pair geometry at the termination",
+      "A reduction in DC loop resistance because conductor spacing is increased",
+      "Improved return loss because the conductors are less tightly coupled",
+      "Lower propagation delay because the electrical path is shortened at the outlet"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "BMK3-002",
+    "domain": "Structured Cabling Systems",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "A designer wants to support an IP camera from a telecommunications room to a single device in an open-ceiling area without an intermediate telecommunications outlet. Within structured cabling terminology, the BEST description of this topology is:",
+    "ref": "ITSIMM: Structured Cabling Systems > Application-specific topologies and MPTL",
+    "hint": "Focus on the link model that ends in a plug for a device, not an outlet.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A cross-connect implemented with a consolidation point",
+      "A modular plug terminated link serving a specific device",
+      "An equipment cord extended through the pathway to the device",
+      "A centralized cabling run using an optical transition enclosure"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-003",
+    "domain": "General Safety Practices",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "While planning a cable pull above a suspended ceiling, the crew identifies energized electrical circuits, limited lighting, and a congested pathway. According to best-practice safety planning, the MOST appropriate action before starting work is to:",
+    "ref": "ITSIMM: General Safety Practices > Pre-job hazard assessment and safety planning",
+    "hint": "The question is about planning controls before installation begins.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Proceed with the pull using extra labor so the exposure time is reduced",
+      "Rely on the foreman's verbal briefing and correct hazards as they are encountered",
+      "Pause the task, review the site-specific hazards, required PPE, and access controls, then update the job plan",
+      "Move the pull to off-hours so fewer occupants are present and continue without further review"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "BMK3-004",
+    "domain": "Space Preparation & Cabling Support Systems",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A pathway run is being installed in a corridor ceiling. Which condition would MOST strongly indicate that the planned support method should be rejected before cable is placed?",
+    "ref": "ITSIMM: Space Preparation and Cabling Support Systems > Independent cable support requirements",
+    "hint": "Consider what is and is not an acceptable means of support for ICT cabling.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The support method leaves room for future cable additions",
+      "The planned support relies on ceiling-grid wires instead of an independent support system",
+      "The pathway route parallels other building services for part of the run",
+      "The cable route includes directional changes that require additional pull planning"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-005",
+    "domain": "Cable Installation",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "During a backbone pull, the crew must lubricate a cable to reduce pulling tension. The BEST practice is to:",
+    "ref": "ITSIMM: Cable Installation > Pulling practices and material compatibility",
+    "hint": "Compatibility and listed use matter more than friction reduction alone.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use any lubricant approved for electrical conduit as long as it reduces friction",
+      "Apply a manufacturer-compatible lubricant in a manner that does not compromise the cable jacket or listed components",
+      "Avoid lubricant entirely because any lubricant will invalidate transmission performance",
+      "Apply lubricant only at the destination end so jacket contamination is minimized"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-006",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A copper permanent link fails with excessive insertion loss but passes wiremap. The installer confirms the tester settings and adapter type are correct. Which corrective step is MOST appropriate next?",
+    "ref": "ITSIMM: Testing Cable and Troubleshooting > Diagnosing balanced copper test failures",
+    "hint": "A valid permanent-link failure should send you back to installation workmanship and link condition.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Re-terminate both ends and inspect for excess untwist, jacket strip length, and damage along the link",
+      "Replace the patch cords at the work area because insertion loss is dominated by equipment cords",
+      "Ignore the result if NEXT and return loss pass because insertion loss is secondary",
+      "Convert the record to a channel test because permanent-link limits are more stringent"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "BMK3-007",
+    "domain": "Firestopping Practices",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "Additional cables must be installed through an existing firestopped penetration. The BEST practice is to:",
+    "ref": "ITSIMM: Firestopping Practices > Maintaining rated penetrations during moves, adds and changes",
+    "hint": "Think in terms of preserving the rating of the assembly, not just filling the gap.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Remove only enough material to pass the new cables, then restore the penetration using a system appropriate to the opening and penetrating items",
+      "Core a second hole immediately adjacent to the original penetration to avoid disturbing the installed firestop",
+      "Use standard foam around the added cables because the original penetration already established the rating",
+      "Leave spare space in the opening unsealed to simplify future cable additions"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "BMK3-008",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A telecommunications bonding conductor is installed with unnecessary length, coils, and abrupt changes in direction. Relative to a shorter, straighter route, this arrangement MOST increases:",
+    "ref": "ITSIMM: Bonding and Grounding (Earthing) and Electrical Protection > Routing practices",
+    "hint": "The concern is surge/fault performance, not normal operation.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Inductance and impedance during transient events",
+      "Current-carrying ampacity under continuous load",
+      "Shield transfer impedance of optical fiber cable",
+      "Mechanical tensile rating of the conductor"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "BMK3-009",
+    "domain": "Specialty Systems Installation",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "An installer is adding cabling for a wireless access point above a hard ceiling in a finished area. The BEST installation approach is to:",
+    "ref": "ITSIMM: Specialty Systems Installation > Wireless systems and application-specific support practices",
+    "hint": "The wrong answers each violate a structured-cabling or support principle.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Terminate the horizontal cable on a patch panel in the ceiling space to shorten the device cord",
+      "Provide a compliant pathway and support method, then serve the device using the intended outlet or connection model for the application",
+      "Use spare security-system cable pairs if continuity tests are acceptable",
+      "Suspend the device cable from nearby mechanical supports if the cable weight is low"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-010",
+    "domain": "Project Management",
+    "difficulty": 3,
+    "style": "FIRST",
+    "q": "Before technicians begin a sizable installation, which item should be reviewed FIRST to reduce rework caused by scope misunderstandings?",
+    "ref": "ITSIMM: Project Management > Pre-installation document review",
+    "hint": "Start with the controlling job documents.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The individual technician's personal tool list",
+      "The approved drawings, specifications, and change information for the current job",
+      "The final as-built package from the previous project at the site",
+      "The distributor's promotional literature for the selected cabling products"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-011",
+    "domain": "Retrofits & Upgrades",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "In a retrofit project, abandoned cable is discovered above the ceiling in a pathway that is already near capacity. The MOST appropriate next action is to:",
+    "ref": "ITSIMM: Retrofits and Upgrades > Existing conditions and abandoned cable considerations",
+    "hint": "Retrofit work starts with evaluating what is already in the pathway.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Leave the abandoned cable in place unless it interferes with the current pull",
+      "Document the condition and address removal or disposition in accordance with project requirements and applicable practices before adding more cable",
+      "Bundle the abandoned cable tightly to reclaim as much pathway space as possible",
+      "Use the abandoned cable as supplemental support for the new installation where permitted by the owner"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-012",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A multimode fiber link passes continuity but fails loss limits after field termination. Which installation issue is MOST likely to produce this result without creating an open circuit?",
+    "ref": "ITSIMM: Testing Cable and Troubleshooting > Optical fiber loss troubleshooting",
+    "hint": "The link is complete, but performance is degraded.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "End-face contamination or poor connector workmanship causing elevated insertion loss",
+      "A polarity reversal that changes the direction of light propagation",
+      "Excessive bonding conductor length in the serving telecommunications room",
+      "A mislabeled adapter panel that changes the recorded cable ID"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "BMK3-013",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "A crew is terminating a screened twisted-pair system. To preserve the intended performance of the cabling system, the BEST practice is to:",
+    "ref": "ITSIMM: Cable Installation > Screened cabling termination practices",
+    "hint": "The question is asking about preserving system design intent, not improvising a field fix.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Bond the screen only if the link fails alien crosstalk testing",
+      "Maintain the manufacturer's termination method and hardware so screen continuity and pair geometry are preserved",
+      "Treat the cable exactly like unscreened twisted pair because the balanced signal conductors determine all performance",
+      "Remove screen continuity at the outlet end to reduce the possibility of ground loops"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-014",
+    "domain": "Data Centers",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "In a data center, why is disciplined administration of patching and labeling especially important during turnover and ongoing operations?",
+    "ref": "ITSIMM: Structured Cabling Systems / Data center-specific installation considerations > Administration",
+    "hint": "Think about operational impact in dense, highly interconnected environments.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because patch fields in data centers are used only for temporary circuits",
+      "Because high connection density increases the risk that an unrecorded change will affect service restoration and troubleshooting",
+      "Because data centers do not allow color coding for patching fields",
+      "Because labeling requirements replace the need for performance testing in critical spaces"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-015",
+    "domain": "General Safety Practices",
+    "difficulty": 2,
+    "style": "BEST",
+    "q": "A technician is preparing to use a ladder to access a cable route above ceiling level in an occupied space. Which action is BEST aligned with safe work practices?",
+    "ref": "ITSIMM: General Safety Practices > Access equipment and work-area control",
+    "hint": "The safe choice combines equipment inspection, setup, and area protection.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Place the ladder in the quickest access position and have a second technician stabilize it only if needed",
+      "Inspect the ladder condition, set it on a stable surface, and protect the work area before climbing",
+      "Lean the ladder against the suspended ceiling grid to distribute the side load",
+      "Carry the cable spool while climbing so the pull can begin immediately"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-016",
+    "domain": "Space Preparation & Cabling Support Systems",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "A pathway is routed through a telecommunications space that is expected to expand over the next two years. The BEST planning decision at installation time is to:",
+    "ref": "ITSIMM: Space Preparation and Cabling Support Systems > Capacity planning and future growth",
+    "hint": "This is about pathway planning, not just immediate installation convenience.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Fill the pathway close to its practical limit so current material costs are minimized",
+      "Provide a support system and pathway layout that accommodates current needs and reasonable growth without relying on ad hoc field additions",
+      "Use the shortest route regardless of access for future maintenance because cable can always be replaced later",
+      "Reserve space by leaving long unsupported spans between pathway supports"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-017",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "When documenting certification results for newly installed cabling, which record set is BEST suited to support acceptance, future troubleshooting, and moves/adds/changes?",
+    "ref": "ITSIMM: Testing Cable and Troubleshooting / Project Management > Documentation of test results",
+    "hint": "Think traceability from the measured link back to the installed asset.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Only overall pass/fail summaries, since detailed values can confuse future technicians",
+      "Complete identified test records tied to the link labels, test limits, and project documentation",
+      "Photographs of each outlet and rack position without electronic test files",
+      "A handwritten list of failed links only, because passing links do not require retention"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-018",
+    "domain": "Firestopping Practices",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A crew member suggests sealing an unlisted floor penetration with excess cable jacket pieces and general-purpose sealant because the opening is small. What is the MOST accurate response?",
+    "ref": "ITSIMM: Firestopping Practices > System selection and prohibited improvisation",
+    "hint": "The issue is not the size of the opening; it is preserving the rated assembly.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "That approach is acceptable for low-voltage cabling as long as the opening is not load-bearing",
+      "That approach may be used temporarily until the inspector identifies a permanent system",
+      "The penetration should be protected using an appropriate firestop system for the assembly and penetrating items, not improvised filler materials",
+      "The opening only requires firestopping if it passes through a smoke barrier and not a fire-rated assembly"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "BMK3-019",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "BEST",
+    "q": "An installer needs to bond telecommunications metallic components in a room where the building grounding infrastructure already exists. The BEST practice is to:",
+    "ref": "ITSIMM: Bonding and Grounding (Earthing) and Electrical Protection > Integration with building grounding system",
+    "hint": "Telecommunications bonding is not a standalone island.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Create an isolated telecommunications grounding point that remains separate from the building grounding system",
+      "Use the telecommunications bonding infrastructure so metallic ICT components are bonded into the building grounding system in the intended manner",
+      "Bond only active equipment and leave racks, pathways, and cable shields floating unless a fault occurs",
+      "Use the nearest cold-water pipe as the preferred telecommunications grounding point regardless of project design"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "BMK3-020",
+    "domain": "Project Management",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "During a project walkthrough, the customer asks for several outlet relocations that will affect pathway routing and quantities. The MOST appropriate technician response is to:",
+    "ref": "ITSIMM: Project Management > Scope control and change management",
+    "hint": "The key issue is authorization and documentation, not technical feasibility alone.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Make the changes immediately if they appear minor so the schedule is protected",
+      "Record the requested revisions and route them through the project's change process before proceeding beyond authorized scope",
+      "Refuse to discuss the request because only estimators can communicate with the customer",
+      "Complete the original scope first and then update the as-builts to match whichever changes were made in the field"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4001",
+    "domain": "Principles of Transmission",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "When a copper link passes wire map and length but fails NEXT margin, which installation detail is the MOST likely root cause?",
+    "ref": "ITSIMM v8 – Principles of Transmission",
+    "hint": "Think about what directly affects pair-to-pair coupling at the connection.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Pair twist was maintained too close to the IDC and contact resistance increased",
+      "Pairs were untwisted excessively at the point of termination",
+      "The cable jacket was stripped with a nonlisted tool",
+      "The pathway included a gradual offset around ductwork"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4002",
+    "domain": "Principles of Transmission",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A technician wants to minimize alien coupling when placing new balanced cables in a crowded pathway. Which action is MOST consistent with transmission-performance intent?",
+    "ref": "ITSIMM v8 – Principles of Transmission",
+    "hint": "External pair-to-pair interaction gets worse when bundles are overly tight.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Randomize lay lengths by mixing categories in the same bundle",
+      "Control bundle size and maintain pathway practices that avoid unnecessary compression",
+      "Increase pull tension so cables seat tightly and uniformly",
+      "Remove separators from larger cables so the bundle packs more efficiently"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4003",
+    "domain": "Principles of Transmission",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Return loss on a newly terminated channel is consistently worse than expected. Which field condition is the BEST first suspect?",
+    "ref": "ITSIMM v8 – Principles of Transmission",
+    "hint": "Return loss points to impedance consistency.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A localized impedance disturbance created by poor termination geometry",
+      "An equipment cord that is shorter than the horizontal run",
+      "A cable label placed too near the work-area outlet",
+      "A bonding conductor that is routed in parallel with the cable bundle"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4004",
+    "domain": "Principles of Transmission",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Why is preserving pair geometry during modular termination more important at higher transmission categories?",
+    "ref": "ITSIMM v8 – Principles of Transmission",
+    "hint": "Higher frequencies magnify small geometric errors.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because conductor dc resistance changes more dramatically with short untwisted sections",
+      "Because high-frequency performance is more sensitive to small impedance and coupling disturbances",
+      "Because PoE current requires tighter pair balance for heating control",
+      "Because jacket roundness determines optical attenuation at the connector"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4005",
+    "domain": "Principles of Transmission",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A field tester shows propagation delay within limits but delay skew near the maximum. Which interpretation is MOST appropriate?",
+    "ref": "ITSIMM v8 – Principles of Transmission",
+    "hint": "Skew compares pairs to each other, not total length alone.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The conductors are likely undersized for the intended application",
+      "The pairs are transmitting at noticeably different velocities that could affect some applications",
+      "The outlet probably has a reversed pair assignment on one termination block",
+      "The link length is too short to support balanced signaling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4006",
+    "domain": "Principles of Transmission",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "In balanced copper cabling, the functional reason for twisting conductors into pairs is primarily to:",
+    "ref": "ITSIMM v8 – Principles of Transmission",
+    "hint": "Twist affects coupling and balance.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Raise conductor ampacity for remote powering",
+      "Provide a larger contact surface at the termination point",
+      "Control electromagnetic coupling characteristics and support noise rejection",
+      "Eliminate the need for separation from power conductors"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "4007",
+    "domain": "Structured Cabling Systems",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A single horizontal cable run extends from the telecommunications room directly to one device in an open office ceiling without a faceplate outlet. Which structured-cabling description BEST fits this arrangement?",
+    "ref": "ITSIMM v8 – Structured Cabling Systems",
+    "hint": "Think of the recognized direct-to-device variant.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A cross-connect link",
+      "A modular plug terminated link serving a specific device",
+      "An extended equipment cord",
+      "A consolidation point assembly"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4008",
+    "domain": "Structured Cabling Systems",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Which component in a structured cabling system is specifically intended to provide an interconnection point in the horizontal pathway for reconfiguration of work-area serving cables?",
+    "ref": "ITSIMM v8 – Structured Cabling Systems",
+    "hint": "This is not the same thing as a telecommunications room.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Entrance facility",
+      "Consolidation point",
+      "Main cross-connect",
+      "Equipment distributor"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4009",
+    "domain": "Structured Cabling Systems",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A designer is choosing between an interconnect and a cross-connect field. What is the MOST accurate distinction?",
+    "ref": "ITSIMM v8 – Structured Cabling Systems",
+    "hint": "One method connects hardware directly; the other uses a distinct connecting field.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Only a cross-connect introduces jumper or patching fields that connect one cabling segment to another",
+      "Only an interconnect may be located inside a telecommunications room",
+      "A cross-connect is used only for optical fiber and an interconnect only for copper",
+      "An interconnect requires active equipment between each field"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4010",
+    "domain": "Structured Cabling Systems",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Which space is the recognized center of a building backbone and horizontal cabling system from a cross-connect perspective?",
+    "ref": "ITSIMM v8 – Structured Cabling Systems",
+    "hint": "Think core distribution, not service provider handoff.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Equipment room hosting the main cross-connect",
+      "Work area containing the most outlets",
+      "Service entrance where the carrier demarcation is located",
+      "Zone enclosure serving open office furniture"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4011",
+    "domain": "Structured Cabling Systems",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A project requires frequent workstation churn in an open office while preserving the permanent horizontal link. Which design approach is MOST aligned with structured-cabling flexibility?",
+    "ref": "ITSIMM v8 – Structured Cabling Systems",
+    "hint": "The permanent link should stay intact while moves happen locally.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Home-run each move directly back to the main cross-connect",
+      "Place a consolidation point within the horizontal distribution area",
+      "Use only work-area cords long enough to reach any desk location",
+      "Convert the area to patch-by-exception within the entrance facility"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4012",
+    "domain": "Structured Cabling Systems",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "In structured cabling language, the permanent link excludes which item?",
+    "ref": "ITSIMM v8 – Structured Cabling Systems",
+    "hint": "Channel elements extend beyond the installed fixed cabling.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Horizontal cable",
+      "Telecommunications outlet/connector",
+      "Patch cord or equipment cord",
+      "Consolidation point hardware"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "4013",
+    "domain": "Safety",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Before beginning work above a suspended ceiling in an occupied area, which action is the MOST appropriate from a safety-planning standpoint?",
+    "ref": "ITSIMM v8 – Safety",
+    "hint": "The question is about task-specific planning, not generic experience.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Rely on general company policy and begin once tools are staged",
+      "Review site-specific hazards, access controls, PPE, and emergency procedures for that task",
+      "Have the senior installer approve the route and skip the formal job hazard review",
+      "Delay only if the route crosses electrical conduits"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4014",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A crew discovers unidentified cable in a pathway that may be associated with life-safety systems. The BEST immediate response is to:",
+    "ref": "ITSIMM v8 – Safety",
+    "hint": "Unknown systems should not be assumed inactive.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Remove it to improve pathway fill and document the change afterward",
+      "Treat it as abandoned unless it is tagged",
+      "Stop and verify ownership/function before disturbing it",
+      "Bundle it aside temporarily so the new install can proceed"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "4015",
+    "domain": "Safety",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which statement BEST reflects safe ladder use during telecommunications installation?",
+    "ref": "ITSIMM v8 – Safety",
+    "hint": "Focus on general safe-use principles rather than a single material type.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A ladder may be repositioned while occupied if a second technician stabilizes it",
+      "Top-cap standing is acceptable for short-duration terminations",
+      "The ladder should be selected, inspected, and used within its rating and intended configuration",
+      "Fiberglass ladders are required for every indoor cabling task regardless of hazard"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "4016",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When drilling through a wall into an adjacent space with limited visibility, the MOST important control before penetration is to:",
+    "ref": "ITSIMM v8 – Safety",
+    "hint": "The hazard exists beyond the visible surface.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Increase drill speed so contact time is minimized",
+      "Verify the opposite side and hidden-space conditions before drilling",
+      "Use a larger bit so the opening does not need to be reworked",
+      "Route the cable first and drill only if the pull becomes difficult"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4017",
+    "domain": "Safety",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A pathway is congested and partially obstructed. Which action is MOST appropriate before assigning additional installers to force the pull through?",
+    "ref": "ITSIMM v8 – Safety",
+    "hint": "More labor does not solve an unsafe or improper pull plan.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Increase the maximum pulling tension because a larger crew can distribute the load",
+      "Reassess the route, obstructions, supports, and pull plan before continuing",
+      "Switch to a smaller pull rope and continue with the same route",
+      "Remove jacket markings to reduce friction in the pathway"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4018",
+    "domain": "Safety",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When working in a telecommunications space that also contains power equipment, the installer should FIRST:",
+    "ref": "ITSIMM v8 – Safety",
+    "hint": "The key is hazard recognition and safe working practice.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Assume low-voltage work is exempt from electrical hazard controls",
+      "Identify applicable hazards and maintain required clearances and access practices",
+      "Bond every rack in the room before entering the space",
+      "Shut down all adjacent electrical equipment as a standard precaution"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4019",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which condition would MOST strongly justify rejecting a planned cable support method before installation begins?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Ceiling support hardware is not the same as a cable support system.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The route includes several direction changes",
+      "The support relies on the suspended-ceiling grid system instead of an independent support means",
+      "The route passes through more than one tenant area",
+      "The support spacing is visually uniform"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4020",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "In pathway planning, why are bend provisions and access points important beyond simply making installation easier?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Think long-term serviceability as well as the initial pull.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "They increase cable category rating after installation",
+      "They help preserve cable integrity and allow future administration and maintenance",
+      "They eliminate the need for pathway-fill calculations",
+      "They permit bonding conductors to share the same slack storage area"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4021",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A telecommunications room layout places equipment directly in front of wall-mounted termination fields. What is the BEST design concern?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "The issue is operational access, not temperature or conductor sizing.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The room may become too cool for active equipment",
+      "Required working clearance and accessibility for installation and maintenance may be compromised",
+      "The backbone pathway will automatically exceed fill limits",
+      "The grounding electrode conductor will need upsizing"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4022",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A crew is routing telecommunications cable in a corridor ceiling that already contains HVAC, sprinkler piping, and lighting. Which practice is MOST appropriate?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Telecom supports should be coordinated, not improvised from other systems.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use the nearest existing support wire to reduce pathway congestion",
+      "Coordinate a dedicated support route that avoids conflicts with other building systems",
+      "Rest the bundle on the ceiling tiles where access is best",
+      "Tie the bundle to sprinkler piping at intervals where independent supports are not available"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4023",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the PRIMARY reason pathway-fill planning matters before a cable installation begins?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Fill is about physical management, not changing cable type.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It ensures labels will fit on each cable bundle",
+      "It helps maintain installability, future growth capacity, and cable performance protection",
+      "It determines the transmission category of the cable",
+      "It replaces the need for pull-tension calculations"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4024",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A conduit route has multiple bends and a long pull distance. Which action is the MOST appropriate during pre-installation planning?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Route geometry drives pull difficulty.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Assume lubricant alone will offset any route complexity",
+      "Evaluate pull points, bend accumulation, and cable-side loading before the pull",
+      "Increase bundle size so fewer total pulls are required",
+      "Convert the run to unsupported open-top distribution in the ceiling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4025",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why are telecommunications spaces typically kept separate from unrelated building storage functions?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Think operations and reliability.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Stored items improve acoustic damping around racks",
+      "Storage use can compromise access, cleanliness, and environmental control for ICT systems",
+      "Stored items increase room grounding efficiency by adding metal mass",
+      "It prevents wireless interference with horizontal cabling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4026",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "An installer proposes leaving large coils of spare horizontal cable above the ceiling near the work area for future moves. Which response is MOST appropriate?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Random slack storage creates multiple problems.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Accept it because spare coil storage improves channel balance",
+      "Accept it if the coil is tied tightly enough to the support wire",
+      "Reject it because excess cable storage in random ceiling locations is poor pathway and administration practice",
+      "Reject it only if the cable is optical fiber"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "4027",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the BEST reason to coordinate pathway penetrations before rough-in is complete?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Penetrations affect both routing and restoration.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It guarantees all penetrations will be core-drilled rather than sleeved",
+      "It reduces rework and helps ensure the openings, sleeves, and firestop strategy align with the cabling design",
+      "It allows the telecommunications contractor to avoid pathway labeling",
+      "It eliminates the need to inspect support spacing after installation"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4028",
+    "domain": "Pathways & Spaces",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A room selected as a telecommunications room is adjacent to a source of moisture risk. Which concern is MOST appropriate to raise during planning?",
+    "ref": "ITSIMM v8 – Pathways & Spaces",
+    "hint": "Environmental suitability matters for the room itself.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Moisture exposure can affect both equipment reliability and cabling infrastructure suitability",
+      "Moisture mainly affects only optical connectors and not copper hardware",
+      "Moisture risk is acceptable if the room has painted walls",
+      "Moisture concerns are limited to exterior entrance facilities"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4029",
+    "domain": "Space Preparation and Support",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Before installing racks and termination hardware in a newly built room, which preparation step is MOST appropriate?",
+    "ref": "ITSIMM v8 – Space Preparation and Support",
+    "hint": "Readiness matters before equipment is mounted.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Confirm the space is clean, accessible, and ready for mounting without conflicting trades or unfinished surfaces",
+      "Terminate sample cables first to verify room humidity",
+      "Install patch cords before bonding conductors so routing can be visualized",
+      "Delay any inspection until active electronics are energized"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4030",
+    "domain": "Space Preparation and Support",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A wall field is planned on a surface with uncertain backing strength. Which response is BEST?",
+    "ref": "ITSIMM v8 – Space Preparation and Support",
+    "hint": "The wall must support the installed load.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Proceed if the hardware manufacturer lists the field for indoor use",
+      "Verify adequate mounting support and reinforcement before installation",
+      "Use longer patch cords so the field carries less strain",
+      "Reduce port density so bonding is not required"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4031",
+    "domain": "Space Preparation and Support",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When overhead ladder rack is introduced into a room, the MOST important early coordination issue is:",
+    "ref": "ITSIMM v8 – Space Preparation and Support",
+    "hint": "Think integration with the room layout.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Selecting a rack finish that matches the room color",
+      "Ensuring clear routing, support, and interface to pathways and equipment without blocking access",
+      "Sizing patch cords to exactly match rack width",
+      "Keeping ladder rack isolated from every bonding connection"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4032",
+    "domain": "Space Preparation and Support",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A contractor proposes fastening cable supports to miscellaneous building elements encountered along the route. Which standard-installation concern is MOST applicable?",
+    "ref": "ITSIMM v8 – Space Preparation and Support",
+    "hint": "Suitable support methods matter, not just whether something is nearby.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It may result in inconsistent support that is not intended or suitable for telecommunications cabling",
+      "It will always lower dc resistance of balanced conductors",
+      "It is preferable to a designed support system because it adapts to field conditions",
+      "It is acceptable whenever the cable is plenum rated"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4033",
+    "domain": "Space Preparation and Support",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Which action BEST supports long-term maintainability in a telecommunications room?",
+    "ref": "ITSIMM v8 – Space Preparation and Support",
+    "hint": "Maintainability is about future work as much as day one.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Using available floor space for spare material storage",
+      "Organizing support hardware and routing so future additions do not block access to existing terminations",
+      "Concentrating all pathway entries onto one wall regardless of congestion",
+      "Leaving unlabeled slack above racks for service loops"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4034",
+    "domain": "Space Preparation and Support",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "What is the MOST appropriate reason to inspect room penetrations and sleeves before cable placement?",
+    "ref": "ITSIMM v8 – Space Preparation and Support",
+    "hint": "This is about pathway readiness and restoration.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "To verify they align with the intended pathway design and can be restored appropriately after installation",
+      "To ensure the room can support PoE class negotiations",
+      "To reduce the number of labels needed on backbone cables",
+      "To determine whether optical connectors should be UPC or APC polished"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4035",
+    "domain": "Cable Installation",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "During a backbone pull, which practice is MOST consistent with protecting cable from installation damage?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "The concern is controlled mechanical stress.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use enough pulling force to complete the run quickly while the jacket is still cool",
+      "Monitor tension and sidewall loading while using methods compatible with the cable design",
+      "Tighten all temporary ties so the cable cannot shift during the pull",
+      "Allow the cable reel to free-spin so twist does not accumulate"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4036",
+    "domain": "Cable Installation",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A crew needs lubricant for a difficult conduit pull. The BEST choice is to:",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Compatibility matters.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use any lubricant commonly stocked for electrical work",
+      "Select a lubricant compatible with the cable jacket and installation method",
+      "Avoid lubricant because it always voids listing compliance",
+      "Apply petroleum-based lubricant sparingly only at the destination end"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4037",
+    "domain": "Cable Installation",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which condition is MOST likely to damage performance during copper installation even if the jacket shows no obvious break?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Think conductor geometry, not just visible jacket cuts.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Moderate dust accumulation on the reel flange",
+      "Excessive deformation from pulling or cinching too tightly",
+      "A pathway route with one additional 90-degree turn",
+      "A pull sequence that starts from the upper floor instead of the lower floor"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4038",
+    "domain": "Cable Installation",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why should temporary support and handling methods be controlled during installation of optical fiber cable?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Fiber is sensitive to both pulling and bending conditions.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "To preserve tensile and bend conditions within acceptable limits",
+      "To increase connector polish quality after termination",
+      "To reduce need for optical loss testing",
+      "To allow fiber counts to be changed later"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4039",
+    "domain": "Cable Installation",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A technician plans to dress a bundle tightly with many closely spaced ties to improve appearance. Which response is MOST appropriate?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Neatness should not come at the expense of cable integrity.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Approve it because a compact bundle typically improves transmission consistency",
+      "Approve it only for shielded cable because the shield absorbs compression",
+      "Reject it because over-compression can harm cable geometry and long-term performance",
+      "Reject it only if the installation is in a data center hot aisle"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "4040",
+    "domain": "Cable Installation",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When transitioning cable from pathway to rack or termination field, the MOST appropriate objective is to:",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "The transition zone must still respect installation limits.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Maintain routing that protects bend, support, and serviceability requirements",
+      "Reduce all slack to zero so no future adjustment is possible",
+      "Tie the cable to active equipment handles for strain relief",
+      "Route copper and power together to simplify future tracing"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4041",
+    "domain": "Cable Installation",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A long horizontal run will be installed through multiple pathway segments by several crews. What is the BEST way to control damage risk?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Consistency and coordination matter on complex pulls.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Allow each crew to use its own preferred pull method for efficiency",
+      "Coordinate a single pull plan with defined handoff points, limits, and communication",
+      "Increase allowable tension because multiple crews can share the load",
+      "Stage the cable in tighter coils so route changes are easier"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4042",
+    "domain": "Cable Installation",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the MOST appropriate reason to observe manufacturer setup guidance when unreeling or paying off cable?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Cable handling begins before the pull itself.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It helps prevent twists, kinks, and avoidable mechanical stress during installation",
+      "It changes the category rating of the installed link",
+      "It removes the need for post-installation inspection",
+      "It ensures pathway fill can be recalculated automatically"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4043",
+    "domain": "Cable Installation",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A cable pull approaches the maximum allowed tension. Which action is BEST?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Near-limit readings are a warning, not a target.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Continue steadily because momentary overage rarely affects performance",
+      "Stop, reassess the route and pulling method, and reduce installation stress before proceeding",
+      "Add more installers to maintain the same path and force",
+      "Shorten the labeling format to reduce bundle drag"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4044",
+    "domain": "Cable Installation",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "After cable placement, why is visual inspection of routing and support still important before termination begins?",
+    "ref": "ITSIMM v8 – Cable Installation",
+    "hint": "Correcting support/routing problems gets harder later.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because many installation issues are easier to correct before hardware is populated and dressed",
+      "Because inspection at this stage determines the final network addressing plan",
+      "Because only visual inspection can verify attenuation",
+      "Because it is required only for optical backbones"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4045",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "At a copper outlet termination, what is the BEST reason to keep jacket removal and pair opening to a practical minimum?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Termination geometry is critical.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "To preserve pair balance and transmission performance at the connector",
+      "To improve patch-cord flexibility at the work area",
+      "To lower the conductor operating temperature under load",
+      "To make visual pair identification more difficult for unauthorized users"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4046",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A modular jack is reterminated after a performance failure. Which field practice is MOST appropriate?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Retermination should restore the hardware to intended use.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reuse the previously seated conductor positions to avoid additional trim loss",
+      "Follow the termination method exactly, ensuring conductor placement and seating are correct for that hardware",
+      "Switch pair assignments if wire map still passes",
+      "Increase jacket strip length so the conductors seat deeper"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4047",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A channel intended to support remote powering is being reviewed. Which observation is MOST relevant from an installation-quality perspective?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Remote powering adds a thermal consideration.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Aesthetically uniform tie spacing along each bundle",
+      "Bundling and cable management practices that may influence heat buildup in dense groups",
+      "The use of mixed-color patch cords in the equipment room",
+      "The order in which the outlets were labeled during rough-in"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4048",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the MOST appropriate interpretation when a copper link passes wire map but fails insertion loss margin?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Wire map is necessary but not sufficient.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The conductors are in the correct pinout, but the transmission path still has excessive attenuation or related impairment",
+      "The outlet must have a split pair because wire map cannot detect pin reversals",
+      "The bonding network is definitely open at the rack",
+      "The tester is reading the patch cord category instead of the permanent link"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4049",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Why is excessive cable compression under support hardware a particular concern for balanced twisted-pair cable?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Shape changes matter electrically.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It can change geometry and impedance, degrading performance without obvious jacket failure",
+      "It increases the dielectric strength of the insulation",
+      "It reduces susceptibility to external noise by compacting the pairs",
+      "It ensures more stable patch-cord insertion cycles"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4050",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A technician is choosing between field-terminated plug hardware options for a direct-connect device run. Which factor is MOST important?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Compatibility beats generic marketing claims.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Matching the hardware to the cable construction and application",
+      "Selecting the plug with the highest advertised gold thickness regardless of cable type",
+      "Using the smallest plug body so bend radius is easier to ignore",
+      "Choosing a plug that allows pair transposition if needed"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4051",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "When troubleshooting intermittent performance on a copper run, which physical condition is MOST likely to create an issue that appears only under movement or temperature changes?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Intermittent faults often come from connections.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A label wrapped too close to the cable sheath",
+      "Marginal termination seating or conductor contact integrity",
+      "A patch panel mounted on a bonded rack",
+      "An outlet installed on a flush rather than surface box"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4052",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the BEST reason to preserve pair identification and sequence carefully during termination?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Correct pair assignment matters beyond simple continuity.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It improves the visual symmetry of the termination block",
+      "It supports correct pinout and helps avoid split-pair or performance-related errors",
+      "It reduces the need for administration records",
+      "It allows the cable to be shared with coaxial applications later"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4053",
+    "domain": "Copper",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A run serving a wireless access point is converted from a standard outlet to a modular plug terminated link. Which installation decision remains MOST important?",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Changing link style does not remove installation rules.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Keeping the device mounting bracket electrically isolated from the ceiling grid",
+      "Using components and termination practices appropriate to the recognized link type",
+      "Eliminating pathway supports because the cable will not be repatched often",
+      "Replacing the horizontal cable with stranded conductors for flexibility"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4054",
+    "domain": "Copper",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When balancing neat appearance with copper performance at a patch panel, the BEST principle is to:",
+    "ref": "ITSIMM v8 – Copper",
+    "hint": "Good workmanship protects performance.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Prioritize the tightest possible dressing because appearance predicts performance",
+      "Dress cables neatly while avoiding bends, compression, and geometry disturbances near terminations",
+      "Leave all cables loose and unsupported behind the panel",
+      "Bundle all categories together tightly to equalize spacing"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4055",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "During optical fiber routing to an enclosure, which condition is MOST likely to increase attenuation immediately after installation?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Macrobend stress is a classic optical-loss problem.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A label placed on the outer jacket near the splice tray",
+      "A bend tighter than the cable or cord is designed to accommodate",
+      "A grounded rack in the same room as the enclosure",
+      "A patch cord with a shorter-than-average length"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4056",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the PRIMARY reason to keep connector endfaces clean during testing and turn-up?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Dirty optics can look like bad cable.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Contamination can increase loss and create misleading test results",
+      "Cleanliness mainly affects color coding, not optical performance",
+      "It prevents the need for polarity verification",
+      "It improves jacket flame rating"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4057",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A splice tray is being organized after several fibers were rerouted. Which practice is MOST appropriate?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Tray organization should protect fibers and permit service.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use the smallest loops possible to maximize tray capacity",
+      "Route and secure fibers so bend management and future access are both preserved",
+      "Stack splice protectors loosely so heat can dissipate faster",
+      "Tighten retention points until the buffered fibers cannot move"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4058",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When verifying an optical link, why is polarity confirmation important in addition to attenuation testing?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Loss alone does not prove Tx is reaching Rx.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because a link can exhibit acceptable loss values at the wrong wavelength only when polarity is reversed",
+      "Because transmit-to-receive continuity is required for the link to function even if physical loss is low",
+      "Because polarity determines connector cleanliness requirements",
+      "Because reversed polarity changes the fiber type from multimode to single-mode"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4059",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A field technician sees fluctuating loss results during repeated tests on the same fiber pair. Which cause is MOST plausible?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Fluctuation often points to interface condition.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A stable macrobend in the backbone cable",
+      "Connector contamination or inconsistent mating condition",
+      "An accurately documented polarity map",
+      "A splice tray with adequate slack storage"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4060",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Which handling approach is MOST appropriate when preparing to terminate or splice optical fiber?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Preparation quality matters.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Work quickly so the fiber is exposed for the shortest possible time, even if the area is cluttered",
+      "Use a clean, controlled work area and procedures that protect the fibers and components",
+      "Strip multiple fibers at once and separate them after cleaving",
+      "Skip inspection because insertion loss testing will reveal all defects later"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4061",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Why is bend management inside fiber enclosures important even after the cable has passed installation and continuity checks?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Passing initial checks does not eliminate future bend sensitivity.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because post-installation bends can still create attenuation or long-term reliability issues",
+      "Because enclosure bend control changes the fiber count on the link",
+      "Because only enclosure bends affect polarity",
+      "Because bend management is needed only for multimode fiber"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4062",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A backbone fiber cable enters an enclosure with little service slack. What is the BEST concern?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Think future work, not just today's splice.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Too little slack can complicate future maintenance and increase handling stress during re-entry",
+      "Too little slack improves attenuation but reduces polarity control",
+      "Slack is unnecessary if the enclosure is bonded",
+      "Service slack affects only shielded copper systems"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4063",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which statement BEST describes the relationship between connector inspection and cleaning?",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "It is a deliberate workflow, not guesswork.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Cleaning should be performed repeatedly without inspection to avoid handling damage",
+      "Inspection and cleaning are part of a controlled process used to verify endface condition before mating or testing",
+      "Inspection is needed only after a link fails certification",
+      "Cleaning is optional if factory patch cords are used"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4064",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When selecting fiber patch cords for a system, the MOST appropriate consideration is to:",
+    "ref": "ITSIMM v8 – Fiber",
+    "hint": "Compatibility first.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Match fiber type and connector interface to the application and installed cabling",
+      "Use any connector that fits physically because attenuation differences are negligible",
+      "Favor the thickest jacket regardless of enclosure capacity",
+      "Select cords by color preference so administration is simplified"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4065",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A permanent link test fails with marginal NEXT on several pairs, but wire map and length are normal. What is the BEST first field action?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Start where NEXT problems are commonly introduced.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Replace the tester battery and retest at a lower accuracy level",
+      "Inspect both terminations for excessive untwist, pair placement, and seating issues",
+      "Shorten the patch cords used by the tester",
+      "Replace the bonding conductors serving the rack"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4066",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why is it important to confirm the tester is configured for the correct test limit and link model before certifying cabling?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Test results are only meaningful in the right context.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because a misconfigured tester can produce results that are not valid for the installed system",
+      "Because the tester cannot measure length until the limit is selected",
+      "Because only the selected limit determines wire map accuracy",
+      "Because calibration is unnecessary when the correct limit is chosen"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4067",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A copper link intermittently drops service, yet repeated certification tests pass. Which troubleshooting step is MOST appropriate next?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Certification passing does not rule out channel-side or intermittent connection issues.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Focus only on pathway fill because intermittent issues are always thermal",
+      "Investigate patching, active ports, and connection stability under normal operating conditions",
+      "Reclassify the link to a lower category so the results are less sensitive",
+      "Replace all horizontal cable labels"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4068",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A fiber link shows higher-than-expected attenuation. Which check is MOST appropriate before concluding the cable itself is defective?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Rule out common optical test factors first.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Verify cleanliness, reference method, polarity, and connector condition",
+      "Reterminate the nearest copper patch panel",
+      "Increase the source power above normal test conditions",
+      "Move the cable to another tray to reduce pathway fill"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4069",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "When multiple newly installed copper links fail in the same telecommunications room with similar symptoms, which cause is MOST plausible?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Common symptoms often indicate a common process error.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A shared workmanship or configuration issue at common termination points",
+      "Independent random jacket defects on every run",
+      "Excessive workstation movement in remote office areas",
+      "Localized optical contamination in the backbone enclosure"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4070",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the BEST purpose of recording test results with link identifiers and dates?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Results without traceability lose value quickly.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It replaces the need for as-built drawings",
+      "It provides traceability for acceptance, troubleshooting, and future changes",
+      "It allows test equipment to skip calibration reminders",
+      "It is only useful for fiber installations"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4071",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A technician suspects a split pair on a terminated outlet. Which result would MOST strongly support that suspicion?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Split pair can hide behind continuity if the pins still land correctly.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Correct pin continuity combined with unacceptable performance behavior",
+      "A measured length slightly shorter than the design target",
+      "A rack-bonding conductor routed separately from horizontal cable",
+      "A patch-panel label that does not match the room number"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4072",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "After correcting a failed termination, what is the MOST appropriate verification step?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Verification should match the original acceptance method.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Retest the affected link using the proper configuration and document the updated result",
+      "Assume the issue is resolved if wire map now passes",
+      "Test only one pair to save time if the others were not changed",
+      "Skip documentation because the original failed result is already archived"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4073",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which troubleshooting approach is MOST effective when symptoms are inconsistent and several recent changes occurred in the same area?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Discipline prevents chasing noise.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Change multiple variables at once to reach a faster resolution",
+      "Use a controlled process that isolates one variable at a time and records findings",
+      "Replace the horizontal cable first because it is the most difficult component to verify",
+      "Ignore administration records until physical faults are ruled out"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4074",
+    "domain": "Testing & Troubleshooting",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why is reference-cord condition important during field testing?",
+    "ref": "ITSIMM v8 – Testing & Troubleshooting",
+    "hint": "Test setup quality matters.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Reference cords are not part of the measurement path on modern testers",
+      "Poor reference cords can distort results and lead to false conclusions about installed cabling",
+      "Reference cords only influence wire-map results, not performance tests",
+      "Any certified patch cord can be used interchangeably without regard to the test setup"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4075",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "After installing new cabling through a rated barrier, what is the MOST appropriate next step?",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "Rated assemblies require a proper restoration method.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Leave the opening partially accessible until turnover in case another cable must be added",
+      "Restore the penetration using an appropriate listed firestop system for the condition",
+      "Pack the opening tightly with any noncombustible material available on site",
+      "Seal only the visible room side because smoke migration is the primary concern"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4076",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why is it important to distinguish between a sleeve, a pathway element, and the firestop system used with it?",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "One creates the opening path; the other restores the barrier.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because only sleeves require labeling",
+      "Because the penetration hardware and the firestop method serve different functions and must be coordinated",
+      "Because firestop systems determine cable category",
+      "Because pathways in rated walls may not contain telecommunications cabling"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4077",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A contractor wants to add cable to an existing firestopped opening by pushing it through leftover sealant without opening the assembly properly. What is the BEST response?",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "Firestop performance depends on the installed system, not convenience.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Allow it if the cable jacket is plenum rated",
+      "Allow it if the opening is above a suspended ceiling",
+      "Reject it because modifications must preserve the integrity of the listed firestop condition",
+      "Reject it only if optical fiber is being added"
+    ],
+    "answer": 2
+  },
+  {
+    "id": "4078",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the MOST appropriate reason to document firestopped penetrations during closeout?",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "Documentation matters when the opening is revisited.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "To correlate penetration locations and conditions for inspection, maintenance, and future changes",
+      "To reduce the number of pathway supports needed later",
+      "To establish the category rating of adjacent copper links",
+      "To eliminate the need for room numbering"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4079",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which field observation MOST strongly suggests a penetration restoration should be questioned before acceptance?",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "The issue is whether the restoration matches a recognized condition.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The pathway is routed near other building services",
+      "The firestop material used cannot be tied to the specific opening condition or listed system",
+      "The cable bundle is labeled on both sides of the wall",
+      "The sleeve extends slightly beyond the finished surface"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4080",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When planning cable additions through rated construction, the BEST strategy is to:",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "Planning prevents improvised penetrations.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use any existing opening that appears large enough",
+      "Coordinate pathway and restoration methods so the rated assembly can be properly maintained",
+      "Avoid sleeves because they complicate testing",
+      "Delay all firestop work until final occupancy"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4081",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Why is an abandoned cable decision relevant to firestopping work in some projects?",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "The penetration condition changes when contents change.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because removed cable can change the opening condition that the restoration must address",
+      "Because abandoned cable improves smoke sealing by filling voids",
+      "Because firestopping is required only when cable is removed",
+      "Because leaving abandoned cable avoids the need for pathway administration"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4082",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "The MOST appropriate distinction between smoke sealing and full firestop restoration is that:",
+    "ref": "ITSIMM v8 – Firestopping Practices",
+    "hint": "The rating objective is broader than just air movement.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "They are interchangeable terms for any cable-penetration sealing method",
+      "A full firestop restoration must address the rated assembly condition, not merely close visible gaps",
+      "Smoke sealing is preferred for backbone openings and firestopping for horizontal openings",
+      "Only optical penetrations require firestop restoration"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4083",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "What is the PRIMARY purpose of bonding telecommunications metallic components together within a room?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "Bonding is about potential equalization.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "To provide a preferred path for normal load current from active equipment",
+      "To equalize potential between conductive parts and reduce hazardous differences",
+      "To improve optical loss performance on adjacent fiber links",
+      "To eliminate the need for surge protection at entrances"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4084",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "A bonding conductor is attached to painted metal hardware. Which corrective action is MOST appropriate?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "Paint interferes with the electrical bond.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Add dielectric tape under the lug to protect the finish",
+      "Establish proper metal-to-metal contact using suitable listed hardware and installation practice",
+      "Increase conductor length to improve flexibility",
+      "Route the conductor alongside data cables to stabilize potential"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4085",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which condition is MOST likely to compromise the effectiveness of a telecommunications bonding connection?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "Connection quality matters as much as conductor presence.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "A conductor route that is visibly neat and direct",
+      "Loose or contaminated connection surfaces at the bonding interface",
+      "A rack located near an overhead ladder rack",
+      "A conductor identified by green insulation"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4086",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why should bonding conductors be installed in an orderly and protected manner rather than left loosely routed behind equipment?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "Mechanical protection supports electrical continuity.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because orderly routing improves signal throughput in balanced cabling",
+      "Because it supports reliability, inspection, and reduced risk of physical damage or disconnection",
+      "Because bonding conductors are part of the horizontal channel measurement",
+      "Because loose routing lowers conductor resistance"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4087",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A rack line is expanded and one new rack is mechanically adjacent to bonded racks but no bonding jumper is installed to it. What is the BEST assessment?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "Do not rely on incidental contact for intentional bonding.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Mechanical contact alone should be assumed sufficient unless testing later shows otherwise",
+      "The new rack should be intentionally bonded as part of the telecommunications bonding scheme",
+      "Only racks containing optical hardware require bonding",
+      "The omission is acceptable if patch panels are nonshielded"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4088",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the MOST appropriate reason to label or document the telecommunications bonding infrastructure?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "Administration matters here too.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "It supports inspection, maintenance, and future modifications to the bonding network",
+      "It changes the conductor ampacity rating",
+      "It reduces the number of pathway penetrations required",
+      "It is used primarily to establish cable category compliance"
+    ],
+    "answer": 0
+  },
+  {
+    "id": "4089",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "Which statement BEST describes the relationship between bonding and grounding in ICT spaces?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "The concepts are related but not identical.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Bonding and grounding are identical terms and can be used interchangeably without context",
+      "Bonding joins conductive elements together, while grounding relates the system to earth or a reference point through the building grounding infrastructure",
+      "Grounding is used only for shielded cable and bonding only for fiber",
+      "Bonding is optional whenever the equipment room includes a main cross-connect"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4090",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "When inspecting a completed room, which observation MOST strongly indicates a bonding issue that should be corrected?",
+    "ref": "ITSIMM v8 – Bonding & Grounding",
+    "hint": "Presence alone does not prove effectiveness.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Patch cords are color-coded by application",
+      "A conductor is present but terminates on hardware with poor contact surfaces and uncertain continuity",
+      "The rack line has vertical cable managers installed",
+      "The room includes both copper and optical backbone terminations"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4091",
+    "domain": "Specialty Systems",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A ceiling-mounted wireless access point will be served without a faceplate outlet. Which design decision remains MOST important?",
+    "ref": "ITSIMM v8 – Specialty Systems Installation",
+    "hint": "Special devices still need a recognized cabling method.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Applying workstation labeling rules to the device enclosure only",
+      "Selecting a recognized cabling approach and hardware appropriate to the supported device connection method",
+      "Eliminating pathway support because the device is fixed in place",
+      "Using stranded horizontal cable to simplify service loops"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4092",
+    "domain": "Specialty Systems",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why do specialty systems such as cameras, access-control devices, and wireless access points still demand disciplined administration practices?",
+    "ref": "ITSIMM v8 – Specialty Systems Installation",
+    "hint": "Nontraditional endpoints still need traceability.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because those systems are exempt from structured cabling records",
+      "Because device-focused cabling can still create troubleshooting and lifecycle issues if not documented consistently",
+      "Because administration applies only to optical backbones",
+      "Because specialty systems require fewer identifiers than standard outlets"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4093",
+    "domain": "Specialty Systems",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A security device is installed in a location with limited future access. Which installation approach is MOST appropriate?",
+    "ref": "ITSIMM v8 – Specialty Systems Installation",
+    "hint": "Inaccessible devices need thoughtful serviceability.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Minimize all service allowance because any extra cable invites tampering",
+      "Plan support, connectorization, and serviceability so maintenance can occur without stressing the permanent cabling",
+      "Use the shortest possible pathway even if support is improvised",
+      "Omit labels on exposed cable to reduce visibility"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4094",
+    "domain": "Specialty Systems",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "For a device outlet mounted above a ceiling, which concern is MOST appropriate to raise?",
+    "ref": "ITSIMM v8 – Specialty Systems Installation",
+    "hint": "Above-ceiling work still needs proper support and access considerations.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Whether the device enclosure color matches the ceiling grid",
+      "Whether the installation preserves accessibility, support, and administration appropriate to the application",
+      "Whether the outlet can share support wires with luminaires",
+      "Whether patch cords can replace the permanent link indefinitely"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4095",
+    "domain": "Specialty Systems",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A PoE-powered device run is being added to a dense bundle serving many endpoints. Which factor deserves EXTRA attention compared with a lightly loaded bundle?",
+    "ref": "ITSIMM v8 – Specialty Systems Installation",
+    "hint": "Remote powering changes thermal considerations.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Patch-panel labeling symmetry",
+      "Bundle management practices that can influence heat dissipation and cable stress",
+      "The polish style of fiber connectors in the same room",
+      "The width of ladder rack side stringers"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4096",
+    "domain": "Specialty Systems",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "What is the BEST reason to avoid treating device-specific cabling as an exception to normal pathway and support rules?",
+    "ref": "ITSIMM v8 – Specialty Systems Installation",
+    "hint": "Infrastructure rules still apply.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because specialty devices always require fiber rather than copper",
+      "Because the permanent cabling still has to be installed and maintained as infrastructure, not as an informal appliance cord",
+      "Because exceptions are allowed only in data centers",
+      "Because support rules apply only when outlets are wall mounted"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4097",
+    "domain": "Data Centers",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "In a data center distribution area, why is disciplined cable routing especially important?",
+    "ref": "ITSIMM v8 – Data Centers",
+    "hint": "Density amplifies consequences.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because it increases switch forwarding performance",
+      "Because dense infrastructure magnifies the impact of blocked access, poor airflow coordination, and administration errors",
+      "Because routing determines optical wavelength selection",
+      "Because cable pathways in data centers do not require support hardware"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4098",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Which practice is MOST appropriate when adding new cabling to an already dense cabinet row?",
+    "ref": "ITSIMM v8 – Data Centers",
+    "hint": "Order matters in dense environments.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Use any available opening in the rack to save installation time",
+      "Maintain planned routing and separation so access and serviceability are preserved",
+      "Store excess slack on top of active equipment for visibility",
+      "Combine power and data bundles where the path is shortest"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4099",
+    "domain": "Data Centers",
+    "difficulty": 3,
+    "style": "multiple_choice",
+    "q": "A cabinet row has become difficult to service because patching obscures ports and equipment handles. What is the BEST interpretation?",
+    "ref": "ITSIMM v8 – Data Centers",
+    "hint": "Manageability is a functional requirement.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "The problem is mainly cosmetic and should not affect operations",
+      "Cable management has degraded maintainability and should be corrected through disciplined routing and administration",
+      "The issue indicates all copper patch cords should be replaced with optical fiber",
+      "The only remedy is to reduce switch port density"
+    ],
+    "answer": 1
+  },
+  {
+    "id": "4100",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "multiple_choice",
+    "q": "Why is pathway and rack planning often more stringent in data centers than in typical office telecommunications rooms?",
+    "ref": "ITSIMM v8 – Data Centers",
+    "hint": "Think density plus churn.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    },
+    "type": "multiple_choice",
+    "choices": [
+      "Because equipment categories are lower and easier to disrupt",
+      "Because higher density and change frequency demand more control over routing, support, and administration",
+      "Because bonding is not permitted in data center cabinets",
+      "Because data centers rarely use structured cabling practices"
+    ],
+    "answer": 1
   }
 ]
