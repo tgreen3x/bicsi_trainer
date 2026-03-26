@@ -1,0 +1,342 @@
+[
+  {
+    "id": "ST-001",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Primary purpose of bonding in a telecommunications system is to:",
+    "choices": [
+      "Provide a path for normal current flow",
+      "Equalize potential between conductive components to reduce shock hazards",
+      "Increase signal strength",
+      "Reduce crosstalk"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Bonding & Grounding > Purpose",
+    "hint": "Bonding = equalize potential.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 1,
+      "wording": 1
+    }
+  },
+  {
+    "id": "ST-005",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "Correct sequence before mating fiber connectors:",
+    "choices": [
+      "Clean → Inspect → Mate",
+      "Inspect → Clean → Inspect → Mate",
+      "Inspect → Mate → Clean",
+      "Mate → Clean → Inspect"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Fiber > Connector care",
+    "hint": "Inspect, clean, inspect, mate.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 2,
+      "wording": 0
+    }
+  },
+  {
+    "id": "ST-011",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Primary purpose of firestopping a penetration is to:",
+    "choices": [
+      "Improve cooling",
+      "Maintain fire-resistance rating by restoring compartmentalization of a listed assembly",
+      "Bond the sleeve",
+      "Reduce attenuation"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Firestopping > Purpose",
+    "hint": "Listed assembly + compartmentalization.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 2,
+      "wording": 0
+    }
+  },
+  {
+    "id": "ST-015",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Why must A/B redundant pathways be physically separated:",
+    "choices": [
+      "To reduce bend radius",
+      "To prevent a single incident from impacting both (avoid single point of failure)",
+      "To improve connector polish",
+      "To reduce pair untwist"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Data Centers > Redundancy",
+    "hint": "Avoid single point of failure.",
+    "rubric": {
+      "concept": 1,
+      "hierarchy": 2,
+      "wording": 0
+    }
+  },
+  {
+    "id": "BND-001",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY purpose of bonding in telecommunications spaces is to:",
+    "choices": [
+      "Provide a dedicated path for normal operating current",
+      "Equalize potential differences between conductive components to reduce shock hazards",
+      "Eliminate electromagnetic interference by shielding",
+      "Increase signal strength by reducing attenuation"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Bonding & Grounding > Purpose and principles",
+    "hint": "Bonding = equalize potential; grounding = reference."
+  },
+  {
+    "id": "BND-002",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "A grounding/bonding connection is installed on a painted rack. MOST appropriate corrective action is to:",
+    "choices": [
+      "Increase conductor size to compensate for paint",
+      "Add a longer bonding conductor to reduce resistance",
+      "Establish metal-to-metal contact (remove paint/use listed hardware) and resecure the connection",
+      "Apply dielectric grease over the paint to improve conductivity"
+    ],
+    "answer": 2,
+    "ref": "ITSIMM: Bonding & Grounding > Connections and terminations",
+    "hint": "Paint is an insulator—contact quality matters."
+  },
+  {
+    "id": "BND-003",
+    "domain": "Bonding & Grounding",
+    "difficulty": 3,
+    "style": "MOST",
+    "q": "A bonding conductor is routed with multiple tight loops and sharp bends. MOST likely impact is:",
+    "choices": [
+      "Lower impedance and improved surge performance",
+      "Higher impedance and reduced fault/surge performance",
+      "Increased optical attenuation",
+      "Improved EMI shielding in copper pathways"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Bonding & Grounding > Conductor routing",
+    "hint": "Short, straight, and practical reduces impedance."
+  },
+  {
+    "id": "BND-004",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A TMGB is BEST described as:",
+    "choices": [
+      "A busbar located in each work area outlet box",
+      "The main telecommunications grounding busbar bonded to the building grounding electrode system",
+      "A copper splice block for backbone cabling",
+      "A device used to test continuity of bonding conductors"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Bonding & Grounding > Busbars",
+    "hint": "TMGB = main telecom grounding busbar."
+  },
+  {
+    "id": "BND-005",
+    "domain": "Bonding & Grounding",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A TBB is used to:",
+    "choices": [
+      "Interconnect TGBs to the TMGB to create a telecommunications bonding backbone",
+      "Terminate horizontal copper pairs to patch panels",
+      "Provide strain relief for fiber trunks",
+      "Measure insulation resistance of bonding jumpers"
+    ],
+    "answer": 0,
+    "ref": "ITSIMM: Bonding & Grounding > Bonding backbone",
+    "hint": "TBB links busbars across the system."
+  },
+  {
+    "id": "FIB-001",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "FIRST",
+    "q": "Before mating any fiber connector pair, the FIRST step is to:",
+    "choices": [
+      "Measure insertion loss with an OTDR",
+      "Inspect the end face for contamination or damage",
+      "Apply index-matching gel",
+      "Polish the connector ferrule"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Fiber > Connector care",
+    "hint": "Inspect/clean/inspect/mate starts with inspect."
+  },
+  {
+    "id": "FIB-002",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "The correct best-practice sequence for fiber connector preparation is:",
+    "choices": [
+      "Clean → Inspect → Mate",
+      "Inspect → Clean → Inspect → Mate",
+      "Inspect → Mate → Clean",
+      "Mate → Inspect → Clean"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Fiber > Connector inspection and cleaning",
+    "hint": "ICI-M: Inspect, Clean, Inspect, Mate."
+  },
+  {
+    "id": "FIB-003",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "An OTDR trace shows a strong reflective event at the near-end connector with minimal overall loss. MOST likely cause is:",
+    "choices": [
+      "Excessive macro-bending mid-span",
+      "A dirty or improperly mated connector interface",
+      "Incorrect fiber core size",
+      "Too many splices causing cumulative attenuation"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Fiber > OTDR interpretation",
+    "hint": "High reflectance at a connector often points to interface issues."
+  },
+  {
+    "id": "FIB-004",
+    "domain": "Fiber",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "A link passes at 1310 nm but fails at 1550 nm. MOST likely issue is:",
+    "choices": [
+      "Copper impedance mismatch",
+      "A bend-stress point causing wavelength-sensitive bend loss",
+      "Incorrect wire map",
+      "Excessive NEXT in the channel"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Fiber > Loss mechanisms",
+    "hint": "Longer wavelengths can be more bend-loss sensitive in practice."
+  },
+  {
+    "id": "FIB-005",
+    "domain": "Fiber",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "Microbending in fiber primarily increases:",
+    "choices": [
+      "Reflectance only",
+      "Attenuation (loss)",
+      "Crosstalk",
+      "Propagation speed"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Fiber > Microbending and macrobending",
+    "hint": "Bends/stress = loss."
+  },
+  {
+    "id": "PWS-001",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY concern when cable tray fill exceeds recommended capacity is:",
+    "choices": [
+      "Overheating of fiber due to optical power",
+      "Reduced accessibility and limited future expansion",
+      "Lower return loss in copper",
+      "Increased rack airflow"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Pathways & Spaces > Fill and capacity",
+    "hint": "Space and access are the big compliance drivers."
+  },
+  {
+    "id": "PWS-002",
+    "domain": "Pathways & Spaces",
+    "difficulty": 2,
+    "style": "DEF",
+    "q": "A commonly tested maximum conduit fill guideline (without special derating considerations) is:",
+    "choices": [
+      "20%",
+      "40%",
+      "60%",
+      "80%"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Pathways & Spaces > Conduit fill",
+    "hint": "Know the typical fill number used on exams."
+  },
+  {
+    "id": "FIR-001",
+    "domain": "Firestopping",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY purpose of firestopping a penetration is to:",
+    "choices": [
+      "Reduce signal attenuation in cabling",
+      "Maintain the fire-resistance rating of the assembly by restoring compartmentalization",
+      "Improve airflow through walls",
+      "Prevent dust from entering telecom spaces"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Firestopping > Purpose and assemblies",
+    "hint": "Think 'listed assembly' and 'compartmentalization'."
+  },
+  {
+    "id": "FIR-002",
+    "domain": "Firestopping",
+    "difficulty": 3,
+    "style": "CAUSE",
+    "q": "After adding new cables through an existing firestopped sleeve, the system was not re-entered per the listing. MOST likely outcome is:",
+    "choices": [
+      "No impact if sealant remains visible",
+      "The fire-resistance-rated assembly may be compromised and fail inspection",
+      "Improved fire performance due to added cables",
+      "Reduced pathway fill requirements"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Firestopping > Re-entry and compliance",
+    "hint": "Re-entry must match the listed system."
+  },
+  {
+    "id": "DC-001",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "PRIMARY",
+    "q": "The PRIMARY reason redundant A/B pathways must be physically separated is to:",
+    "choices": [
+      "Reduce insertion loss",
+      "Avoid a single physical incident damaging both pathways",
+      "Improve connector reflectance",
+      "Simplify labeling"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Data Centers > Redundancy and separation",
+    "hint": "Avoid a single point of failure."
+  },
+  {
+    "id": "DC-002",
+    "domain": "Data Centers",
+    "difficulty": 2,
+    "style": "MOST",
+    "q": "Missing blanking panels in a populated cabinet row MOST directly impacts:",
+    "choices": [
+      "Copper return loss",
+      "Airflow management and cooling efficiency",
+      "Fiber core alignment",
+      "Bonding conductor impedance"
+    ],
+    "answer": 1,
+    "ref": "ITSIMM: Data Centers > Airflow management",
+    "hint": "Hot/cold air mixing is the trap."
+  }
+]

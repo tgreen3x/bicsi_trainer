@@ -1,0 +1,1522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BICSI Technical Workstation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --base:16px;
+      --font:"Michroma", sans-serif;
+      --ui:"Orbitron", sans-serif;
+      --mono:"Courier New", monospace;
+      --bg:#c0c0c0;
+      --panel:#c0c0c0;
+      --panel2:#d4d0c8;
+      --panelTop:#d4d0c8;
+      --text:#000000;
+      --muted:#333333;
+      --accent:#000080;
+      --good:#008000;
+      --warn:#808000;
+      --bad:#800000;
+      --border:#000000;
+      --overlay:rgba(0,0,0,.35);
+      --scan:rgba(0,0,0,.02);
+      --titlebar:#000080;
+      --titlebar-text:#ffffff;
+      --menu-bg:#d4d0c8;
+      --sunken-dark:#808080;
+      --sunken-light:#ffffff;
+      --status-bg:#d4d0c8;
+      --dropdown-hover:#000080;
+      --dropdown-hover-text:#ffffff;
+    }
+    [data-theme="ibm"]{
+      --font:"Michroma", monospace;
+      --ui:"Orbitron", monospace;
+      --mono:"Courier New", monospace;
+      --bg:#000000;
+      --panel:#000000;
+      --panel2:#050505;
+      --panelTop:#000000;
+      --text:#39ff14;
+      --muted:#1ebd1e;
+      --accent:#39ff14;
+      --good:#39ff14;
+      --warn:#e2ff4f;
+      --bad:#ff6f6f;
+      --border:#39ff14;
+      --overlay:rgba(0,0,0,.78);
+      --scan:rgba(57,255,20,.08);
+      --titlebar:#001400;
+      --titlebar-text:#39ff14;
+      --menu-bg:#000000;
+      --sunken-dark:#0b5a0b;
+      --sunken-light:#39ff14;
+      --status-bg:#000000;
+      --dropdown-hover:#39ff14;
+      --dropdown-hover-text:#000000;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0}
+    html{background:var(--bg)}
+    body{
+      color:var(--text);
+      font-family:var(--ui);
+      font-size:var(--base);
+      line-height:1.45;
+      background:
+        repeating-linear-gradient(to bottom, var(--scan) 0px, var(--scan) 1px, transparent 2px, transparent 4px),
+        var(--bg);
+      min-height:100vh;
+    }
+
+    /* ===== App Shell ===== */
+    .app-shell{
+      max-width:1280px;
+      margin:auto;
+      border:2px solid var(--border);
+      background:var(--panel);
+      box-shadow:1px 1px 0 var(--sunken-light),-1px -1px 0 var(--sunken-dark);
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+
+    /* ===== Title Bar ===== */
+    .titleBar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:6px 8px;
+      background:var(--titlebar);
+      color:var(--titlebar-text);
+      font-weight:700;
+      font-size:14px;
+      border-bottom:1px solid var(--border);
+      flex-shrink:0;
+    }
+    .titleBar-left{display:flex;align-items:center;gap:8px}
+    .titleBar-icon{width:14px;height:14px;background:var(--titlebar-text);color:var(--titlebar);display:inline-flex;align-items:center;justify-content:center;font-size:10px;border:1px solid var(--border)}
+    .win-controls{display:flex;gap:4px}
+    .win-btn{
+      width:26px;height:22px;padding:0;display:inline-flex;align-items:center;justify-content:center;
+      font-size:14px;background:var(--panel2)!important;color:#000!important;
+      border:2px solid var(--border)!important;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark)!important;
+      border-radius:0!important;cursor:default;font-family:var(--mono);
+    }
+    [data-theme="ibm"] .win-btn{color:var(--accent)!important;background:#001000!important}
+
+    /* ===== Menu Bar ===== */
+    .menuBar{
+      display:flex;
+      align-items:stretch;
+      background:var(--menu-bg);
+      border-bottom:2px solid var(--border);
+      flex-shrink:0;
+      position:relative;
+      z-index:100;
+    }
+    .menuItem{
+      position:relative;
+      padding:6px 14px;
+      font-size:13px;
+      font-family:var(--ui);
+      cursor:default;
+      user-select:none;
+      border-right:1px solid transparent;
+      white-space:nowrap;
+    }
+    .menuItem:hover, .menuItem.open{
+      background:var(--dropdown-hover);
+      color:var(--dropdown-hover-text);
+    }
+    .menuItem > span { pointer-events:none; }
+
+    /* Dropdown */
+    .dropdown{
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      min-width:200px;
+      background:var(--menu-bg);
+      border:2px solid var(--border);
+      box-shadow:2px 2px 0 var(--sunken-dark);
+      z-index:999;
+    }
+    .menuItem.open .dropdown{ display:block; }
+    .dropdown-item{
+      padding:6px 16px;
+      font-size:13px;
+      font-family:var(--ui);
+      cursor:default;
+      white-space:nowrap;
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .dropdown-item:hover{
+      background:var(--dropdown-hover);
+      color:var(--dropdown-hover-text);
+    }
+    .dropdown-item.disabled{opacity:.45;pointer-events:none}
+    .dropdown-separator{height:1px;background:var(--border);margin:3px 6px}
+    .dropdown-item .shortcut{margin-left:auto;opacity:.6;font-size:11px;font-family:var(--mono)}
+
+    /* Status info inside Trainer dropdown */
+    .dropdown-status{
+      padding:6px 12px;
+      font-size:11px;
+      font-family:var(--mono);
+      color:var(--muted);
+      background:var(--panel2);
+      border-top:1px solid var(--border);
+    }
+    [data-theme="ibm"] .dropdown-status{color:var(--muted)}
+
+    /* ===== Body Layout: sidebar-left | main | sidebar-right ===== */
+    .body-layout{
+      display:grid;
+      grid-template-columns:200px 1fr 260px;
+      flex:1;
+      min-height:0;
+    }
+    @media(max-width:1000px){
+      .body-layout{grid-template-columns:1fr}
+      .sidebar-left,.sidebar-right{display:none}
+    }
+
+    /* ===== Left Sidebar (Operator Console) ===== */
+    .sidebar-left{
+      border-right:2px solid var(--border);
+      background:var(--panel2);
+      display:flex;
+      flex-direction:column;
+      gap:0;
+      padding:0;
+      box-shadow:inset -1px 0 0 var(--sunken-dark);
+    }
+    .sidebar-section{
+      border-bottom:1px solid var(--border);
+      padding:8px;
+    }
+    .sidebar-title{
+      font-family:var(--mono);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+    .diagLamp{
+      display:flex;gap:6px;align-items:center;padding:5px 4px;
+      font-family:var(--mono);font-size:11px;text-transform:uppercase;
+      border:1px solid var(--border);background:var(--panel);margin-bottom:4px;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+    .lamp{width:9px;height:9px;background:var(--muted);border:1px solid var(--border);display:inline-block;flex-shrink:0}
+    .diagLamp.active .lamp{background:var(--good)}
+    .hardwareTag{
+      display:block;padding:4px 6px;border:1px solid var(--border);background:var(--panel);
+      font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;
+      margin-bottom:4px;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+    .bootPrompt{
+      padding:6px;border:2px solid var(--border);background:var(--panel);
+      font-family:var(--mono);font-size:11px;line-height:1.5;
+      box-shadow:inset -1px -1px 0 var(--sunken-light),inset 1px 1px 0 var(--sunken-dark);
+      word-break:break-word;
+    }
+    .cursor{display:inline-block;width:.55em;animation:blink 1s steps(1,end) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .statusLamp{width:9px;height:9px;background:var(--good);border:1px solid var(--border);display:inline-block;margin-right:4px;flex-shrink:0}
+
+    /* ===== Main Content ===== */
+    .main-content{
+      padding:14px;
+      overflow-y:auto;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .card{
+      background:var(--panel);
+      border:2px solid var(--border);
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+      overflow:hidden;
+    }
+    .card h2{
+      margin:0;padding:8px 10px;font-size:13px;color:var(--text);
+      background:var(--panelTop);border-bottom:1px solid var(--border);
+      font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+    .card .content{padding:12px}
+    #err{display:none;padding:10px 12px;border:2px solid var(--bad);background:rgba(255,0,0,.06);font-family:var(--mono);font-size:12px}
+
+    /* ===== Right Sidebar (Scoreboard) ===== */
+    .sidebar-right{
+      border-left:2px solid var(--border);
+      background:var(--panel2);
+      display:flex;
+      flex-direction:column;
+      overflow-y:auto;
+    }
+    .scoreboard-header{
+      padding:8px 10px;background:var(--titlebar);color:var(--titlebar-text);
+      font-size:12px;font-weight:700;border-bottom:1px solid var(--border);
+      font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em;flex-shrink:0;
+    }
+    .scoreBox{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px}
+    .mini{
+      background:var(--panel);border:2px solid var(--border);padding:8px;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+    .mini .k{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase}
+    .mini .v{font-family:var(--mono);font-size:16px;font-weight:700;margin-top:2px}
+    .v.good{color:var(--good)} .v.warn{color:var(--warn)} .v.bad{color:var(--bad)}
+    .score-section{padding:8px;border-top:1px solid var(--border)}
+    .score-section-title{font-family:var(--mono);font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .pill{
+      padding:3px 7px;border:1px solid var(--border);color:var(--text);display:inline-flex;align-items:center;
+      background:var(--panel);box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+      font-family:var(--mono);font-size:11px;
+    }
+    .pills-col{display:flex;flex-direction:column;gap:4px}
+
+    /* ===== Status Bar ===== */
+    .app-statusbar{
+      display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap;align-items:center;
+      padding:5px 10px;border-top:2px solid var(--border);background:var(--status-bg);
+      font-family:var(--mono);font-size:11px;flex-shrink:0;
+    }
+    .statusSegment{
+      padding:3px 7px;border:1px solid var(--border);background:var(--panel);
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+
+    /* ===== Buttons, Inputs ===== */
+    button,select,input,textarea{
+      font:inherit;color:var(--text);background:var(--panel2);border:2px solid var(--border);
+      border-radius:0;padding:7px 10px;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+    button{cursor:pointer;font-family:var(--font)}
+    button:hover,select:hover{background:#adadad}
+    button:active{
+      box-shadow:inset -1px -1px 0 var(--sunken-light),inset 1px 1px 0 var(--sunken-dark);
+      transform:translate(1px,1px);
+    }
+    [data-theme="ibm"] button,[data-theme="ibm"] select,[data-theme="ibm"] input,[data-theme="ibm"] textarea{
+      background:#000;color:var(--text);border-color:var(--border);box-shadow:inset 0 0 0 1px var(--border);
+    }
+    [data-theme="ibm"] button:hover,[data-theme="ibm"] select:hover{background:#031403}
+    [data-theme="ibm"] button:active{transform:none;box-shadow:inset 0 0 0 1px var(--border),inset 0 0 10px rgba(57,255,20,.12)}
+    button:disabled{opacity:.6;cursor:not-allowed}
+
+    /* retro square radio buttons */
+    input[type="radio"]{
+      appearance:none;-webkit-appearance:none;
+      width:14px;height:14px;margin-right:8px;
+      border:2px solid #000;background:#c0c0c0;
+      box-shadow:inset -1px -1px 0 #fff,inset 1px 1px 0 #808080;
+      cursor:pointer;flex-shrink:0;
+    }
+    input[type="radio"]:checked{background:#000080}
+    [data-theme="ibm"] input[type="radio"]{background:#000;border-color:var(--border)}
+    [data-theme="ibm"] input[type="radio"]:checked{background:var(--accent)}
+
+    /* ===== ASCII Banner ===== */
+    .ascii-banner{
+      background:var(--panel2);
+      border-bottom:2px solid var(--border);
+      padding:10px 16px 8px;
+      text-align:center;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+      flex-shrink:0;
+      overflow:hidden;
+    }
+    .ascii-banner pre{
+      font-family:var(--mono);
+      font-size:clamp(5px, 0.9vw, 11px);
+      line-height:1.15;
+      color:var(--accent);
+      display:inline-block;
+      text-align:left;
+      margin:0;
+      letter-spacing:0.05em;
+      white-space:pre;
+    }
+    [data-theme="ibm"] .ascii-banner pre{
+      color:var(--good);
+      text-shadow:0 0 8px var(--good);
+    }
+    .ascii-sub{
+      font-family:var(--mono);
+      font-size:10px;
+      color:var(--muted);
+      letter-spacing:0.3em;
+      text-transform:uppercase;
+      margin-top:4px;
+    }
+
+    /* ===== Quiz/Content styles ===== */
+    .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .q{
+      padding:10px;border:2px solid var(--border);background:var(--panel2);margin-bottom:10px;
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+    .q strong{display:block;margin-bottom:8px}
+    .choices{display:grid;gap:5px}
+    .choice{display:flex;gap:10px;align-items:flex-start;padding:6px 8px}
+    .choice:hover{background:rgba(0,0,0,.06)}
+    [data-theme="ibm"] .choice:hover{background:rgba(57,255,20,.06)}
+    .choice.correct{border:2px solid var(--good);background:rgba(0,128,0,.08);padding:8px 10px}
+    .choice.wrong{border:2px solid var(--bad);background:rgba(128,0,0,.08);padding:8px 10px}
+    .footerRow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px}
+    textarea{width:100%;min-height:100px;resize:vertical;background:var(--panel);font-family:var(--mono)}
+    .small{color:var(--muted);font-size:12px;font-family:var(--mono)}
+    .mono{font-family:var(--mono)}
+    .flash{
+      user-select:none;cursor:pointer;padding:14px;border:2px solid var(--border);
+      background:var(--panel2);box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+      margin:10px 0;
+    }
+    .flash .front{font-weight:700;font-size:1em;font-family:var(--mono)}
+    .flash .back{margin-top:10px;color:var(--muted);font-family:var(--mono)}
+    .split{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+    @media(max-width:680px){.split{grid-template-columns:1fr}}
+    .divider{height:1px;background:var(--border);margin:12px 0}
+
+    /* ===== Boot Overlay ===== */
+    .bootOverlay{
+      position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+      background:var(--overlay);
+    }
+    .bootConsole{
+      width:min(760px,92vw);min-height:280px;background:var(--panel);border:2px solid var(--border);
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+    }
+    .bootHeader{
+      display:flex;justify-content:space-between;gap:12px;align-items:center;
+      padding:8px 10px;background:var(--titlebar);color:var(--titlebar-text);
+      border-bottom:1px solid var(--border);font-size:13px;font-weight:700;font-family:var(--mono);
+    }
+    .bootLog{
+      min-height:170px;white-space:pre-wrap;line-height:1.7;font-size:13px;font-family:var(--mono);
+      padding:12px;background:var(--panel2);
+      border-top:1px solid var(--sunken-light);border-left:1px solid var(--sunken-light);
+      border-right:1px solid var(--sunken-dark);border-bottom:1px solid var(--sunken-dark);
+      margin:10px;
+    }
+    .bootReady{
+      margin:0 10px 10px;padding:8px 10px;display:flex;justify-content:space-between;gap:10px;
+      align-items:center;opacity:0;transition:opacity .25s ease;
+      border:2px solid var(--border);background:var(--panel2);
+      box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark);
+      font-family:var(--mono);font-size:12px;
+    }
+    .bootReady.show{opacity:1}
+
+    /* ===== Settings Modal ===== */
+    .modal.hidden{display:none}
+    .modal{position:fixed;inset:0;background:var(--overlay);display:flex;align-items:center;justify-content:center;z-index:9999}
+    .modal-panel{width:min(440px,92vw);background:var(--panel);border:2px solid var(--border);box-shadow:inset 1px 1px 0 var(--sunken-light),inset -1px -1px 0 var(--sunken-dark)}
+    .modal-header{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:var(--titlebar);color:var(--titlebar-text);border-bottom:1px solid var(--border);font-weight:700;font-family:var(--mono);font-size:13px}
+    .modal-body{display:grid;gap:10px;padding:14px}
+    .modal-body label{font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .modal-body select{width:100%}
+    .modal-close{min-width:32px;padding:4px 8px}
+  </style>
+</head>
+
+<body data-theme="win95">
+
+<!-- ===== Boot Overlay ===== -->
+<div id="bootOverlay" class="bootOverlay">
+  <div class="bootConsole">
+    <div class="bootHeader">
+      <span>BICSI TRAINING WORKSTATION.EXE</span>
+      <span id="bootStamp">BOOT // v5.0</span>
+    </div>
+    <div id="bootLog" class="bootLog"></div>
+    <div id="bootReady" class="bootReady">
+      <span class="hardwareTag" style="display:inline-block">System Ready</span>
+      <span class="small">Select a control to continue</span>
+    </div>
+  </div>
+</div>
+
+<div class="app-shell">
+
+  <!-- ===== Title Bar ===== -->
+  <div class="titleBar">
+    <div class="titleBar-left">
+      <span class="titleBar-icon">B</span>
+      <span>BICSI Technical Workstation</span>
+    </div>
+    <div class="win-controls" aria-hidden="true">
+      <button class="win-btn">_</button>
+      <button class="win-btn">□</button>
+      <button class="win-btn">×</button>
+    </div>
+  </div>
+
+  <!-- ===== Menu Bar ===== -->
+  <nav class="menuBar" id="menuBar">
+
+    <!-- FILE -->
+    <div class="menuItem" data-menu="file">
+      <span>File</span>
+      <div class="dropdown">
+        <div class="dropdown-item" id="menuQuestionBank">📁 Shared Question Bank</div>
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-item" id="menuImport">⬆ Import Progress</div>
+        <div class="dropdown-item" id="menuExport">⬇ Export Progress</div>
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-item" id="menuReset">⚠ Reset All Data</div>
+      </div>
+    </div>
+
+    <!-- SESSION -->
+    <div class="menuItem" data-menu="session">
+      <span>Session</span>
+      <div class="dropdown">
+        <div class="dropdown-item" id="menuHome">🏠 Home</div>
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-item" id="menuDaily">▶ Daily Training</div>
+        <div class="dropdown-item" id="menuPressure">⏱ Pressure Round</div>
+        <div class="dropdown-item" id="menuFlashcards">🃏 Flashcards</div>
+        <div class="dropdown-item" id="menuWording">✏ Wording Lab</div>
+      </div>
+    </div>
+
+    <!-- TRAINER -->
+    <div class="menuItem" data-menu="trainer">
+      <span>Trainer</span>
+      <div class="dropdown">
+        <div class="dropdown-item" id="menuReview">🔁 Review Misses</div>
+        <div class="dropdown-item" id="menuClearMisses">🗑 Clear Misses Deck</div>
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-status" id="trainerStatusMode">MODE // DAILY</div>
+        <div class="dropdown-status" id="trainerStatusSelect">SELECT // ADAPTIVE</div>
+        <div class="dropdown-status" id="trainerStatusTheme">THEME // WINDOWS 95</div>
+      </div>
+    </div>
+
+    <!-- DIAGNOSTICS -->
+    <div class="menuItem" data-menu="diagnostics">
+      <span>Diagnostics</span>
+      <div class="dropdown">
+        <div class="dropdown-item" id="menuSettings">⚙ Settings</div>
+      </div>
+    </div>
+
+    <!-- HELP -->
+    <div class="menuItem" data-menu="help">
+      <span>Help</span>
+      <div class="dropdown">
+        <div class="dropdown-item" id="menuManual">📄 Training Manual (PDF)</div>
+        <div class="dropdown-item" id="menuPractice">📝 Practice Test (PDF)</div>
+        <div class="dropdown-item" id="menuFlashPDF">🗂 Flashcards (PDF)</div>
+        <div class="dropdown-item" id="menuImages">📸 Images (PDF)</div>
+    </div>
+
+  </nav>
+
+  <!-- ===== ASCII Banner ===== -->
+  <div class="ascii-banner">
+    <pre>
+ ██████╗ ██╗ ██████╗███████╗██╗    ████████╗██████╗  █████╗ ██╗███╗   ██╗███████╗██████╗
+ ██╔══██╗██║██╔════╝██╔════╝██║    ╚══██╔══╝██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██╔══██╗
+ ██████╔╝██║██║     ███████╗██║       ██║   ██████╔╝███████║██║██╔██╗ ██║█████╗  ██████╔╝
+ ██╔══██╗██║██║     ╚════██║██║       ██║   ██╔══██╗██╔══██║██║██║╚██╗██║██╔══╝  ██╔══██╗
+ ██████╔╝██║╚██████╗███████║██║       ██║   ██║  ██║██║  ██║██║██║ ╚████║███████╗██║  ██║
+ ╚═════╝ ╚═╝ ╚═════╝╚══════╝╚═╝       ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝</pre>
+    <div class="ascii-sub">Technical Workstation v5.0 &nbsp;·&nbsp; BICSI Certification Training System &nbsp;·&nbsp; EST. 2025</div>
+  </div>
+
+  <!-- ===== Body Layout ===== -->
+  <div class="body-layout">
+
+    <!-- LEFT SIDEBAR: Operator Console -->
+    <aside class="sidebar-left">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Operator Console</div>
+        <div class="diagLamp active" id="lampBank"><span class="lamp"></span><span>BANK ONLINE</span></div>
+        <div class="diagLamp active" id="lampMemory"><span class="lamp"></span><span>LOCAL MEM</span></div>
+        <div class="diagLamp active" id="lampSim"><span class="lamp"></span><span>SIM READY</span></div>
+        <div class="diagLamp" id="lampMode"><span class="lamp"></span><span>RUN MODE</span></div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">System Status</div>
+        <span class="hardwareTag">BANK // <span id="bankSizeTag">--</span></span>
+        <span class="hardwareTag">MISSES // <span id="missCountTag">0</span></span>
+        <span class="hardwareTag">STREAK // <span id="streakTag">0</span></span>
+      </div>
+      <div class="sidebar-section" style="flex:1">
+        <div class="sidebar-title">Console</div>
+        <div class="bootPrompt" id="bootPrompt">Awaiting input<span class="cursor">█</span></div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Status</div>
+        <div style="display:flex;align-items:center;gap:4px;font-family:var(--mono);font-size:11px">
+          <span class="statusLamp"></span><span id="statusHeadline">NOMINAL</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div id="err" class="mono"></div>
+      <div class="card">
+        <h2 id="mainTitle">Loading…</h2>
+        <div class="content" id="main"></div>
+      </div>
+    </main>
+
+    <!-- RIGHT SIDEBAR: Scoreboard -->
+    <aside class="sidebar-right">
+      <div class="scoreboard-header">▐ Technician Scoreboard</div>
+      <div class="scoreBox">
+        <div class="mini"><div class="k">Concept</div><div class="v" id="scoreConcept">0</div></div>
+        <div class="mini"><div class="k">Hier.</div><div class="v" id="scoreHierarchy">0</div></div>
+        <div class="mini"><div class="k">Word.</div><div class="v" id="scoreWording">0</div></div>
+      </div>
+      <div class="score-section">
+        <div class="score-section-title">Session</div>
+        <div class="pills-col">
+          <span class="pill">Total: <span id="scoreTotal" class="mono" style="margin-left:4px">0/30</span></span>
+          <span class="pill">Rank: <span id="rank" class="mono" style="margin-left:4px">—</span></span>
+          <span class="pill">Timer: <span id="timer" class="mono" style="margin-left:4px">—</span></span>
+        </div>
+      </div>
+      <div class="score-section">
+        <div class="score-section-title">Bank &amp; Progress</div>
+        <div class="pills-col">
+          <span class="pill">Bank: <span id="bankSize" class="mono" style="margin-left:4px">—</span></span>
+          <span class="pill">Misses: <span id="missCount" class="mono" style="margin-left:4px">0</span></span>
+          <span class="pill">Streak: <span id="streak" class="mono" style="margin-left:4px">0</span></span>
+        </div>
+      </div>
+      <div class="score-section">
+        <div class="score-section-title">Domain Stats</div>
+        <div id="domainStatsBox" style="font-size:11px"></div>
+      </div>
+      <div class="score-section" style="margin-top:auto;padding-top:10px">
+        <div class="score-section-title">Resources</div>
+        <div class="pills-col">
+          <a class="pill" href="BICSI_Technician_Training_Manual.pdf" target="_blank" rel="noopener" style="text-decoration:none">📄 Training Manual</a>
+          <a class="pill" href="BICSI_Technician_Practice_Test.pdf" target="_blank" rel="noopener" style="text-decoration:none">📝 Practice Test</a>
+          <a class="pill" href="BICSI_Technician_Flashcards.pdf" target="_blank" rel="noopener" style="text-decoration:none">🗂 Flashcards PDF</a>
+        </div>
+      </div>
+    </aside>
+
+  </div><!-- /body-layout -->
+
+  <!-- ===== Status Bar ===== -->
+  <div class="app-statusbar">
+    <span class="statusSegment">SYSTEM READY</span>
+    <span class="statusSegment">BANK: <span id="statusBankSize">--</span></span>
+    <span class="statusSegment">MODE: <span id="statusMode">DAILY</span></span>
+    <span class="statusSegment">THEME: <span id="statusTheme">WINDOWS 95</span></span>
+  </div>
+
+</div><!-- /app-shell -->
+
+<!-- Hidden file input for import -->
+<input id="importFile" type="file" accept="application/json" style="display:none" />
+
+<!-- Settings Modal -->
+<div id="settingsModal" class="modal hidden">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <span>⚙ Application Settings</span>
+      <button id="closeSettingsBtn" class="modal-close">X</button>
+    </div>
+    <div class="modal-body">
+      <label for="themeSelect">Theme</label>
+      <select id="themeSelect" title="Theme">
+        <option value="win95">Windows 95 Corporate</option>
+        <option value="ibm">IBM Workstation</option>
+      </select>
+      <label for="fontSelect">Font Size</label>
+      <select id="fontSelect" title="Font size">
+        <option value="15">Small</option>
+        <option value="16" selected>Normal</option>
+        <option value="18">Large</option>
+        <option value="20">XL</option>
+      </select>
+      <label for="selectionSelect">Question Selection</label>
+      <select id="selectionSelect" title="Question Selection">
+        <option value="adaptive">Adaptive</option>
+        <option value="rotating">Rotating</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- PACK 1 JSON -->
+<script id="pack1_json" type="application/json">
+[
+  {"id":"BND-001","domain":"Bonding & Grounding","difficulty":2,"style":"PRIMARY","q":"The PRIMARY purpose of bonding in telecommunications spaces is to:","choices":["Provide a dedicated path for normal operating current","Equalize potential differences between conductive components to reduce shock hazards","Eliminate electromagnetic interference by shielding","Increase signal strength by reducing attenuation"],"answer":1,"ref":"ITSIMM: Bonding & Grounding > Purpose and principles","hint":"Bonding = equalize potential; grounding = reference."},
+  {"id":"BND-002","domain":"Bonding & Grounding","difficulty":2,"style":"MOST","q":"A grounding/bonding connection is installed on a painted rack. MOST appropriate corrective action is to:","choices":["Increase conductor size to compensate for paint","Add a longer bonding conductor to reduce resistance","Establish metal-to-metal contact (remove paint/use listed hardware) and resecure the connection","Apply dielectric grease over the paint to improve conductivity"],"answer":2,"ref":"ITSIMM: Bonding & Grounding > Connections and terminations","hint":"Paint is an insulator—contact quality matters."},
+  {"id":"BND-003","domain":"Bonding & Grounding","difficulty":3,"style":"MOST","q":"A bonding conductor is routed with multiple tight loops and sharp bends. MOST likely impact is:","choices":["Lower impedance and improved surge performance","Higher impedance and reduced fault/surge performance","Increased optical attenuation","Improved EMI shielding in copper pathways"],"answer":1,"ref":"ITSIMM: Bonding & Grounding > Conductor routing","hint":"Short, straight, and practical reduces impedance."},
+  {"id":"BND-004","domain":"Bonding & Grounding","difficulty":2,"style":"DEF","q":"A TMGB is BEST described as:","choices":["A busbar located in each work area outlet box","The main telecommunications grounding busbar bonded to the building grounding electrode system","A copper splice block for backbone cabling","A device used to test continuity of bonding conductors"],"answer":1,"ref":"ITSIMM: Bonding & Grounding > Busbars","hint":"TMGB = main telecom grounding busbar."},
+  {"id":"BND-005","domain":"Bonding & Grounding","difficulty":2,"style":"DEF","q":"A TBB is used to:","choices":["Interconnect TGBs to the TMGB to create a telecommunications bonding backbone","Terminate horizontal copper pairs to patch panels","Provide strain relief for fiber trunks","Measure insulation resistance of bonding jumpers"],"answer":0,"ref":"ITSIMM: Bonding & Grounding > Bonding backbone","hint":"TBB links busbars across the system."},
+  {"id":"FIB-001","domain":"Fiber","difficulty":2,"style":"FIRST","q":"Before mating any fiber connector pair, the FIRST step is to:","choices":["Measure insertion loss with an OTDR","Inspect the end face for contamination or damage","Apply index-matching gel","Polish the connector ferrule"],"answer":1,"ref":"ITSIMM: Fiber > Connector care","hint":"Inspect/clean/inspect/mate starts with inspect."},
+  {"id":"FIB-002","domain":"Fiber","difficulty":2,"style":"DEF","q":"The correct best-practice sequence for fiber connector preparation is:","choices":["Clean → Inspect → Mate","Inspect → Clean → Inspect → Mate","Inspect → Mate → Clean","Mate → Inspect → Clean"],"answer":1,"ref":"ITSIMM: Fiber > Connector inspection and cleaning","hint":"ICI-M: Inspect, Clean, Inspect, Mate."},
+  {"id":"FIB-003","domain":"Fiber","difficulty":3,"style":"CAUSE","q":"An OTDR trace shows a strong reflective event at the near-end connector with minimal overall loss. MOST likely cause is:","choices":["Excessive macro-bending mid-span","A dirty or improperly mated connector interface","Incorrect fiber core size","Too many splices causing cumulative attenuation"],"answer":1,"ref":"ITSIMM: Fiber > OTDR interpretation","hint":"High reflectance at a connector often points to interface issues."},
+  {"id":"FIB-004","domain":"Fiber","difficulty":3,"style":"CAUSE","q":"A link passes at 1310 nm but fails at 1550 nm. MOST likely issue is:","choices":["Copper impedance mismatch","A bend-stress point causing wavelength-sensitive bend loss","Incorrect wire map","Excessive NEXT in the channel"],"answer":1,"ref":"ITSIMM: Fiber > Loss mechanisms","hint":"Longer wavelengths can be more bend-loss sensitive in practice."},
+  {"id":"FIB-005","domain":"Fiber","difficulty":2,"style":"PRIMARY","q":"Microbending in fiber primarily increases:","choices":["Reflectance only","Attenuation (loss)","Crosstalk","Propagation speed"],"answer":1,"ref":"ITSIMM: Fiber > Microbending and macrobending","hint":"Bends/stress = loss."},
+  {"id":"PWS-001","domain":"Pathways & Spaces","difficulty":2,"style":"PRIMARY","q":"The PRIMARY concern when cable tray fill exceeds recommended capacity is:","choices":["Overheating of fiber due to optical power","Reduced accessibility and limited future expansion","Lower return loss in copper","Increased rack airflow"],"answer":1,"ref":"ITSIMM: Pathways & Spaces > Fill and capacity","hint":"Space and access are the big compliance drivers."},
+  {"id":"PWS-002","domain":"Pathways & Spaces","difficulty":2,"style":"DEF","q":"A commonly tested maximum conduit fill guideline (without special derating considerations) is:","choices":["20%","40%","60%","80%"],"answer":1,"ref":"ITSIMM: Pathways & Spaces > Conduit fill","hint":"Know the typical fill number used on exams."},
+  {"id":"FIR-001","domain":"Firestopping","difficulty":2,"style":"PRIMARY","q":"The PRIMARY purpose of firestopping a penetration is to:","choices":["Reduce signal attenuation in cabling","Maintain the fire-resistance rating of the assembly by restoring compartmentalization","Improve airflow through walls","Prevent dust from entering telecom spaces"],"answer":1,"ref":"ITSIMM: Firestopping > Purpose and assemblies","hint":"Think 'listed assembly' and 'compartmentalization'."},
+  {"id":"FIR-002","domain":"Firestopping","difficulty":3,"style":"CAUSE","q":"After adding new cables through an existing firestopped sleeve, the system was not re-entered per the listing. MOST likely outcome is:","choices":["No impact if sealant remains visible","The fire-resistance-rated assembly may be compromised and fail inspection","Improved fire performance due to added cables","Reduced pathway fill requirements"],"answer":1,"ref":"ITSIMM: Firestopping > Re-entry and compliance","hint":"Re-entry must match the listed system."},
+  {"id":"DC-001","domain":"Data Centers","difficulty":2,"style":"PRIMARY","q":"The PRIMARY reason redundant A/B pathways must be physically separated is to:","choices":["Reduce insertion loss","Avoid a single physical incident damaging both pathways","Improve connector reflectance","Simplify labeling"],"answer":1,"ref":"ITSIMM: Data Centers > Redundancy and separation","hint":"Avoid a single point of failure."},
+  {"id":"DC-002","domain":"Data Centers","difficulty":2,"style":"MOST","q":"Missing blanking panels in a populated cabinet row MOST directly impacts:","choices":["Copper return loss","Airflow management and cooling efficiency","Fiber core alignment","Bonding conductor impedance"],"answer":1,"ref":"ITSIMM: Data Centers > Airflow management","hint":"Hot/cold air mixing is the trap."}
+]
+</script>
+
+<script>
+/* =========================
+   Error Banner
+   ========================= */
+function showErr(msg){
+  const box = document.getElementById("err");
+  box.style.display = "block";
+  box.textContent = msg;
+}
+window.addEventListener("error", (e)=>showErr("JS Error: " + (e.message||e.error||e)));
+window.addEventListener("unhandledrejection", (e)=>showErr("Promise Error: " + (e.reason?.message||e.reason||e)));
+
+/* =========================
+   Flashcards + Wording
+   ========================= */
+const FLASHCARDS = [
+  { front:"UTP pair untwist at termination", back:"13 mm (0.5 in) maximum" },
+  { front:"Conduit fill (typical max w/o derating)", back:"40%" },
+  { front:"UTP max pull tension", back:"25 lbf (typical best-practice limit)" },
+  { front:"Fiber mating sequence", back:"Inspect → Clean → Inspect → Mate" },
+  { front:"Why keep bonding conductors short/straight?", back:"Minimize impedance; maintain effective fault/surge performance" },
+  { front:"Tray overfill primary concern", back:"Limits future expansion; reduces accessibility; increases mechanical stress" },
+  { front:"Redundant pathways separation", back:"Maintain resiliency; avoid single point of failure" },
+  { front:"Firestopping purpose", back:"Maintain rated fire-resistance by restoring compartmentalization (listed assembly)" },
+  { front:"Multi-mode operating frequencies", back:"850 nm and 1300 nm"},
+  { front:"Single-mode operating frequencies", back:" 1310 nm and 1550 nm"},
+  { front:"Minimum inside bend radius for 4-strand optical cable at rest", back:"25mm (1 in)"},
+  { front:"Connection process that uses a pre-polished fiber stub with index-matching gel", back:"Cleave and Secure connectors"},
+  { front:"Fusion splice loss will be", back:"0.1dB or less"}
+];
+
+const WORDING_PROMPTS = [
+  { field:"The rack isn't grounded.", target:"Reword this to closely match BICSI technician language" },
+  { field:"There's too much bend in that fiber.", target:"Reword this to closely match BICSI technician language" },
+  { field:"The tray's too full.", target:"Reword this to closely match BICSI technician language" },
+  { field:"They added cable without fixing the firestop.", target:"Reword this to closely match BICSI technician language" },
+  { field:"The bonding wire's too long.", target:"Reword this to closely match BICSI technician language" }
+];
+
+/* =========================
+   Storage Keys
+   ========================= */
+const KEY        = "bicsi_trainer_state_v6";
+const QB_ROT_KEY = "bicsi_qbank_rotation_v2";
+const QB_DATA_KEY= "bicsi_qbank_data_v1";
+const MISSES_KEY = "bicsi_misses_v1";
+const STATS_KEY  = "bicsi_domain_stats_v1";
+const DAILY_KEY  = "bicsi_daily_v1";
+
+/* =========================
+   State
+   ========================= */
+function loadState(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch{ return null; } }
+function saveState(){ localStorage.setItem(KEY, JSON.stringify(state)); }
+
+const state = loadState() ?? {
+  theme:"win95", font:16, mode:"daily", selection:"adaptive",
+  week:1, session:"A",
+  scores:{ concept:0, hierarchy:0, wording:0 },
+  lastResult:null
+};
+
+function rankFromTotal(t){
+  if (t>=28) return "EXAM DOMINANT";
+  if (t>=26) return "TECHNICIAN READY";
+  if (t>=23) return "JUNIOR TECH";
+  if (t>=18) return "SENIOR INSTALLER";
+  return "INSTALLER";
+}
+
+/* =========================
+   Utilities
+   ========================= */
+function shuffleArray(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+  return arr;
+}
+function shuffleQuestionChoices(q){
+  const choices=[...q.choices];
+  const correct=choices[q.answer];
+  shuffleArray(choices);
+  return {...q, choices, answer:choices.indexOf(correct)};
+}
+function readPackJson(id){
+  const el=document.getElementById(id);
+  if(!el) return [];
+  try{ const a=JSON.parse(el.textContent); return Array.isArray(a)?a:[]; }catch{ return []; }
+}
+
+    function normalizeQuestion(q){
+  if(!q || typeof q !== "object") return null;
+  if(!q.id || !q.domain || !q.q) return null;
+
+  const qType = q.type || "multiple_choice";
+
+  const base = {
+    id: String(q.id),
+    domain: String(q.domain),
+    difficulty: Number(q.difficulty ?? 2),
+    style: String(q.style ?? "MOST"),
+    q: String(q.q),
+    ref: String(q.ref ?? ""),
+    hint: String(q.hint ?? ""),
+    rubric: q.rubric ?? {concept:1, hierarchy:1, wording:1}
+  };
+
+  if(qType === "true_false"){
+    if(typeof q.answer !== "boolean") return null;
+
+    return {
+      ...base,
+      type: "true_false",
+      choices: ["True", "False"],
+      answer: q.answer ? 0 : 1
+    };
+  }
+
+  if(!Array.isArray(q.choices) || q.choices.length !== 4) return null;
+  if(typeof q.answer !== "number" || q.answer < 0 || q.answer > 3) return null;
+
+  return {
+    ...base,
+    type: "multiple_choice",
+    choices: q.choices.map(String),
+    answer: q.answer
+  };
+}
+
+
+/* =========================
+   Shared Question Bank
+   ========================= */
+let sharedBankCache = [];
+
+async function loadSharedBank(){
+  try{
+    const res = await fetch("question-bank.json", { cache:"no-store" });
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const arr = await res.json();
+    if(!Array.isArray(arr)) throw new Error("question-bank.json must be an array.");
+    sharedBankCache = arr.map(normalizeQuestion).filter(Boolean);
+  }catch(err){
+    sharedBankCache = [];
+    showErr(`Question bank load failed: ${err.message || err}`);
+  }
+  resetRotation();
+  updateBankSizeUI();
+}
+
+function getBank(){
+  return [...sharedBankCache];
+}
+function setBank(arr){
+  sharedBankCache = (Array.isArray(arr) ? arr : []).map(normalizeQuestion).filter(Boolean);
+  resetRotation();
+  updateBankSizeUI();
+}
+function mergeIntoBank(){
+  return { added:0, replaced:0, rejected:0, total:getBank().length };
+}
+function resetRotation(){ localStorage.removeItem(QB_ROT_KEY); }
+
+
+/* =========================
+   Rotation
+   ========================= */
+function loadRot(){ try{ return JSON.parse(localStorage.getItem(QB_ROT_KEY)); }catch{ return null; } }
+function saveRot(o){ localStorage.setItem(QB_ROT_KEY,JSON.stringify(o)); }
+function getNextRotatingSet(count=10){
+  const bank=getBank();
+  let rot=loadRot();
+  if(!rot||!Array.isArray(rot.order)||rot.order.length!==bank.length||typeof rot.idx!=="number"){
+    rot={order:[...Array(bank.length).keys()],idx:0};
+    shuffleArray(rot.order);
+  }
+  const set=[];
+  for(let i=0;i<count;i++){ set.push(bank[rot.order[rot.idx%rot.order.length]]); rot.idx++; }
+  saveRot(rot);
+  return set;
+}
+
+/* =========================
+   Misses
+   ========================= */
+function loadMisses(){ try{ return JSON.parse(localStorage.getItem(MISSES_KEY))||{}; }catch{ return {}; } }
+function saveMisses(m){ localStorage.setItem(MISSES_KEY,JSON.stringify(m)); }
+function clearMisses(){ localStorage.removeItem(MISSES_KEY); updateMissCountUI(); }
+function missesCount(){ return Object.keys(loadMisses()).length; }
+
+/* =========================
+   Domain Stats
+   ========================= */
+function loadStats(){ try{ return JSON.parse(localStorage.getItem(STATS_KEY))||{}; }catch{ return {}; } }
+function saveStats(s){ localStorage.setItem(STATS_KEY,JSON.stringify(s)); }
+function domainAccuracy(domain,stats){ const s=stats[domain]; if(!s||!s.seen) return 0.65; return Math.max(0,Math.min(1,s.correct/s.seen)); }
+function weightedPick(items,weightFn){
+  const weights=items.map(x=>Math.max(0.01,weightFn(x)));
+  const total=weights.reduce((a,b)=>a+b,0);
+  let r=Math.random()*total;
+  for(let i=0;i<items.length;i++){ r-=weights[i]; if(r<=0) return items[i]; }
+  return items[items.length-1];
+}
+function getAdaptiveSet(count=10){
+  const bank=getBank(),stats=loadStats(),misses=loadMisses(),picked=new Set(),set=[];
+  const weightFn=(q)=>{
+    const acc=domainAccuracy(q.domain,stats);
+    const weakness=(1.05-acc);
+    const missBoost=misses[q.id]?.misses?(1+Math.min(3,misses[q.id].misses*0.5)):1;
+    return weakness*missBoost;
+  };
+  let tries=0;
+  while(set.length<count&&tries<1000){ const q=weightedPick(bank,weightFn); if(!picked.has(q.id)){picked.add(q.id);set.push(q);} tries++; }
+  for(const q of bank){ if(set.length>=count) break; if(!picked.has(q.id)){picked.add(q.id);set.push(q);} }
+  shuffleArray(set);
+  return set.slice(0,count);
+}
+
+/* =========================
+   Review Misses Set
+   ========================= */
+function weightedPickIds(ids,missesMap){
+  const weights=ids.map(id=>(missesMap[id]?.misses??0)+1);
+  const total=weights.reduce((a,b)=>a+b,0);
+  let r=Math.random()*total;
+  for(let i=0;i<ids.length;i++){r-=weights[i];if(r<=0) return ids[i];}
+  return ids[ids.length-1];
+}
+function buildReviewSet(totalCount=10,missRatio=0.7){
+  const bank=getBank(),bankById=new Map(bank.map(q=>[q.id,q]));
+  const missesMap=loadMisses(),missIds=Object.keys(missesMap).filter(id=>bankById.has(id));
+  if(missIds.length===0) return state.selection==="adaptive"?getAdaptiveSet(totalCount):getNextRotatingSet(totalCount);
+  const missCountTarget=Math.min(totalCount,Math.max(1,Math.round(totalCount*missRatio)));
+  const set=[],picked=new Set();
+  let tries=0;
+  while(set.length<missCountTarget&&tries<400){ const id=weightedPickIds(missIds,missesMap); if(!picked.has(id)){picked.add(id);set.push(bankById.get(id));} tries++; }
+  const fresh=state.selection==="adaptive"?getAdaptiveSet(totalCount*2):getNextRotatingSet(totalCount*2);
+  for(const q of fresh){ if(set.length>=totalCount) break; if(!picked.has(q.id)){picked.add(q.id);set.push(q);} }
+  for(const q of bank){ if(set.length>=totalCount) break; if(!picked.has(q.id)){picked.add(q.id);set.push(q);} }
+  shuffleArray(set);
+  return set.slice(0,totalCount);
+}
+
+/* =========================
+   Grading
+   ========================= */
+function applyMisses(round,pickedAnswers){
+  const m=loadMisses();
+  round.forEach((q,idx)=>{ if(pickedAnswers[idx]!==q.answer){ if(!m[q.id]) m[q.id]={misses:0,lastTs:0}; m[q.id].misses+=1; m[q.id].lastTs=Date.now(); } });
+  saveMisses(m); updateMissCountUI();
+}
+function applyDomainStats(round,pickedAnswers){
+  const s=loadStats();
+  round.forEach((q,idx)=>{ if(!s[q.domain]) s[q.domain]={seen:0,correct:0}; s[q.domain].seen+=1; if(pickedAnswers[idx]===q.answer) s[q.domain].correct+=1; });
+  saveStats(s); updateStatsUI();
+}
+
+/* =========================
+   Daily Tracking
+   ========================= */
+function todayKey(){ const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function loadDaily(){ try{ return JSON.parse(localStorage.getItem(DAILY_KEY))||{}; }catch{ return {}; } }
+function saveDaily(d){ localStorage.setItem(DAILY_KEY,JSON.stringify(d)); }
+function dailyState(){
+  const d=loadDaily(),k=todayKey();
+  if(!d[k]) d[k]={warmup:false,pressure:false,review:false,wording:false};
+  saveDaily(d); return d[k];
+}
+function setDailyStep(step,val=true){
+  const all=loadDaily(),k=todayKey();
+  if(!all[k]) all[k]={warmup:false,pressure:false,review:false,wording:false};
+  all[k][step]=val; saveDaily(all); updateStreakUI();
+}
+function computeStreak(){
+  const all=loadDaily(),today=new Date();
+  let streak=0;
+  for(let i=0;i<3650;i++){
+    const d=new Date(today); d.setDate(today.getDate()-i);
+    const k=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    const s=all[k];
+    if(s&&s.warmup&&s.pressure&&s.review&&s.wording) streak++; else break;
+  }
+  return streak;
+}
+
+/* =========================
+   UI Helpers
+   ========================= */
+function updateBankSizeUI(){
+  const n=String(getBank().length);
+  const e1=document.getElementById("bankSize"); if(e1) e1.textContent=n;
+  const e2=document.getElementById("bankSizeTag"); if(e2) e2.textContent=n;
+  const e3=document.getElementById("statusBankSize"); if(e3) e3.textContent=n;
+}
+function updateMissCountUI(){
+  const n=String(missesCount());
+  const e1=document.getElementById("missCount"); if(e1) e1.textContent=n;
+  const e2=document.getElementById("missCountTag"); if(e2) e2.textContent=n;
+}
+function updateStreakUI(){
+  const n=String(computeStreak());
+  const e1=document.getElementById("streak"); if(e1) e1.textContent=n;
+  const e2=document.getElementById("streakTag"); if(e2) e2.textContent=n;
+}
+function updateStatsUI(){
+  const box=document.getElementById("domainStatsBox");
+  if(!box) return;
+  const stats=loadStats(),domains=Object.keys(stats).sort();
+  if(domains.length===0){ box.innerHTML=`<div class="small">No stats yet.</div>`; return; }
+  box.innerHTML=domains.map(d=>{
+    const seen=stats[d].seen||0,correct=stats[d].correct||0,acc=seen?Math.round((correct/seen)*100):0;
+    return `<div style="display:flex;justify-content:space-between;gap:4px;margin:3px 0;font-family:var(--mono);font-size:10px">
+      <span>${d}</span><span class="pill">${correct}/${seen} ${acc}%</span>
+    </div>`;
+  }).join("");
+}
+function setScoreUI(){
+  const c=state.scores.concept,h=state.scores.hierarchy,w=state.scores.wording;
+  document.getElementById("scoreConcept").textContent=c;
+  document.getElementById("scoreHierarchy").textContent=h;
+  document.getElementById("scoreWording").textContent=w;
+  const total=c+h+w;
+  document.getElementById("scoreTotal").textContent=`${total}/30`;
+  document.getElementById("rank").textContent=rankFromTotal(total);
+  const colorize=(el,v)=>{ el.classList.remove("good","warn","bad"); el.classList.add(v>=9?"good":v>=7?"warn":"bad"); };
+  colorize(document.getElementById("scoreConcept"),c);
+  colorize(document.getElementById("scoreHierarchy"),h);
+  colorize(document.getElementById("scoreWording"),w);
+}
+function titleFromMode(m){
+  return {daily:"Daily Training",pressure:"Pressure Round",review:"Review Misses",flashcards:"Flashcards",wording:"Wording Lab",bank:"Question Bank"}[m]||"Daily Training";
+}
+function setThemeFont(){
+  if(!["win95","ibm"].includes(state.theme)) state.theme="win95";
+  document.body.dataset.theme=state.theme;
+  document.documentElement.style.setProperty("--base",state.font+"px");
+  const themeSelect=document.getElementById("themeSelect");
+  const fontSelect=document.getElementById("fontSelect");
+  const selectionSelect=document.getElementById("selectionSelect");
+  if(themeSelect) themeSelect.value=state.theme;
+  if(fontSelect) fontSelect.value=String(state.font);
+  if(selectionSelect) selectionSelect.value=state.selection;
+}
+
+/* =========================
+   Timer
+   ========================= */
+let timerInterval=null;
+function startTimer(seconds){
+  stopTimer();
+  let remaining=seconds;
+  const el=document.getElementById("timer");
+  const tick=()=>{
+    const m=String(Math.floor(remaining/60)).padStart(2,"0");
+    const s=String(remaining%60).padStart(2,"0");
+    el.textContent=`${m}:${s}`;
+    if(remaining<=0){stopTimer();el.textContent="00:00";}
+    remaining--;
+  };
+  tick(); timerInterval=setInterval(tick,1000);
+}
+function stopTimer(){ if(timerInterval){clearInterval(timerInterval);timerInterval=null;} }
+
+/* =========================
+   Render
+   ========================= */
+function getFreshSet(count=10){ return state.selection==="adaptive"?getAdaptiveSet(count):getNextRotatingSet(count); }
+
+function render(){
+  setThemeFont();
+  setScoreUI();
+  updateBankSizeUI();
+  updateMissCountUI();
+  updateStreakUI();
+  updateStatsUI();
+  updateWorkbenchStatus();
+
+  const main=document.getElementById("main");
+  const mainTitle=document.getElementById("mainTitle");
+  main.innerHTML="";
+  mainTitle.textContent=titleFromMode(state.mode);
+  stopTimer();
+  document.getElementById("timer").textContent="—";
+
+  if(state.mode==="daily")      renderDaily(main);
+  if(state.mode==="pressure")   renderQuiz(main,{mode:"pressure"});
+  if(state.mode==="review")     renderQuiz(main,{mode:"review"});
+  if(state.mode==="flashcards") renderFlashcards(main);
+  if(state.mode==="wording")    renderWording(main);
+  if(state.mode==="bank")       renderBankManager(main);
+}
+
+/* ===== Daily ===== */
+function renderDaily(root){
+  const d=dailyState();
+  const box=document.createElement("div");
+  box.className="q";
+  box.innerHTML=`<strong>Daily Run (10–15 min)</strong><div class="small" style="margin-top:6px">Finish all 4 steps to keep your streak alive.</div>`;
+  const steps=document.createElement("div");
+  steps.style.marginTop="10px";
+  function stepRow(label,key,actionText){
+    const done=d[key];
+    const row=document.createElement("div");
+    row.className="mini"; row.style.marginBottom="10px";
+    row.innerHTML=`<div class="row" style="justify-content:space-between;gap:10px"><div><div class="mono"><b>${done?"✅":"⬜"} ${label}</b></div><div class="small">${actionText}</div></div><button class="primary" id="go_${key}">${done?"Redo":"Start"}</button></div>`;
+    return row;
+  }
+  const warm=stepRow("Warmup","warmup","3 quick flashcards (tap to reveal)");
+  const press=stepRow("Pressure Round","pressure","10 questions (Adaptive/Rotating + shuffled answers)");
+  const rev=stepRow("Review Misses","review","10 questions (~70% misses if available)");
+  const word=stepRow("Wording Lab","wording","Rewrite 2 prompts using power phrases");
+  steps.append(warm,press,rev,word);
+  box.appendChild(steps);
+  root.appendChild(box);
+  warm.querySelector("#go_warmup").onclick=()=>{setDailyStep("warmup",true);renderDailyWarmup(root);};
+  press.querySelector("#go_pressure").onclick=()=>{state.mode="pressure";saveState();render();};
+  rev.querySelector("#go_review").onclick=()=>{state.mode="review";saveState();render();};
+  word.querySelector("#go_wording").onclick=()=>{state.mode="wording";saveState();render();};
+}
+
+function renderDailyWarmup(root){
+  root.innerHTML="";
+  const top=document.createElement("div");
+  top.className="row";
+  top.innerHTML=`<span class="pill">Warmup • 3 cards</span><span class="pill">Tap to flip</span>`;
+  let cards=[...FLASHCARDS]; shuffleArray(cards); cards=cards.slice(0,3);
+  let index=0;
+  const card=document.createElement("div");
+  card.className="flash"; card.dataset.flipped="0";
+  function draw(){
+    const item=cards[index],flipped=card.dataset.flipped==="1";
+    card.innerHTML=flipped?`<div class="front">Answer</div><div class="back">${item.back}</div>`:`<div class="front">${item.front}</div><div class="back">Tap to reveal</div>`;
+  }
+  card.onclick=()=>{card.dataset.flipped=(card.dataset.flipped==="1")?"0":"1";draw();};
+  const nav=document.createElement("div"); nav.className="footerRow";
+  const next=document.createElement("button"); next.className="primary"; next.textContent="Next Card";
+  const done=document.createElement("button"); done.textContent="Done → Back to Daily";
+  next.onclick=()=>{ index++; if(index>=cards.length){setDailyStep("warmup",true);okBeep();state.mode="daily";saveState();render();return;} card.dataset.flipped="0";draw(); };
+  done.onclick=()=>{state.mode="daily";saveState();render();};
+  nav.append(next,done);
+  root.append(top,card,nav);
+  draw();
+}
+
+/* ===== Quiz ===== */
+function renderQuiz(root,opts){
+  const isReview=opts.mode==="review";
+  let round=isReview?buildReviewSet(10,0.7):getFreshSet(10);
+  round=round.map(shuffleQuestionChoices);
+  shuffleArray(round);
+  const top=document.createElement("div"); top.className="row";
+  top.innerHTML=isReview
+    ?`<span class="pill">10 questions • Weak deck</span><span class="pill">answers randomized</span>`
+    :`<span class="pill">10 questions • ${state.selection==="adaptive"?"Adaptive":"Rotating"}</span><span class="pill">answers randomized</span>`;
+  const btnRow=document.createElement("div"); btnRow.className="footerRow";
+  const startBtn=document.createElement("button"); startBtn.className="primary";
+  startBtn.textContent=isReview?"Start Timed Review (6:00)":"Start Timed Round (6:00)";
+  const newSetBtn=document.createElement("button"); newSetBtn.textContent="New Set";
+  const gradeBtn=document.createElement("button"); gradeBtn.textContent="Grade Round";
+  btnRow.append(startBtn,newSetBtn,gradeBtn);
+  const form=document.createElement("div"); form.id="quiz";
+  round.forEach((item,idx)=>{
+    const q=document.createElement("div"); q.className="q";
+    q.innerHTML=`<strong>${idx+1}. <span class="mono">[${item.domain}]</span> ${item.q}</strong>`;
+    const choices=document.createElement("div"); choices.className="choices";
+    item.choices.forEach((c,cidx)=>{
+      const line=document.createElement("label"); line.className="choice"; line.id=`q${idx}_c${cidx}`;
+      line.innerHTML=`<input type="radio" name="q${idx}" value="${cidx}"><span>${c}</span>`;
+      choices.appendChild(line);
+    });
+    q.appendChild(choices); form.appendChild(q);
+  });
+  const result=document.createElement("div"); result.className="small";
+  const missPanel=document.createElement("div"); missPanel.style.marginTop="14px";
+  startBtn.onclick=()=>startTimer(6*60);
+  newSetBtn.onclick=()=>{stopTimer();render();};
+  gradeBtn.onclick=()=>{
+    const picked=round.map((_,idx)=>{ const sel=root.querySelector(`input[name="q${idx}"]:checked`); return sel?Number(sel.value):null; });
+    round.forEach((q,qIdx)=>{ q.choices.forEach((_,cIdx)=>{ const el=document.getElementById(`q${qIdx}_c${cIdx}`); if(el) el.classList.remove("correct","wrong"); }); });
+    let correct=0,concept=0,hierarchy=0,wording=0;
+    const missesOnly=[];
+    round.forEach((q,idx)=>{
+      const chosen=picked[idx],isCorrect=chosen===q.answer;
+      if(isCorrect){correct++;concept+=q.rubric?.concept??0;hierarchy+=q.rubric?.hierarchy??0;wording+=q.rubric?.wording??0;}
+      else missesOnly.push({idx:idx+1,q});
+    });
+    round.forEach((q,qIdx)=>{
+      const chosen=picked[qIdx],correctChoice=q.answer;
+      const correctEl=document.getElementById(`q${qIdx}_c${correctChoice}`); if(correctEl) correctEl.classList.add("correct");
+      if(chosen!==null&&chosen!==undefined&&chosen!==correctChoice){ const chosenEl=document.getElementById(`q${qIdx}_c${chosen}`); if(chosenEl) chosenEl.classList.add("wrong"); }
+    });
+    applyMisses(round,picked);
+    applyDomainStats(round,picked);
+    const maxC=round.reduce((a,q)=>a+(q.rubric?.concept||0),0);
+    const maxH=round.reduce((a,q)=>a+(q.rubric?.hierarchy||0),0);
+    const maxW=round.reduce((a,q)=>a+(q.rubric?.wording||0),0);
+    const c10=maxC?Math.round((concept/maxC)*10):0;
+    const h10=maxH?Math.round((hierarchy/maxH)*10):0;
+    const w10=maxW?Math.round((wording/maxW)*10):0;
+    state.scores={concept:c10,hierarchy:h10,wording:w10};
+    state.lastResult={correct,total:round.length,c10,h10,w10,ts:Date.now(),mode:opts.mode};
+    saveState(); setScoreUI();
+    if(opts.mode==="pressure") setDailyStep("pressure",true);
+    if(opts.mode==="review") setDailyStep("review",true);
+    if(missesOnly.length===0) okBeep(); else warnBeep();
+    result.innerHTML=`<div style="margin-top:10px" class="mono">Result: ${correct}/${round.length} correct • Concept ${c10}/10 • Hierarchy ${h10}/10 • Wording ${w10}/10</div><div class="small" style="margin-top:6px">Green = correct answer • Red = your chosen wrong answer</div>`;
+    missPanel.innerHTML="";
+    const panel=document.createElement("div"); panel.className="q";
+    panel.innerHTML=`<strong>Miss Breadcrumbs</strong><div class="small">No explanations—use these to find it in ITSIMM.</div>`;
+    const list=document.createElement("div"); list.style.marginTop="10px";
+    if(missesOnly.length===0){ const ok=document.createElement("div"); ok.className="mini"; ok.innerHTML=`<div class="mono">No misses. Clean round.</div>`; list.appendChild(ok); }
+    else{
+      missesOnly.forEach(m=>{
+        const letter=String.fromCharCode(65+m.q.answer);
+        const item=document.createElement("div"); item.className="mini"; item.style.marginBottom="10px";
+        item.innerHTML=`<div class="mono"><b>${m.idx}. [${m.q.domain}]</b> Correct: <b>${letter}</b></div><div class="small" style="margin-top:6px"><b>Ref:</b> ${m.q.ref||"—"}</div><div class="small"><b>Hint:</b> ${m.q.hint||"—"}</div>`;
+        list.appendChild(item);
+      });
+    }
+    const copyBtn=document.createElement("button"); copyBtn.className="primary"; copyBtn.textContent="Copy Miss Breadcrumbs"; copyBtn.style.marginTop="10px";
+    copyBtn.onclick=async()=>{
+      const text=missesOnly.length===0?"Miss Breadcrumbs: none":"Miss Breadcrumbs:\n"+missesOnly.map(m=>`- ${m.idx}. [${m.q.domain}] Correct: ${String.fromCharCode(65+m.q.answer)}\n  Ref: ${m.q.ref||"—"}\n  Hint: ${m.q.hint||"—"}`).join("\n");
+      try{await navigator.clipboard.writeText(text);alert("Copied.");}catch{alert("Clipboard blocked. Copy manually.");}
+    };
+    panel.append(list,copyBtn);
+    missPanel.appendChild(panel);
+    stopTimer();
+  };
+  root.append(top,btnRow,form,result,missPanel);
+}
+
+/* ===== Flashcards ===== */
+function renderFlashcards(root){
+  const top=document.createElement("div"); top.className="row";
+  top.innerHTML=`<span class="pill">Tap card to flip</span><span class="pill">Quick memory reps</span>`;
+  root.appendChild(top);
+  let index=0;
+  const card=document.createElement("div"); card.className="flash";
+  function draw(){
+    const item=FLASHCARDS[index],flipped=card.dataset.flipped==="1";
+    card.innerHTML=flipped?`<div class="front">Answer</div><div class="back">${item.back}</div>`:`<div class="front">${item.front}</div><div class="back">Tap to reveal</div>`;
+  }
+  card.onclick=()=>{card.dataset.flipped=(card.dataset.flipped==="1")?"0":"1";draw();};
+  const nav=document.createElement("div"); nav.className="footerRow";
+  const prev=document.createElement("button"); prev.textContent="◀ Prev";
+  const next=document.createElement("button"); next.textContent="Next ▶";
+  const shuffle=document.createElement("button"); shuffle.className="primary"; shuffle.textContent="Shuffle";
+  prev.onclick=()=>{index=(index-1+FLASHCARDS.length)%FLASHCARDS.length;card.dataset.flipped="0";draw();};
+  next.onclick=()=>{index=(index+1)%FLASHCARDS.length;card.dataset.flipped="0";draw();};
+  shuffle.onclick=()=>{shuffleArray(FLASHCARDS);index=0;card.dataset.flipped="0";draw();};
+  nav.append(prev,shuffle,next);
+  root.append(card,nav);
+  card.dataset.flipped="0"; draw();
+}
+
+/* ===== Wording ===== */
+function renderWording(root){
+  const top=document.createElement("div"); top.className="row";
+  top.innerHTML=`<span class="pill">Field talk → Technician wording</span><span class="pill">Write clean inspection sentences</span>`;
+  root.appendChild(top);
+  WORDING_PROMPTS.forEach((p,idx)=>{
+    const block=document.createElement("div"); block.className="q";
+    block.innerHTML=`<strong>${idx+1}. Field version:</strong><div class="mono" style="margin:6px 0 10px;opacity:.9">${p.field}</div><div class="split"><div><div class="small">Your Technician rewrite:</div><textarea id="w_${idx}" placeholder="One inspection-style sentence..."></textarea></div><div><div class="small">Target phrasing (reference):</div><div class="mini" style="height:100%;display:flex;align-items:flex-start"><div class="mono" style="white-space:pre-wrap">${p.target}</div></div></div></div>`;
+    root.appendChild(block);
+  });
+  const doneBtn=document.createElement("button"); doneBtn.className="primary"; doneBtn.textContent="Mark Wording Done (Daily)";
+  doneBtn.onclick=()=>{setDailyStep("wording",true);okBeep();alert("Marked.");};
+  const tip=document.createElement("div"); tip.className="small"; tip.style.marginTop="10px";
+  tip.textContent="Power phrases: listed assembly • manufacturer minimum bend radius • minimize impedance • limit future expansion • shock hazard • resiliency";
+  root.append(doneBtn,tip);
+}
+
+/* ===== Bank Manager ===== */
+
+function renderBankManager(root){
+  const bank = getBank();
+  const head = document.createElement("div");
+  head.className = "q";
+  head.innerHTML = `
+    <strong>Shared Question Bank</strong>
+    <div class="small" style="margin-top:6px">
+      This bank is read-only on the hosted site. Everyone loads the same <span class="mono">question-bank.json</span>.
+    </div>
+    <div class="row" style="margin-top:10px">
+      <span class="pill">Current bank size: <span class="mono">${bank.length}</span></span>
+      <span class="pill">Selection: <span class="mono">${state.selection}</span></span>
+    </div>
+  `;
+
+  const box = document.createElement("div");
+  box.className = "q";
+  box.innerHTML = `<strong>Bank Actions</strong><div class="small">Use export to review the currently hosted bank file.</div>`;
+
+  const btnRow = document.createElement("div");
+  btnRow.className = "footerRow";
+
+  const exportBankBtn = document.createElement("button");
+  exportBankBtn.textContent = "Export Shared Bank";
+
+  const reloadBankBtn = document.createElement("button");
+  reloadBankBtn.className = "primary";
+  reloadBankBtn.textContent = "Reload Shared Bank";
+
+  const status = document.createElement("div");
+  status.className = "small";
+  status.style.marginTop = "10px";
+
+  exportBankBtn.onclick = ()=>{
+    const data = getBank();
+    const blob = new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `question-bank-${data.length}.json`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  };
+
+  reloadBankBtn.onclick = async ()=>{
+    status.textContent = "Reloading shared bank...";
+    await loadSharedBank();
+    status.textContent = `Reloaded shared bank. Total questions: ${getBank().length}.`;
+    render();
+  };
+
+  btnRow.append(reloadBankBtn, exportBankBtn);
+  box.append(btnRow, status);
+  root.append(head, box);
+}
+
+
+/* =========================
+   Export / Import (progress)
+   ========================= */
+
+function exportAll(){
+  const obj = {state,misses:loadMisses(),stats:loadStats(),daily:loadDaily(),rotation:loadRot()};
+  const blob = new Blob([JSON.stringify(obj,null,2)],{type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `bicsi_trainer_progress_${todayKey()}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+function importAll(obj){
+  if(obj.state){ Object.assign(state,obj.state); saveState(); }
+  if(obj.misses) saveMisses(obj.misses);
+  if(obj.stats) saveStats(obj.stats);
+  if(obj.daily) saveDaily(obj.daily);
+  if(obj.rotation) saveRot(obj.rotation);
+}
+
+
+/* =========================
+   Menu Bar Logic
+   ========================= */
+function wireMenuBar(){
+  const menuBar=document.getElementById("menuBar");
+
+  // Toggle open/close on click
+  menuBar.addEventListener("click",(e)=>{
+    const item=e.target.closest(".menuItem");
+    if(!item) { closeAllMenus(); return; }
+    const isOpen=item.classList.contains("open");
+    closeAllMenus();
+    if(!isOpen) item.classList.add("open");
+  });
+
+  // Close menus when clicking outside
+  document.addEventListener("click",(e)=>{
+    if(!e.target.closest(".menuBar")) closeAllMenus();
+  });
+
+  // Hover to switch between open menus
+  menuBar.querySelectorAll(".menuItem").forEach(item=>{
+    item.addEventListener("mouseenter",()=>{
+      const anyOpen=[...menuBar.querySelectorAll(".menuItem")].some(i=>i.classList.contains("open"));
+      if(anyOpen){ closeAllMenus(); item.classList.add("open"); }
+    });
+  });
+
+  function closeAllMenus(){ menuBar.querySelectorAll(".menuItem.open").forEach(i=>i.classList.remove("open")); }
+
+  // File menu
+  document.getElementById("menuQuestionBank").addEventListener("click",()=>{ state.mode="bank"; saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuImport").addEventListener("click",()=>{ document.getElementById("importFile").click(); closeAllMenus(); });
+  document.getElementById("menuExport").addEventListener("click",()=>{ exportAll(); closeAllMenus(); });
+  document.getElementById("menuReset").addEventListener("click",()=>{
+    if(!confirm("Reset all local progress, misses, stats, and daily history?")) return;
+    [KEY,QB_ROT_KEY,MISSES_KEY,STATS_KEY,DAILY_KEY].forEach(k=>localStorage.removeItem(k));
+    location.reload();
+  });
+
+  // Session menu
+  document.getElementById("menuHome").addEventListener("click",()=>{ state.mode="daily"; saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuDaily").addEventListener("click",()=>{ state.mode="daily"; saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuPressure").addEventListener("click",()=>{ state.mode="pressure"; saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuFlashcards").addEventListener("click",()=>{ state.mode="flashcards"; saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuWording").addEventListener("click",()=>{ state.mode="wording"; saveState(); render(); closeAllMenus(); });
+
+  // Trainer menu
+  document.getElementById("menuReview").addEventListener("click",()=>{ state.mode="review"; saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuClearMisses").addEventListener("click",()=>{
+    if(!confirm("Clear your misses deck?")) return;
+    clearMisses(); render(); closeAllMenus();
+  });
+
+  // Diagnostics menu
+  document.getElementById("menuSettings").addEventListener("click",()=>{ document.getElementById("settingsModal").classList.remove("hidden"); closeAllMenus(); });
+
+  // Help menu
+  document.getElementById("menuManual").addEventListener("click",()=>{ window.open("BICSI_Technician_Training_Manual.pdf","_blank"); closeAllMenus(); });
+  document.getElementById("menuPractice").addEventListener("click",()=>{ window.open("BICSI_Technician_Practice_Test.pdf","_blank"); closeAllMenus(); });
+  document.getElementById("menuFlashPDF").addEventListener("click",()=>{ window.open("BICSI_Technician_Flashcards.pdf","_blank"); closeAllMenus(); });
+  document.getElementById("menuImages").addEventListener("click",()=>{ window.open("BICSI_Technician_Images.pdf","_blank"); closeAllMenus(); });
+
+  
+// Import file handler
+  document.getElementById("importFile").addEventListener("change",async(e)=>{
+    const file = e.target.files?.[0];
+    if(!file) return;
+    const fileText = await file.text();
+    try{
+      const obj = JSON.parse(fileText);
+      importAll(obj);
+      render();
+      alert("Progress imported.");
+    }catch{
+      alert("Invalid progress file.");
+    }finally{
+      e.target.value = "";
+    }
+  });
+
+  // Settings modal controls
+
+  document.getElementById("closeSettingsBtn").addEventListener("click",()=>{ document.getElementById("settingsModal").classList.add("hidden"); });
+  document.getElementById("settingsModal").addEventListener("click",(e)=>{ if(e.target.id==="settingsModal") document.getElementById("settingsModal").classList.add("hidden"); });
+  document.getElementById("themeSelect").addEventListener("change",(e)=>{ state.theme=e.target.value; saveState(); render(); });
+  document.getElementById("fontSelect").addEventListener("change",(e)=>{ state.font=Number(e.target.value); saveState(); render(); });
+  document.getElementById("selectionSelect").addEventListener("change",(e)=>{ state.selection=e.target.value; saveState(); render(); });
+}
+
+/* =========================
+   Workbench Status
+   ========================= */
+const modePrompts={
+  daily:["Loading daily circuit...","Balancing weak domains...","Preparing warmup sequence...","Awaiting operator input..."],
+  pressure:["Pressure simulation armed...","Randomizing answer vectors...","Chronometer standing by...","Maintain signal discipline..."],
+  review:["Scanning misses deck...","Prioritizing weak targets...","Routing review packets...","Recovery mode active..."],
+  flashcards:["Indexing recall modules...","Card stack online...","Memory drills available...","Tap card to reveal..."],
+  wording:["Loading technician phrasing lab...","Power phrases synchronized...","Field language translator ready...","Draft concise inspection notes..."],
+  bank:["Question bank maintenance active...","Import channel open...","Rotation order standing by...","Archive and merge routines ready..."]
+};
+
+function updateWorkbenchStatus(){
+  const modeText=(state.mode||"daily").toUpperCase();
+  const selectionText=(state.selection||"adaptive").toUpperCase();
+  const themeText=state.theme==="ibm"?"IBM WORKSTATION":"WINDOWS 95";
+
+  const el=id=>document.getElementById(id);
+  if(el("statusMode")) el("statusMode").textContent=modeText;
+  if(el("statusTheme")) el("statusTheme").textContent=themeText;
+  if(el("statusHeadline")) el("statusHeadline").textContent=`${modeText} • NOMINAL`;
+  if(el("lampMode")) el("lampMode").className="diagLamp active";
+
+  // Trainer dropdown status tags
+  if(el("trainerStatusMode")) el("trainerStatusMode").textContent=`MODE // ${modeText}`;
+  if(el("trainerStatusSelect")) el("trainerStatusSelect").textContent=`SELECT // ${selectionText}`;
+  if(el("trainerStatusTheme")) el("trainerStatusTheme").textContent=`THEME // ${themeText}`;
+
+  const prompt=el("bootPrompt");
+  if(prompt){
+    const msgs=modePrompts[state.mode]||modePrompts.daily;
+    let i=0;
+    prompt.innerHTML=`${msgs[0]}<span class="cursor">█</span>`;
+    if(prompt._rotator) clearInterval(prompt._rotator);
+    prompt._rotator=setInterval(()=>{ i=(i+1)%msgs.length; prompt.innerHTML=`${msgs[i]}<span class="cursor">█</span>`; },2200);
+  }
+}
+
+/* =========================
+   Audio FX
+   ========================= */
+function beep(freq=880,duration=0.06,type="sine",gain=0.018){
+  try{
+    const ctx=beep.ctx||(beep.ctx=new(window.AudioContext||window.webkitAudioContext)());
+    const osc=ctx.createOscillator(),g=ctx.createGain();
+    osc.type=type; osc.frequency.value=freq; g.gain.value=gain;
+    osc.connect(g); g.connect(ctx.destination);
+    osc.start(); g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+duration); osc.stop(ctx.currentTime+duration);
+  }catch(e){}
+}
+function clickBeep(){ beep(640,0.035,"square",0.012); }
+function okBeep(){ beep(880,0.05,"triangle",0.018); setTimeout(()=>beep(1175,0.06,"triangle",0.014),70); }
+function warnBeep(){ beep(320,0.08,"sawtooth",0.018); }
+
+function wireFx(){
+  document.addEventListener("click",(e)=>{ if(e.target.closest("button, .pill, .flash, select, .dropdown-item")) clickBeep(); });
+}
+
+/* =========================
+   Boot Sequence
+   ========================= */
+function startBootSequence(){
+  const overlay=document.getElementById("bootOverlay");
+  const log=document.getElementById("bootLog");
+  const ready=document.getElementById("bootReady");
+  if(!overlay||!log||!ready) return;
+  const lines=["INITIALIZING BICSI TRAINING CONSOLE...","LOADING QUESTION BANK...","MOUNTING LOCAL MEMORY...","CALIBRATING DIAGNOSTIC PANELS...","SYNCING PALETTE MODULE...","READY."];
+  log.textContent=""; ready.classList.remove("show");
+  let index=0;
+  function renderLine(){
+    if(index>=lines.length){ log.textContent+="\n> OPERATOR LINK ESTABLISHED"; ready.classList.add("show"); setTimeout(()=>{overlay.style.display="none";},900); return; }
+    log.textContent+=(index?"\n":"")+lines[index]; index++;
+    setTimeout(renderLine,400);
+  }
+  setTimeout(()=>{overlay.style.display="none";},5000);
+  renderLine();
+}
+
+/* =========================
+   Init
+   ========================= */
+document.addEventListener("DOMContentLoaded", async ()=>{
+  startBootSequence();
+  wireMenuBar();
+  wireFx();
+  await loadSharedBank();
+  render();
+});
+</script>
+</body>
+</html>
