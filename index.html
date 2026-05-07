@@ -59,7 +59,59 @@
       --dropdown-hover:#39ff14;
       --dropdown-hover-text:#000000;
     }
-
+    [data-theme="light"]{
+      --font:"Inter", sans-serif;
+      --ui:"Inter", sans-serif;
+      --mono:"JetBrains Mono", monospace;
+      --bg:#f5f7fa;
+      --panel:#ffffff;
+      --panel2:#eef1f5;
+      --panelTop:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --good:#16a34a;
+      --warn:#d97706;
+      --bad:#dc2626;
+      --border:#d1d5db;
+      --overlay:rgba(0,0,0,.45);
+      --scan:rgba(37,99,235,.03);
+      --titlebar:#e5e7eb;
+      --titlebar-text:#111827;
+      --menu-bg:#ffffff;
+      --sunken-dark:#cbd5e1;
+      --sunken-light:#ffffff;
+      --status-bg:#f3f4f6;
+      --dropdown-hover:#2563eb;
+      --dropdown-hover-text:#ffffff;
+    }
+    [data-theme="dark"]{
+      --font:"Inter", sans-serif;
+      --ui:"Inter", sans-serif;
+      --mono:"JetBrains Mono", monospace;
+      --bg:#111827;
+      --panel:#1f2937;
+      --panel2:#273449;
+      --panelTop:#374151;
+      --text:#f9fafb;
+      --muted:#9ca3af;
+      --accent:#3b82f6;
+      --good:#22c55e;
+      --warn:#f59e0b;
+      --bad:#ef4444;
+      --border:#374151;
+      --overlay:rgba(0,0,0,.6);
+      --scan:rgba(59,130,246,.04);
+      --titlebar:#1f2937;
+      --titlebar-text:#f9fafb;
+      --menu-bg:#1f2937;
+      --sunken-dark:#111827;
+      --sunken-light:#4b5563;
+      --status-bg:#111827;
+      --dropdown-hover:#3b82f6;
+      --dropdown-hover-text:#ffffff;
+    }
+      
     *{box-sizing:border-box; margin:0; padding:0}
     html{background:var(--bg)}
     body{
@@ -436,7 +488,7 @@
   </style>
 </head>
 
-<body data-theme="win95">
+<body data-theme="light">
 
 <!-- ===== Boot Overlay ===== -->
 <div id="bootOverlay" class="bootOverlay">
@@ -646,6 +698,8 @@
       <select id="themeSelect" title="Theme">
         <option value="win95">Windows 95 Corporate</option>
         <option value="ibm">IBM Workstation</option>
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
       </select>
       <label for="fontSelect">Font Size</label>
       <select id="fontSelect" title="Font size">
@@ -741,7 +795,7 @@ function loadState(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch{
 function saveState(){ localStorage.setItem(KEY, JSON.stringify(state)); }
 
 const state = loadState() ?? {
-  theme:"win95", font:16, mode:"daily", selection:"adaptive",
+  theme:"light", font:16, mode:"daily", selection:"adaptive",
   week:1, session:"A",
   scores:{ concept:0, hierarchy:0, wording:0 },
   lastResult:null
@@ -1020,7 +1074,7 @@ function titleFromMode(m){
   return {daily:"Daily Training",pressure:"Pressure Round",review:"Review Misses",flashcards:"Flashcards",wording:"Wording Lab",bank:"Question Bank"}[m]||"Daily Training";
 }
 function setThemeFont(){
-  if(!["win95","ibm"].includes(state.theme)) state.theme="win95";
+  if(!["light","dark","win95","ibm"].includes(state.theme)) state.theme="light";
   document.body.dataset.theme=state.theme;
   document.documentElement.style.setProperty("--base",state.font+"px");
   const themeSelect=document.getElementById("themeSelect");
