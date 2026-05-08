@@ -419,6 +419,31 @@
     }
 
     /* ===== Quiz/Content styles ===== */
+    .quiz-shell {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 260px);
+  min-height: 0;
+}
+
+.quiz-controls {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  padding: 8px;
+  margin-bottom: 10px;
+  box-shadow:
+    inset 1px 1px 0 var(--sunken-light),
+    inset -1px -1px 0 var(--sunken-dark);
+}
+
+.quiz-scroll {
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 6px;
+}
     .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
     .q{
       padding:10px;border:2px solid var(--border);background:var(--panel2);margin-bottom:10px;
@@ -767,7 +792,10 @@ const FLASHCARDS = [
   { front:"Single-mode operating frequencies", back:" 1310 nm and 1550 nm"},
   { front:"Minimum inside bend radius for 4-strand optical cable at rest", back:"25mm (1 in)"},
   { front:"Connection process that uses a pre-polished fiber stub with index-matching gel", back:"Cleave and Secure connectors"},
-  { front:"Fusion splice loss will be", back:"0.1dB or less"}
+  { front:"Fusion splice loss will be", back:"0.1dB or less"},
+  { front:"Maximum length of a permanent link", back:"295 feet, 90 meters"},
+  { front:"Maximum length of a channel", back:"328 feet, 100 meters"},
+  { front:"Typical spacing of J-hooks for a pull", back:"Approximately 4-5 ft apart"}
 ];
 
 const WORDING_PROMPTS = [
@@ -1190,8 +1218,19 @@ function renderQuiz(root,opts){
   const isReview=opts.mode==="review";
   let round=isReview?buildReviewSet(10,0.7):getFreshSet(10);
   round=round.map(shuffleQuestionChoices);
-  shuffleArray(round);
-  const top=document.createElement("div"); top.className="row";
+shuffleArray(round);
+
+const quizShell = document.createElement("div");
+quizShell.className = "quiz-shell";
+
+const quizControls = document.createElement("div");
+quizControls.className = "quiz-controls";
+
+const quizScroll = document.createElement("div");
+quizScroll.className = "quiz-scroll";
+
+const top=document.createElement("div"); 
+top.className="row";
   top.innerHTML=isReview
     ?`<span class="pill">10 questions • Weak deck</span><span class="pill">answers randomized</span>`
     :`<span class="pill">10 questions • ${state.selection==="adaptive"?"Adaptive":"Rotating"}</span><span class="pill">answers randomized</span>`;
@@ -1201,9 +1240,11 @@ function renderQuiz(root,opts){
   const newSetBtn=document.createElement("button"); newSetBtn.textContent="New Set";
   const gradeBtn=document.createElement("button"); gradeBtn.textContent="Grade Round";
   btnRow.append(startBtn,newSetBtn,gradeBtn);
+    quizControls.append(top, btnRow);
   const form=document.createElement("div"); form.id="quiz";
   round.forEach((item,idx)=>{
     const q=document.createElement("div"); q.className="q";
+      quizScroll.appendChild(form);f
     q.innerHTML=`<strong>${idx+1}. <span class="mono">[${item.domain}]</span> ${item.q}</strong>`;
     const choices=document.createElement("div"); choices.className="choices";
     item.choices.forEach((c,cidx)=>{
@@ -1215,6 +1256,7 @@ function renderQuiz(root,opts){
   });
   const result=document.createElement("div"); result.className="small";
   const missPanel=document.createElement("div"); missPanel.style.marginTop="14px";
+    quizScroll.append(result, missPanel);
   startBtn.onclick=()=>startTimer(6*60);
   newSetBtn.onclick=()=>{stopTimer();render();};
   gradeBtn.onclick=()=>{
@@ -1269,7 +1311,8 @@ function renderQuiz(root,opts){
     missPanel.appendChild(panel);
     stopTimer();
   };
-  root.append(top,btnRow,form,result,missPanel);
+  quizShell.append(quizControls, quizScroll);
+root.appendChild(quizShell);
 }
 
 /* ===== Flashcards ===== */
