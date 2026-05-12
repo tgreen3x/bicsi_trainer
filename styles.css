@@ -380,7 +380,17 @@
     button:disabled{opacity:.6;cursor:not-allowed}
 
     /* retro square radio buttons */
-    input[type="radio"]{
+    button:focus-visible,
+    select:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    a:focus-visible,
+    .menuItem:focus-visible,
+    .dropdown-item:focus-visible {
+     outline: 3px solid var(--accent);
+     outline-offset: 2px;
+}  
+      input[type="radio"]{
       appearance:none;-webkit-appearance:none;
       width:14px;height:14px;margin-right:8px;
       border:2px solid #000;background:#c0c0c0;
