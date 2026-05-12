@@ -122,7 +122,48 @@ function readPackJson(id){
     answer: q.answer
   };
 }
+function validateQuestionBank(rawQuestions) {
+  const report = {
+    total: Array.isArray(rawQuestions) ? rawQuestions.length : 0,
+    valid: 0,
+    invalid: 0,
+    duplicateIds: [],
+    missingIds: [],
+    invalidIndexes: []
+  };
 
+  if (!Array.isArray(rawQuestions)) {
+    report.invalid = 1;
+    return report;
+  }
+
+  const seenIds = new Set();
+
+  rawQuestions.forEach((question, index) => {
+    const normalized = normalizeQuestion(question);
+
+    if (!question || !question.id) {
+      report.missingIds.push(index);
+    }
+
+    if (question && question.id) {
+      if (seenIds.has(question.id)) {
+        report.duplicateIds.push(question.id);
+      } else {
+        seenIds.add(question.id);
+      }
+    }
+
+    if (!normalized) {
+      report.invalid++;
+      report.invalidIndexes.push(index);
+    } else {
+      report.valid++;
+    }
+  });
+
+  return report;
+}
 
 /* =========================
    Shared Question Bank
@@ -133,9 +174,25 @@ async function loadSharedBank(){
   try{
     const res = await fetch("question-bank.json", { cache:"no-store" });
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    const arr = await res.json();
-    if(!Array.isArray(arr)) throw new Error("question-bank.json must be an array.");
-    sharedBankCache = arr.map(normalizeQuestion).filter(Boolean);
+   const arr = await res.json();
+
+if (!Array.isArray(arr)) {
+  throw new Error("question-bank.json must be an array.");
+}
+
+const report = validateQuestionBank(arr);
+
+console.log("Question Bank Validation Report:", report);
+
+if (report.duplicateIds.length > 0) {
+  console.warn("Duplicate question IDs found:", report.duplicateIds);
+}
+
+if (report.invalid > 0) {
+  console.warn("Invalid question indexes:", report.invalidIndexes);
+}
+
+sharedBankCache = arr.map(normalizeQuestion).filter(Boolean);
   }catch(err){
     sharedBankCache = [];
     showErr(`Question bank load failed: ${err.message || err}`);
@@ -426,6 +483,19 @@ function renderDailyWarmup(root){
 
 /* ===== Quiz ===== */
 function renderQuiz(root,opts){
+   const bank = getBank();
+
+   if (bank.length === 0) {
+     root.innerHTML = `
+       <div class="q">
+         <strong>No questions loaded.</strong>
+         <div class="small">
+           Check that question-bank.json exists, is valid JSON, and is being fetched from the correct path.
+         </div>
+       </div>
+     `;
+     return;
+}
   const isReview=opts.mode==="review";
   let round=isReview?buildReviewSet(10,0.7):getFreshSet(10);
   round=round.map(shuffleQuestionChoices);
@@ -652,6 +722,24 @@ function importAll(obj){
    ========================= */
 function wireMenuBar(){
   const menuBar=document.getElementById("menuBar");
+    document.querySelectorAll(".menuItem, .dropdown-item").forEach(item => {
+  item.addEventListener("keydown", handleMenuKeydown);
+});
+
+   function handleMenuKeydown(event) {
+  const item = event.currentTarget;
+
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    item.click();
+  }
+
+  if (event.key === "Escape") {
+    document.querySelectorAll(".menuItem.open").forEach(menu => {
+      menu.classList.remove("open");
+    });
+  }
+}
 
   // Toggle open/close on click
   menuBar.addEventListener("click",(e)=>{
