@@ -166,14 +166,10 @@ Study mode by domain
 Progressive Web App support
 Apprentice and instructor accounts
 Instructor dashboard for company, cohort, class year, domain, and individual progress tracking
-Project Pitch
 
-BICSI Technical Workstation is a beginner-built browser study trainer for telecommunications apprenticeship learning. It helps users practice questions, review missed material, build flashcards, and track local progress without requiring an account or backend system.
+## Project Pitch
+BICSI Technical Workstation is a browser-based study trainer for telecommunications apprenticeship learning. It helps users practice certification-style questions, review missed concepts, use flashcards, and track study progress locally in the browser.
 
-The project demonstrates HTML, CSS, JavaScript, JSON data handling, localStorage, accessibility improvements, debugging, testing, and project documentation.
+The project was built as a beginner web development portfolio project and demonstrates HTML, CSS, JavaScript, JSON data handling, localStorage, accessibility improvements, basic testing, debugging, and project documentation.
 
-Status
-
-Day 7 cleanup and portfolio preparation are in progress.
-
-The project is functional as a localStorage-based MVP and ready for final QA before being shared as a beginner web development portfolio project.
+The current version is a localStorage-based MVP. Future versions could add accounts, instructor dashboards, cohort tracking, progress reports, and PWA support.
