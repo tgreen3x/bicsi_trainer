@@ -429,6 +429,87 @@ function render(){
   if(state.mode==="bank")       renderBankManager(main);
 }
 
+function setSidebarMode(mode) {
+  const sidebarTitle = document.getElementById("sidebarTitle");
+  const defaultPanel = document.getElementById("sidebarDefaultPanel");
+  const modePanel = document.getElementById("sidebarModePanel");
+  const modeTitle = document.getElementById("sidebarModeTitle");
+  const modeContent = document.getElementById("sidebarModeContent");
+
+  if (!sidebarTitle || !defaultPanel || !modePanel || !modeTitle || !modeContent) {
+    return;
+  }
+
+  const panels = {
+    default: {
+      title: "▐ Study Dashboard",
+  modeTitle: "Welcome",
+  content: `
+    <span class="pill">Choose a study mode to begin</span>
+    <span class="pill">Recommended: <span class="mono" style="margin-left:4px">Daily Training</span></span>
+    <span class="pill">Use misses to review weak spots</span>
+    <span class="pill">Use flashcards for quick recall</span>
+    `
+    },
+    daily: {
+      title: "▐ Daily Training",
+      modeTitle: "Daily Training",
+      content: `
+        <span class="pill">Goal: <span class="mono" style="margin-left:4px">30 questions</span></span>
+        <span class="pill">Focus: <span class="mono" style="margin-left:4px">steady practice</span></span>
+        <span class="pill">Tip: read each question carefully</span>
+      `
+    },
+    pressure: {
+      title: "▐ Technician Scoreboard",
+      modeTitle: "",
+      content: ""
+    },
+    misses: {
+      title: "▐ Misses Deck",
+      modeTitle: "Review Missed Questions",
+      content: `
+        <span class="pill">Purpose: targeted review</span>
+        <span class="pill">Focus: weak concepts</span>
+        <span class="pill">Tip: slow down and learn why</span>
+      `
+    },
+    flashcards: {
+      title: "▐ Flashcards",
+      modeTitle: "Flashcard Review",
+      content: `
+        <span class="pill">Purpose: memory practice</span>
+        <span class="pill">Focus: terms and definitions</span>
+        <span class="pill">Tip: say the answer before flipping</span>
+      `
+    },
+    wording: {
+      title: "▐ Wording Lab",
+      modeTitle: "Question Wording Practice",
+      content: `
+        <span class="pill">Focus: tricky wording</span>
+        <span class="pill">Watch for: always / never</span>
+        <span class="pill">Tip: identify what the question is really asking</span>
+      `
+    }
+  };
+
+  const panel = panels[mode] || panels.default;
+
+  sidebarTitle.textContent = panel.title;
+
+  if (mode === "pressure") {
+    defaultPanel.hidden = false;
+    modePanel.hidden = true;
+    return;
+  }
+
+  defaultPanel.hidden = true;
+  modePanel.hidden = false;
+  modeTitle.textContent = panel.modeTitle;
+  modeContent.innerHTML = panel.content;
+}
+
 /* ===== Daily ===== */
 function renderDaily(root){
   const d=dailyState();
@@ -776,11 +857,11 @@ function wireMenuBar(){
   });
 
   // Session menu
-  document.getElementById("menuHome").addEventListener("click",()=>{ state.mode="daily"; saveState(); render(); closeAllMenus(); });
-  document.getElementById("menuDaily").addEventListener("click",()=>{ state.mode="daily"; saveState(); render(); closeAllMenus(); });
-  document.getElementById("menuPressure").addEventListener("click",()=>{ state.mode="pressure"; saveState(); render(); closeAllMenus(); });
-  document.getElementById("menuFlashcards").addEventListener("click",()=>{ state.mode="flashcards"; saveState(); render(); closeAllMenus(); });
-  document.getElementById("menuWording").addEventListener("click",()=>{ state.mode="wording"; saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuHome").addEventListener("click",()=>{ state.mode="daily"; setSidebarMode("default"); saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuDaily").addEventListener("click",()=>{ state.mode="daily"; setSidebarMode("daily"); saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuPressure").addEventListener("click",()=>{ state.mode="pressure"; setSidebarMode("pressure"); saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuFlashcards").addEventListener("click",()=>{ state.mode="flashcards"; setSidebarMode("flashcards"); saveState(); render(); closeAllMenus(); });
+  document.getElementById("menuWording").addEventListener("click",()=>{ state.mode="wording"; setSidebarMode("wording"); saveState(); render(); closeAllMenus(); });
 
   // Trainer menu
   document.getElementById("menuReview").addEventListener("click",()=>{ state.mode="review"; saveState(); render(); closeAllMenus(); });
@@ -913,6 +994,6 @@ document.addEventListener("DOMContentLoaded", async ()=>{
   render();
   wireMenuBar();
   wireFx();
-  
+  setSidebarMode("default");
   startBootSequence();
 });
