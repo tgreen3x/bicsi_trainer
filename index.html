@@ -34,9 +34,9 @@ c<!doctype html>
       <span>BICSI Technical Workstation</span>
     </div>
     <div class="win-controls" aria-hidden="true">
-      <button class="win-btn">_</button>
-      <button class="win-btn">□</button>
-      <button class="win-btn">×</button>
+      <button class="win-btn" aria-label="Minimize window" type="button">_</button>
+      <button class="win-btn" aria-label="Maximize window" type="button">□</button>
+      <button class="win-btn" aria-label="Close window" type="button">×</button>
     </div>
   </div>
 
@@ -44,60 +44,84 @@ c<!doctype html>
   <nav class="menuBar" id="menuBar">
 
     <!-- FILE -->
-    <div class="menuItem" data-menu="file">
+    <div class="menuItem" data-menu="file" tabindex="0"
+role="button">
       <span>File</span>
       <div class="dropdown">
-        <div class="dropdown-item" id="menuQuestionBank">📁 Shared Question Bank</div>
+        <div class="dropdown-item" id="menuQuestionBank" tabindex="0"
+role="button">📁 Shared Question Bank</div>
         <div class="dropdown-separator"></div>
-        <div class="dropdown-item" id="menuImport">⬆ Import Progress</div>
-        <div class="dropdown-item" id="menuExport">⬇ Export Progress</div>
+        <div class="dropdown-item" id="menuImport" tabindex="0"
+role="button">⬆ Import Progress</div>
+        <div class="dropdown-item" id="menuExport" tabindex="0"
+role="button">⬇ Export Progress</div>
         <div class="dropdown-separator"></div>
-        <div class="dropdown-item" id="menuReset">⚠ Reset All Data</div>
+        <div class="dropdown-item" id="menuReset" tabindex="0"
+role="button">⚠ Reset All Data</div>
       </div>
     </div>
 
     <!-- SESSION -->
-    <div class="menuItem" data-menu="session">
+    <div class="menuItem" data-menu="session" tabindex="0"
+role="button">
       <span>Session</span>
       <div class="dropdown">
-        <div class="dropdown-item" id="menuHome">🏠 Home</div>
+        <div class="dropdown-item" id="menuHome" tabindex="0"
+role="button">🏠 Home</div>
         <div class="dropdown-separator"></div>
-        <div class="dropdown-item" id="menuDaily">▶ Daily Training</div>
-        <div class="dropdown-item" id="menuPressure">⏱ Pressure Round</div>
-        <div class="dropdown-item" id="menuFlashcards">🃏 Flashcards</div>
-        <div class="dropdown-item" id="menuWording">✏ Wording Lab</div>
+        <div class="dropdown-item" id="menuDaily" tabindex="0"
+role="button">▶ Daily Training</div>
+        <div class="dropdown-item" id="menuPressure" tabindex="0"
+role="button">⏱ Pressure Round</div>
+        <div class="dropdown-item" id="menuFlashcards" tabindex="0"
+role="button">🃏 Flashcards</div>
+        <div class="dropdown-item" id="menuWording" tabindex="0"
+role="button">✏ Wording Lab</div>
       </div>
     </div>
 
     <!-- TRAINER -->
-    <div class="menuItem" data-menu="trainer">
+    <div class="menuItem" data-menu="trainer" tabindex="0"
+role="button">
       <span>Trainer</span>
       <div class="dropdown">
-        <div class="dropdown-item" id="menuReview">🔁 Review Misses</div>
-        <div class="dropdown-item" id="menuClearMisses">🗑 Clear Misses Deck</div>
+        <div class="dropdown-item" id="menuReview" tabindex="0"
+role="button">🔁 Review Misses</div>
+        <div class="dropdown-item" id="menuClearMisses" tabindex="0"
+role="button">🗑 Clear Misses Deck</div>
         <div class="dropdown-separator"></div>
-        <div class="dropdown-status" id="trainerStatusMode">MODE // DAILY</div>
-        <div class="dropdown-status" id="trainerStatusSelect">SELECT // ADAPTIVE</div>
-        <div class="dropdown-status" id="trainerStatusTheme">THEME // WINDOWS 95</div>
+        <div class="dropdown-status" id="trainerStatusMode" tabindex="0"
+role="button">MODE // DAILY</div>
+        <div class="dropdown-status" id="trainerStatusSelect" tabindex="0"
+role="button">SELECT // ADAPTIVE</div>
+        <div class="dropdown-status" id="trainerStatusTheme" tabindex="0"
+role="button">THEME // WINDOWS 95</div>
       </div>
     </div>
 
     <!-- DIAGNOSTICS -->
-    <div class="menuItem" data-menu="diagnostics">
+    <div class="menuItem" data-menu="diagnostics" tabindex="0"
+role="button">
       <span>Diagnostics</span>
       <div class="dropdown">
-        <div class="dropdown-item" id="menuSettings">⚙ Settings</div>
+        <div class="dropdown-item" id="menuSettings" tabindex="0"
+role="button">⚙ Settings</div>
       </div>
     </div>
 
     <!-- HELP -->
-    <div class="menuItem" data-menu="help">
+    <div class="menuItem" data-menu="help" tabindex="0"
+role="button">
       <span>Help</span>
       <div class="dropdown">
-        <div class="dropdown-item" id="menuManual">📄 Training Manual (PDF)</div>
-        <div class="dropdown-item" id="menuPractice">📝 Practice Test (PDF)</div>
-        <div class="dropdown-item" id="menuFlashPDF">🗂 Flashcards (PDF)</div>
-        <div class="dropdown-item" id="menuImages">📸 Images (PDF)</div>
+        <div class="dropdown-item" id="menuManual" tabindex="0"
+role="button">📄 Training Manual (PDF)</div>
+        <div class="dropdown-item" id="menuPractice" tabindex="0"
+role="button">📝 Practice Test (PDF)</div>
+        <div class="dropdown-item" id="menuFlashPDF" tabindex="0"
+role="button">🗂 Flashcards (PDF)</div>
+        <div class="dropdown-item" id="menuImages" tabindex="0"
+role="button">📸 Images (PDF)</div>
     </div>
 
   </nav>
@@ -153,43 +177,71 @@ c<!doctype html>
       </div>
     </main>
 
-    <!-- RIGHT SIDEBAR: Scoreboard -->
-    <aside class="sidebar-right">
-      <div class="scoreboard-header">▐ Technician Scoreboard</div>
-      <div class="scoreBox">
-        <div class="mini"><div class="k">Concept</div><div class="v" id="scoreConcept">0</div></div>
-        <div class="mini"><div class="k">Hier.</div><div class="v" id="scoreHierarchy">0</div></div>
-        <div class="mini"><div class="k">Word.</div><div class="v" id="scoreWording">0</div></div>
+    <!-- RIGHT SIDEBAR: Context Panel -->
+<aside class="sidebar-right">
+  <div class="scoreboard-header" id="sidebarTitle">▐ Technician Panel</div>
+
+  <!-- DEFAULT / GENERAL PANEL -->
+  <div id="sidebarDefaultPanel" class="sidebar-panel">
+    <div class="scoreBox">
+      <div class="mini">
+        <div class="k">Concept</div>
+        <div class="v" id="scoreConcept">0</div>
       </div>
-      <div class="score-section">
-        <div class="score-section-title">Session</div>
-        <div class="pills-col">
-          <span class="pill">Total: <span id="scoreTotal" class="mono" style="margin-left:4px">0/30</span></span>
-          <span class="pill">Rank: <span id="rank" class="mono" style="margin-left:4px">—</span></span>
-          <span class="pill timer-pill">Timer: <span id="timer" class="mono" style="margin-left:4px">—</span></span>
-        </div>
+      <div class="mini">
+        <div class="k">Hier.</div>
+        <div class="v" id="scoreHierarchy">0</div>
       </div>
-      <div class="score-section">
-        <div class="score-section-title">Bank &amp; Progress</div>
-        <div class="pills-col">
-          <span class="pill">Bank: <span id="bankSize" class="mono" style="margin-left:4px">—</span></span>
-          <span class="pill">Misses: <span id="missCount" class="mono" style="margin-left:4px">0</span></span>
-          <span class="pill">Streak: <span id="streak" class="mono" style="margin-left:4px">0</span></span>
-        </div>
+      <div class="mini">
+        <div class="k">Word.</div>
+        <div class="v" id="scoreWording">0</div>
       </div>
-      <div class="score-section">
-        <div class="score-section-title">Domain Stats</div>
-        <div id="domainStatsBox" style="font-size:11px"></div>
+    </div>
+
+    <div class="score-section">
+      <div class="score-section-title">Session</div>
+      <div class="pills-col">
+        <span class="pill">Total: <span id="scoreTotal" class="mono" style="margin-left:4px">0/30</span></span>
+        <span class="pill">Rank: <span id="rank" class="mono" style="margin-left:4px">—</span></span>
+        <span class="pill timer-pill">Timer: <span id="timer" class="mono" style="margin-left:4px">—</span></span>
       </div>
-      <div class="score-section" style="margin-top:auto;padding-top:10px">
-        <div class="score-section-title">Resources</div>
-        <div class="pills-col">
-          <a class="pill" href="BICSI_Technician_Training_Manual.pdf" target="_blank" rel="noopener" style="text-decoration:none">📄 Training Manual</a>
-          <a class="pill" href="BICSI_Technician_Practice_Test.pdf" target="_blank" rel="noopener" style="text-decoration:none">📝 Practice Test</a>
-          <a class="pill" href="BICSI_Technician_Flashcards.pdf" target="_blank" rel="noopener" style="text-decoration:none">🗂 Flashcards PDF</a>
-        </div>
+    </div>
+
+    <div class="score-section">
+      <div class="score-section-title">Bank &amp; Progress</div>
+      <div class="pills-col">
+        <span class="pill">Bank: <span id="bankSize" class="mono" style="margin-left:4px">—</span></span>
+        <span class="pill">Misses: <span id="missCount" class="mono" style="margin-left:4px">0</span></span>
+        <span class="pill">Streak: <span id="streak" class="mono" style="margin-left:4px">0</span></span>
       </div>
-    </aside>
+    </div>
+
+    <div class="score-section">
+      <div class="score-section-title">Domain Stats</div>
+      <div id="domainStatsBox" style="font-size:11px"></div>
+    </div>
+  </div>
+
+  <!-- MODE-SPECIFIC PANEL -->
+  <div id="sidebarModePanel" class="sidebar-panel" hidden>
+    <div class="score-section">
+      <div class="score-section-title" id="sidebarModeTitle">Current Mode</div>
+      <div class="pills-col" id="sidebarModeContent">
+        <!-- app.js will fill this -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RESOURCES: Keep available at the bottom -->
+  <div class="score-section" style="margin-top:auto;padding-top:10px">
+    <div class="score-section-title">Resources</div>
+    <div class="pills-col">
+      <a class="pill" href="BICSI_Technician_Training_Manual.pdf" target="_blank" rel="noopener" style="text-decoration:none">📄 Training Manual</a>
+      <a class="pill" href="BICSI_Technician_Practice_Test.pdf" target="_blank" rel="noopener" style="text-decoration:none">📝 Practice Test</a>
+      <a class="pill" href="BICSI_Technician_Flashcards.pdf" target="_blank" rel="noopener" style="text-decoration:none">🗂 Flashcards PDF</a>
+    </div>
+  </div>
+</aside>
 
   </div><!-- /body-layout -->
 
